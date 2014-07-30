@@ -25,11 +25,11 @@ function html5video(jcont,opts) {
                 ,loop: false
                 ,debug: false
                 ,AppSettings: {
-                UserID: null
-                ,AccountID: null
-                ,Version: null
-                ,AppPlatform: null
-                ,Skin: null
+                    UserID: null
+                    ,AccountID: null
+                    ,Version: null
+                    ,AppPlatform: null
+                    ,Skin: null
             }
         }
     };
