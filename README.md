@@ -18,7 +18,7 @@ Features
   - loop
   - end of video playlist overlay with replay button
   - video types
-      - mp4, webm, ogg
+      - All types supported by VideoJs (mp4, webm, ogg, flv)
       - youtube
 
 Example:
