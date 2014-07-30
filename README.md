@@ -21,6 +21,7 @@ Features
   - video types
       - All types supported by VideoJs (mp4, webm, ogg, flv)
       - youtube
+  - flash fallback
 
 Example:
 ```
