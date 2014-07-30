@@ -5,22 +5,7 @@
   - VideoJS (http://videojs.com) (https://github.com/videojs)  	
   - VideoJS Plugins (https://github.com/videojs/video.js/wiki/Plugins) 	
   	- video-js-resolutions (https://github.com/vidcaster/video-js-resolutions)
-  	- videojs-youtube (https://github.com/eXon/videojs-youtube) 
-
-  Video Types:
-  	- youtube
-  	- video/mp4
-  	- video/webm 
-
-  Tracking Events:
-  	- firstplay
-  	- play
-  	- ended
-  	- lastVideoEnded
-
-  ToDo:
-    - have 2 videos on a page working, change whole thing to a function
-    - setup examples 		
+  	- videojs-youtube (https://github.com/eXon/videojs-youtube) 		
 */
 
 function html5video(jcont,opts) {
