@@ -1,5 +1,5 @@
 Cross-browser HTML5 Video Player made with video-js.
-Supports all major browsers plus iOs and Android.
+Supports all major browsers plus iOS and Android.
 
 Thanks to:
   - jQuery (http://jquery.com)
