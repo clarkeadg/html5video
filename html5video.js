@@ -10,31 +10,31 @@
 
 function html5video(jcont,opts) {
 
-	var config = {
-		key: 'html5video'
-		,defaults: { 
-			id: 'video'
-			,width: 640
-			,height: 390
-			,statsApi: '//example.com/api/stats'
-			,enableStats: false 
-			,replayText: 'Replay Videos ?'
-			,videos: []
-			,current: 0
-			,autoplay: true
-			,loop: false
-			,debug: false
-			,AppSettings: {
-				UserID: null
-	    		,AccountID: null
-	    		,Version: null
-	    		,AppPlatform: null
-	    		,Skin: null
-			}
-		}
-	};
+    var config = {
+        key: 'html5video'
+            ,defaults: { 
+                id: 'video'
+                ,width: 640
+                ,height: 390
+                ,statsApi: '//example.com/api/stats'
+                ,enableStats: false 
+                ,replayText: 'Replay Videos ?'
+                ,videos: []
+                ,current: 0
+                ,autoplay: true
+                ,loop: false
+                ,debug: false
+                ,AppSettings: {
+                UserID: null
+                ,AccountID: null
+                ,Version: null
+                ,AppPlatform: null
+                ,Skin: null
+            }
+        }
+    };
 
-	var z = this, init, _build, _initialize, _actions, _events, _lastVideoEnded, _killPlayer, _getVideoType, _getVideoType, _setupYoutubePlayer, _setupDefaultPlayer, _startVideos, _setupControls, _setupResolutions, _selectResolution, _postData, _makeSource, _makePlayer;
+    var z = this, init, _build, _initialize, _actions, _events, _lastVideoEnded, _killPlayer, _getVideoType, _getVideoType, _setupYoutubePlayer, _setupDefaultPlayer, _startVideos, _setupControls, _setupResolutions, _selectResolution, _postData, _makeSource, _makePlayer;
 
     z.$ = {}; 
     z.$.cont = jcont; 
