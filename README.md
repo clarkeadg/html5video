@@ -13,7 +13,8 @@ Features
   - playlists
   - video resolutions (switch between hd and sd)
   - stat tracking
-  - show/hide controls
+      - track events for video start, end, and last video ended
+  - show/hide controls (support for ads, hide controls till the video finishes)
   - autoplay
   - loop
   - end of video playlist overlay with replay button
