@@ -21,7 +21,7 @@ function html5video(jcont,opts) {
 			,replayText: 'Replay Videos ?'
 			,videos: []
 			,current: 0
-			,autoplay: true  // do not set this to false if first video is youtube
+			,autoplay: true
 			,loop: false
 			,debug: false
 			,AppSettings: {
