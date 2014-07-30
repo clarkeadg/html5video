@@ -17,6 +17,7 @@ Features
   - autoplay
   - loop
   - end of video playlist overlay with replay button
+  - multiple video players on 1 page
   - video types
       - All types supported by VideoJs (mp4, webm, ogg, flv)
       - youtube
