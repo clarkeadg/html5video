@@ -7,7 +7,6 @@ html5video
 -----------------
 
 Example:
-
 ```
 <!DOCTYPE html>
 <html>
@@ -62,12 +61,12 @@ Example:
             ,"intensity":"1"
             ,"enabled":"1"
             ,src: [
-              'http://localhost/html5player/videos/TBBBTYB_hopsports.mp4'
-              //,'http://localhost/html5player/videos/TBBBTYB_hopsports.webm'
+              'videos/TBBBTYB_hopsports.mp4'
+              //,'videos/TBBBTYB_hopsports.webm'
             ]
             ,srcHD: [
-              'http://localhost/html5player/videos/ADA_BEST1.mp4'
-              //,'http://localhost/html5player/videos/ADA_BEST1.webm'
+              'videos/ADA_BEST1.mp4'
+              //,'videos/ADA_BEST1.webm'
             ]
             ,type: "video/mp4"
             ,poster : 'http://localhost/html5player/videos/TBBBTYB_hopsports.jpg'
@@ -115,10 +114,10 @@ Example:
             ,"intensity":"1"
             ,"enabled":"1"
             ,src: [
-              'http://localhost/html5player/videos/TBBBTYB_hopsports.mp4'
+              'videos/TBBBTYB_hopsports.mp4'
             ]
             ,srcHD: [
-              'http://localhost/html5player/videos/TBBBTYB_hopsports.mp4'
+              'videos/TBBBTYB_hopsports.mp4'
             ]
             ,poster : 'http://localhost/html5player/videos/TBBBTYB_hopsports.jpg'
             ,title : 'Ad 1'  
