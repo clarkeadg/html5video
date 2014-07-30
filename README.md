@@ -1,10 +1,25 @@
-html5video
-==========
+Cross-browser HTML5 Video Player made with video-js.
+Supports all major browsers plus iOs and Android.
 
-HTML5 Video Player
+Thanks to:
+  - jQuery (http://jquery.com)
+  - Bowser (https://github.com/ded/bowser)
+  - VideoJS (http://videojs.com) (https://github.com/videojs)  	
+  - VideoJS Plugins (https://github.com/videojs/video.js/wiki/Plugins) 	
+  	- video-js-resolutions (https://github.com/vidcaster/video-js-resolutions)
+  	- videojs-youtube (https://github.com/eXon/videojs-youtube) 
 
-html5video
------------------
+Features
+  - playlists
+  - video resolutions (switch between hd and sd)
+  - stat tracking
+  - show/hide controls
+  - autoplay
+  - loop
+  - end of video playlist overlay with replay button
+  - video types
+      - mp4, webm, ogg
+      - youtube
 
 Example:
 ```
