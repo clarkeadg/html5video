@@ -12,24 +12,24 @@ function html5video(jcont,opts) {
 
     var config = {
         key: 'html5video'
-            ,defaults: { 
-                id: 'video'
-                ,width: 640
-                ,height: 390
-                ,statsApi: '//example.com/api/stats'
-                ,enableStats: false 
-                ,replayText: 'Replay Videos ?'
-                ,videos: []
-                ,current: 0
-                ,autoplay: true
-                ,loop: false
-                ,debug: false
-                ,AppSettings: {
-                    UserID: null
-                    ,AccountID: null
-                    ,Version: null
-                    ,AppPlatform: null
-                    ,Skin: null
+        ,defaults: { 
+            id: 'video'
+            ,width: 640
+            ,height: 390
+            ,statsApi: '//example.com/api/stats'
+            ,enableStats: false 
+            ,replayText: 'Replay Videos ?'
+            ,videos: []
+            ,current: 0
+            ,autoplay: true
+            ,loop: false
+            ,debug: false
+            ,AppSettings: {
+                UserID: null
+                ,AccountID: null
+                ,Version: null
+                ,AppPlatform: null
+                ,Skin: null
             }
         }
     };
