@@ -2,21 +2,21 @@
 <html>
 <head>  
   <title>html5videoplayer.js | HTML5 Video Player</title>
-  <link href="video-js/video-js.css" rel="stylesheet" type="text/css">
-  <link href="video-js/video-js-resolutions.css" rel="stylesheet" type="text/css">  
-  <link href="html5video.css" rel="stylesheet" type="text/css"> 
+  <link href="../assets/css/video-js.css" rel="stylesheet" type="text/css">
+  <link href="../assets/css/video-js-resolutions.css" rel="stylesheet" type="text/css">  
+  <link href="../assets/css/html5video.css" rel="stylesheet" type="text/css"> 
 </head>
 <body> 
-  <div id="video1">&nbsp;</div>
-  <script src="video-js/jquery.min.js"></script>
-  <script src="video-js/bowser.min.js"></script>
-  <script src="video-js/video.dev.js"></script>  
-  <script src="video-js/video-js-resolutions.js"></script>
-  <script src="video-js/video-js-youtube.js"></script> 
-  <script src="html5video.js"></script>
+  <div id="video1"></div>  
+  <script src="../assets/js/jquery.min.js"></script>
+  <script src="../assets/js/bowser.min.js"></script>
+  <script src="../assets/js/video.dev.js"></script>  
+  <script src="../assets/js/video-js-resolutions.js"></script>
+  <script src="../assets/js/video-js-youtube.js"></script> 
+  <script src="../assets/js/html5video.js"></script>
   <script type="text/javascript">
     $(function() {        
-      videojs.options.flash.swf = "video-js/video-js.swf";
+      videojs.options.flash.swf = "../assets/flash/video-js.swf";
       
       var video1 = new html5video($('#video1'),{
         id: 'video-1' //must have a unique idea if you want more than 1 video on a page
@@ -51,18 +51,18 @@
             ,"intensity":"1"
             ,"enabled":"1"
             ,src: [
-              'videos/TBBBTYB_hopsports.mp4'
-              //,'videos/TBBBTYB_hopsports.webm'
+              '../assets/videos/TBBBTYB_hopsports.mp4'
+              //,'../assets/videos/TBBBTYB_hopsports.webm'
             ]
             ,srcHD: [
-              'videos/ADA_BEST1.mp4'
-              //,'videos/ADA_BEST1.webm'
+              '../assets/videos/ADA_BEST1.mp4'
+              //,'../assets/videos/ADA_BEST1.webm'
             ]
             ,type: "video/mp4"
-            ,poster : 'videos/TBBBTYB_hopsports.jpg'
+            ,poster : '../assets/videos/TBBBTYB_hopsports.jpg'
             ,title : 'Ad 1'  
             ,isAd: true
-            ,controls: false 
+            ,controls: true 
           }
           ,{
             "id":"OyYoyYoy"
@@ -84,7 +84,7 @@
             ,srcHD: [
               'http://www.youtube.com/watch?v=f9aMmSzIHnI'
             ]
-            ,poster : 'videos/TBBBTYB_hopsports.jpg'
+            ,poster : '../assets/videos/TBBBTYB_hopsports.jpg'
             ,title : 'Ad 1'  
             ,isAd: false
             ,controls: true 
@@ -104,12 +104,12 @@
             ,"intensity":"1"
             ,"enabled":"1"
             ,src: [
-              'videos/TBBBTYB_hopsports.mp4'
+              '../assets/videos/TBBBTYB_hopsports.mp4'
             ]
             ,srcHD: [
-              'videos/TBBBTYB_hopsports.mp4'
+              '../assets/videos/TBBBTYB_hopsports.mp4'
             ]
-            ,poster : 'videos/TBBBTYB_hopsports.jpg'
+            ,poster : '../assets/videos/TBBBTYB_hopsports.jpg'
             ,title : 'Ad 1'  
             ,isAd: true
             ,controls: false 

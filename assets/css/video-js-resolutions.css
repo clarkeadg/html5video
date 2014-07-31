@@ -3,10 +3,10 @@
 
 @font-face{
   font-family: 'VideoJS-Resolutions';
-  src: url('font/VideoJS-Resolutions.eot');
-  src: url('font/VideoJS-Resolutions.eot?#iefix') format('embedded-opentype'),
-  url('font/VideoJS-Resolutions.woff') format('woff'),
-  url('font/VideoJS-Resolutions.ttf') format('truetype');
+  src: url('../fonts/VideoJS-Resolutions.eot');
+  src: url('../fonts/VideoJS-Resolutions.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/VideoJS-Resolutions.woff') format('woff'),
+  url('../fonts/VideoJS-Resolutions.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
