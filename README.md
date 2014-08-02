@@ -18,7 +18,7 @@ Features
       - youtube
   - flash fallback
 
-  Thanks to:
+Thanks to:
   - jQuery (http://jquery.com)
   - Bowser (https://github.com/ded/bowser)
   - VideoJS (http://videojs.com) (https://github.com/videojs)   
