@@ -1,244 +1,71 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-  <meta charset="utf-8" />
-  <title>HTML5 Video Player | Video JS</title>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Html5video by clarkeadg</title>
 
-  <!-- REQUIRED -->
-  <link href="assets/css/video-js.css" rel="stylesheet" type="text/css">
-  <link href="assets/css/video-js-resolutions.css" rel="stylesheet" type="text/css">  
-  <link href="assets/css/html5video.css" rel="stylesheet" type="text/css"> 
-  <script src="assets/js/jquery.min.js"></script>
-  <script src="assets/js/bowser.min.js"></script>
-  <script src="assets/js/video.dev.js"></script>  
-  <script src="assets/js/video-js-resolutions.js"></script>
-  <script src="assets/js/video-js-youtube.js"></script> 
-  <script src="assets/js/html5video.js"></script>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Html5video</h1>
+        <p>HTML5 Video Player</p>
 
-  <!-- OPTIONAL -->
-  <link href="assets/demo/css/base.css" rel="stylesheet" type="text/css"> 
-  <link href="assets/demo/css/site.css" rel="stylesheet" type="text/css"> 
-  <!--<link href="assets/demo/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"> 
-  <link href="assets/demo/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css"> 
-  <script src="assets/demo/bootstrap/js/bootstrap.min.js"></script>-->
+        <p class="view"><a href="https://github.com/clarkeadg/html5video">View the Project on GitHub <small>clarkeadg/html5video</small></a></p>
 
-</head>
-<body>
 
-  <div id="wrap">
-    <div id="main">
+        <ul>
+          <li><a href="https://github.com/clarkeadg/html5video/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/clarkeadg/html5video/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/clarkeadg/html5video">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h3>
+<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
 
-      <ul id="nav">
-        <li><a href="get-started.html">Get Started</a></li>
-        <li><a href="docs/">Docs</a></li>
-        <li><a href="examples/">Examples</a></li>        
-        <li><a href="http://github.com/clarkeadg/html5video/zipball/master">Download</a></li>
-        <li><a href="http://github.com/clarkeadg/html5video">Github</a></li>
-      </ul>
+<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
 
-      <h1>HTML5 VIDEO</h1>
-      <p class="tagline">Made with Video JS</p>
+<pre><code>$ cd your_repo_root/repo_name
+$ git fetch origin
+$ git checkout gh-pages
+</code></pre>
 
-      <!-- Begin VideoJS -->
-      <div id="video1"></div> 
-      <!--<div class="video-js-box">
-        <video class="video-js" width="640" height="264" poster="http://video-js.zencoder.com/oceans-clip.png" controls preload>
-          <source src="http://video-js.zencoder.com/oceans-clip.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
-          <source src="http://video-js.zencoder.com/oceans-clip.webm" type='video/webm; codecs="vp8, vorbis"'>
-          <source src="http://video-js.zencoder.com/oceans-clip.ogg" type='video/ogg; codecs="theora, vorbis"'>
-          <object class="vjs-flash-fallback" width="640" height="264" type="application/x-shockwave-flash"
-            data="http://releases.flowplayer.org/swf/flowplayer-3.2.1.swf">
-            <param name="movie" value="http://releases.flowplayer.org/swf/flowplayer-3.2.1.swf" />
-            <param name="allowfullscreen" value="true" />
-            <param name="flashvars" value='config={"clip":{"url":"http://video-js.zencoder.com/oceans-clip.mp4","autoPlay":false,"autoBuffering":true}}' />
-            <img src="http://video-js.zencoder.com/oceans-clip.png" width="640" height="264" alt="Poster Image"
-              title="No video playback capabilities." />
-          </object>
-        </video>
-        <p class="vjs-no-video"><strong>Download Video:</strong>
-          <a href="http://video-js.zencoder.com/oceans-clip.mp4">MP4</a>,
-          <a href="http://video-js.zencoder.com/oceans-clip.webm">WebM</a>,
-          <a href="http://video-js.zencoder.com/oceans-clip.ogg">Ogg</a><br>
-          <a href="http://videojs.com">HTML5 Video Player</a> by <a href="http://videojs.com">VideoJS</a>
-        </p>
-      </div>-->
-      <!-- End VideoJS -->
-      
-      <!--<p id="video_note">Video clip is from <a href="http://disney.go.com/disneynature/oceans/" title="Oceans">Disney&rsquo;s Oceans</a></p>-->
+<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
 
-      <p>&nbsp;</p>
+<h3>
+<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
 
-      <p>Cross-browser HTML5 Video Player made with video-js. Supports all major browsers plus iOS and Android.</p>
+<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
 
-      <!--<p>Video JS is a javascript-based video player that uses the HTML5 video functionality built into  advanced browsers. In general, the benefit of using an HTML5 player is a consistent look between browsers.</p>-->
+<h3>
+<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
 
-      <!--<p id="sponsor">
-        <a href="http://zencoder.com">Video encoding &amp; hosting</a> provided by:<br>
-        <a href="http://zencoder.com"><img src="assets/demo/images/zencoder-logo.png" border="0" alt="Zencoder - Video Encoding"></a>
-      </p>-->
+<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
 
-      <div id="features_and_support" class="clearfix">
-        <div id="features">
-          <h6>Features</h6>
-          <ul id="feature_list">
-            <li>Free &amp; Open Source</li>
-            <li>Lightweight. <strong>NO IMAGES USED</strong></li>
-            <li>100% skinnable using CSS</li>
-            <li>Library independent</li>
-            <li>Easy to use</li>
-            <li>Easy to understand &amp; extend</li>
-            <li>Consistent look between browsers</li>
-            <li>Full Window Mode</li>
-            <li>Volume Control</li>
-            <li>Forced fallback to Flash (even when there is an unsupported source)</li>
-            <li></li>
-          </ul>
-        </div>
-        <div id="supported" class="clearfix">
-          <h6>Download</h6>
-          <div class="supported-section">
-            <a href="http://github.com/clarkeadg/html5video/zipball/master" title="Zip Download"><img src="assets/demo/images/icons/zip.png" alt="Zip Download"></a>
-            <a href="github.com/clarkeadg/html5video/tarball/master" title="Tar Download"><img src="assets/demo/images/icons/tar.png" alt="Tar Download"></a>
-          </div>
-          <h6>Supported Browsers</h6>
-          <div class="supported-section">
-            <a href="http://www.mozilla.com/en-US/firefox/firefox.html" title="Firefox"><img src="assets/demo/images/icons/firefox.png" alt="Firefox"></a>
-            <a href="http://www.apple.com/safari/" title="Safari"><img src="assets/demo/images/icons/safari.png" alt="Safari"></a>
-            <a href="http://www.google.com/chrome" title="Chrome"><img src="assets/demo/images/icons/chrome.png" alt="Chrome"></a>
-            <a href="http://www.opera.com/" title="Opera"><img src="assets/demo/images/icons/opera.png" alt="Opera"></a>
-          </div>
-          <h6>Fallback Support For</h6>
-          <div class="supported-section">
-            <a href="http://www.microsoft.com/windows/Internet-explorer/default.aspx" title="IE"><img src="assets/demo/images/icons/ie.png" alt="IE"></a>
-          </div>
-          <h6>Supported Formats</h6>
-          <div class="supported-section">
-            <a href="http://en.wikipedia.org/wiki/H.264/MPEG-4_AVC" title="h264"><img src="assets/demo/images/icons/h264.png" alt="h264"></a>
-            <a href="http://www.theora.org/" title="Ogg"><img src="assets/demo/images/icons/ogg.png" alt="Ogg"></a>
-            <a href="http://www.webmproject.org/" title="WebM"><img src="assets/demo/images/icons/webm.png" alt="WebM"></a>
-          </div>
-          <h6>Compatible With</h6>
-          <div class="supported-section">
-            <a href="http://www.apple.com/iphone/" title="iPhone"><img src="assets/demo/images/icons/iphone.png" alt="iPhone"></a>
-            <a href="http://www.apple.com/ipad/" title="iPad"><img src="assets/demo/images/icons/ipad.png" alt="iPad"></a>
-          </div>
-        </div>
+<h3>
+<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
 
-       <!-- <p id="issues_link">Submit any bugs in the <a href="http://github.com/zencoder/video-js/issues">Issue Tracker</a> or update the <a href="http://wiki.github.com/zencoder/video-js/browser-device-compatibility">Compatibility Table</a></p>
-        <p>Moved <a href="http://videojs.com/comments.html">comments</a> to another page temporarily.</p>  -->    
+<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
 
-      </div>
+<h3>
+<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
+
+<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/clarkeadg">clarkeadg</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
     </div>
-
-    <!--<div id="footer">
-      &copy; <a href="http://videojs.com">The Video JS Project</a>. Sponsored by <a href="http://zencoder.com">Zencoder</a>.
-    </div>-->
-
-  </div>
-
-  <script type="text/javascript">
-    $(function() {        
-      videojs.options.flash.swf = "assets/flash/video-js.swf";      
-      var video1 = new html5video($('#video1'),{
-        id: 'video-1' //must have a unique idea if you want more than 1 video on a page
-        ,width: 640
-        ,height: 390
-        ,statsApi: 'http://laravel.brainbreaks.net/api/stats/?Version=v2'
-        ,enableStats: false        
-        ,replayText: 'Replay ?'
-        ,autoplay: true         
-        ,loop: false
-        ,debug: false
-        ,AppSettings: {
-          UserID: "brian"
-            ,AccountID: 1
-            ,Version: '1.4.6'
-            ,AppPlatform: 'html5'
-            ,Skin: 'web'
-        } 
-        ,videos: [  
-          {
-            "id":"ad1"
-            ,"name":"Ad 1"
-            ,"contentpack_id":"ad1"
-            ,"father_id":null
-            ,"description":"Ad 1"
-            ,"thumbnail":"ContentPacks\/brewers\/brewers_thumb.jpg"
-            ,"filename":""
-            ,"contents_sort_order":"1"
-            ,"video_type":"Ad"
-            ,"duration":"0"
-            ,"tags":""
-            ,"intensity":"1"
-            ,"enabled":"1"
-            ,src: [
-              'assets/videos/TBBBTYB_hopsports.mp4'
-              //,'../assets/videos/TBBBTYB_hopsports.webm'
-            ]
-            ,srcHD: [
-              'assets/videos/ADA_BEST1.mp4'
-              //,'../assets/videos/ADA_BEST1.webm'
-            ]
-            ,type: "video/mp4"
-            ,poster : 'assets/videos/TBBBTYB_hopsports.jpg'
-            ,title : 'Ad 1'  
-            ,isAd: true
-            ,controls: true 
-          }
-          ,{
-            "id":"OyYoyYoy"
-            ,"name":"OyYoyYoy"
-            ,"contentpack_id":"OyYoyYoy"
-            ,"father_id":null
-            ,"description":"OyYoyYoy"
-            ,"thumbnail":"ContentPacks\/brewers\/brewers_thumb.jpg"
-            ,"filename":""
-            ,"contents_sort_order":"1"
-            ,"video_type":"School"
-            ,"duration":"0"
-            ,"tags":""
-            ,"intensity":"1"
-            ,"enabled":"1"
-            ,src: [
-              'http://www.youtube.com/watch?v=f9aMmSzIHnI' //oy yoy yoy
-            ]
-            ,srcHD: [
-              'http://www.youtube.com/watch?v=f9aMmSzIHnI'
-            ]
-            ,poster : 'assets/videos/TBBBTYB_hopsports.jpg'
-            ,title : 'Ad 1'  
-            ,isAd: false
-            ,controls: true 
-          }
-          ,{
-            "id":"ad2"
-            ,"name":"Ad 2"
-            ,"contentpack_id":"ad1"
-            ,"father_id":null
-            ,"description":"Ad 1"
-            ,"thumbnail":"ContentPacks\/brewers\/brewers_thumb.jpg"
-            ,"filename":""
-            ,"contents_sort_order":"1"
-            ,"video_type":"Ad"
-            ,"duration":"0"
-            ,"tags":""
-            ,"intensity":"1"
-            ,"enabled":"1"
-            ,src: [
-              'assets/videos/TBBBTYB_hopsports.mp4'
-            ]
-            ,srcHD: [
-              'assets/videos/TBBBTYB_hopsports.mp4'
-            ]
-            ,poster : '../assets/videos/TBBBTYB_hopsports.jpg'
-            ,title : 'Ad 1'  
-            ,isAd: true
-            ,controls: false 
-          } 
-        ]
-      });
-    });
-  </script>
-
-</body>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
 </html>
