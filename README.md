@@ -1,13 +1,7 @@
 Cross-browser HTML5 Video Player made with video-js.
 Supports all major browsers plus iOS and Android.
 
-Thanks to:
-  - jQuery (http://jquery.com)
-  - Bowser (https://github.com/ded/bowser)
-  - VideoJS (http://videojs.com) (https://github.com/videojs)  	
-  - VideoJS Plugins (https://github.com/videojs/video.js/wiki/Plugins) 	
-  	- video-js-resolutions (https://github.com/vidcaster/video-js-resolutions)
-  	- videojs-youtube (https://github.com/eXon/videojs-youtube) 
+View example at http://www.spideyjs.com/html5video/
 
 Features
   - playlists
@@ -23,4 +17,12 @@ Features
       - All types supported by VideoJs (mp4, webm, ogg, flv)
       - youtube
   - flash fallback
+
+  Thanks to:
+  - jQuery (http://jquery.com)
+  - Bowser (https://github.com/ded/bowser)
+  - VideoJS (http://videojs.com) (https://github.com/videojs)   
+  - VideoJS Plugins (https://github.com/videojs/video.js/wiki/Plugins)  
+    - video-js-resolutions (https://github.com/vidcaster/video-js-resolutions)
+    - videojs-youtube (https://github.com/eXon/videojs-youtube) 
 
