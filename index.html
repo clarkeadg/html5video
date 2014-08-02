@@ -7,7 +7,7 @@
   <!-- REQUIRED -->
   <link href="assets/css/video-js.css" rel="stylesheet" type="text/css">
   <link href="assets/css/video-js-resolutions.css" rel="stylesheet" type="text/css">  
-  <link href="assets/css/html5video.css" rel="stylesheet" type="text/css"> 
+  <link href="assets/css/html5video.css" rel="stylesheet" type="text/css">
   <script src="assets/js/jquery.min.js"></script>
   <script src="assets/js/bowser.min.js"></script>
   <script src="assets/js/video.dev.js"></script>  
@@ -16,70 +16,74 @@
   <script src="assets/js/html5video.js"></script>
 
   <!-- OPTIONAL -->
-  <link href="assets/demo/css/base.css" rel="stylesheet" type="text/css"> 
-  <link href="assets/demo/css/site.css" rel="stylesheet" type="text/css"> 
-  <!--<link href="assets/demo/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"> 
-  <link href="assets/demo/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css"> 
-  <script src="assets/demo/bootstrap/js/bootstrap.min.js"></script>-->
+  <link href="assets/demo/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">  
+  <script src="assets/demo/bootstrap/js/bootstrap.min.js"></script>
+  <link href="assets/demo/css/navbar-fixed-top.css" rel="stylesheet" type="text/css">
+  <link href="assets/demo/css/site.css" rel="stylesheet" type="text/css">
+  <!--<link href="assets/demo/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css">-->
 
 </head>
 <body>
 
-  <div id="wrap">
-    <div id="main">
+  <div id="wrap" >
 
-      <ul id="nav">
-        <li><a href="get-started.html">Get Started</a></li>
-        <li><a href="docs/">Docs</a></li>
-        <li><a href="examples/">Examples</a></li>        
-        <li><a href="https://github.com/clarkeadg/html5video/zipball/master">Download</a></li>
-        <li><a href="https://github.com/clarkeadg/html5video">Github</a></li>
-      </ul>
+  <!-- Fixed navbar -->
+  <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">HTML5 Video</a>
+      </div>
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="get-started.html">Get Started</a></li>
+          <li><a href="docs/">Docs</a></li>
+          <li><a href="examples/">Examples</a></li>        
+          <li><a href="https://github.com/clarkeadg/html5video/zipball/master">Download</a></li>
+          <li><a href="https://github.com/clarkeadg/html5video">Github</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
 
-      <h1>HTML5 VIDEO</h1>
-      <p class="tagline">Made with Video JS</p>
-
-      <!-- Begin VideoJS -->
+  <div class="container">
+    <div class="jumbotron1 center">
+      <p>Cross-browser HTML5 Video Player made with <a href="http://www.videojs.com" >Video JS</a>. Supports all major browsers plus iOS and Android.</p>
       <div id="video1"></div> 
-      <!--<div class="video-js-box">
-        <video class="video-js" width="640" height="264" poster="http://video-js.zencoder.com/oceans-clip.png" controls preload>
-          <source src="http://video-js.zencoder.com/oceans-clip.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
-          <source src="http://video-js.zencoder.com/oceans-clip.webm" type='video/webm; codecs="vp8, vorbis"'>
-          <source src="http://video-js.zencoder.com/oceans-clip.ogg" type='video/ogg; codecs="theora, vorbis"'>
-          <object class="vjs-flash-fallback" width="640" height="264" type="application/x-shockwave-flash"
-            data="http://releases.flowplayer.org/swf/flowplayer-3.2.1.swf">
-            <param name="movie" value="http://releases.flowplayer.org/swf/flowplayer-3.2.1.swf" />
-            <param name="allowfullscreen" value="true" />
-            <param name="flashvars" value='config={"clip":{"url":"http://video-js.zencoder.com/oceans-clip.mp4","autoPlay":false,"autoBuffering":true}}' />
-            <img src="http://video-js.zencoder.com/oceans-clip.png" width="640" height="264" alt="Poster Image"
-              title="No video playback capabilities." />
-          </object>
-        </video>
-        <p class="vjs-no-video"><strong>Download Video:</strong>
-          <a href="http://video-js.zencoder.com/oceans-clip.mp4">MP4</a>,
-          <a href="http://video-js.zencoder.com/oceans-clip.webm">WebM</a>,
-          <a href="http://video-js.zencoder.com/oceans-clip.ogg">Ogg</a><br>
-          <a href="http://videojs.com">HTML5 Video Player</a> by <a href="http://videojs.com">VideoJS</a>
-        </p>
-      </div>-->
-      <!-- End VideoJS -->
-      
-      <!--<p id="video_note">Video clip is from <a href="http://disney.go.com/disneynature/oceans/" title="Oceans">Disney&rsquo;s Oceans</a></p>-->
+      <p>
+        <a class="btn btn-lg btn-primary" href="demos/get-started.html" role="button">Get Started</a>
+        <a class="btn btn-lg btn-primary" href="demos/examples/" role="button">View Examples</a>
+      </p>
+    </div>
+  </div> 
 
-      <p>&nbsp;</p>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
 
-      <p>Cross-browser HTML5 Video Player made with video-js. Supports all major browsers plus iOS and Android.</p>
-
-      <!--<p>Video JS is a javascript-based video player that uses the HTML5 video functionality built into  advanced browsers. In general, the benefit of using an HTML5 player is a consistent look between browsers.</p>-->
-
-      <!--<p id="sponsor">
-        <a href="http://zencoder.com">Video encoding &amp; hosting</a> provided by:<br>
-        <a href="http://zencoder.com"><img src="assets/demo/images/zencoder-logo.png" border="0" alt="Zencoder - Video Encoding"></a>
-      </p>-->
-
-      <div id="features_and_support" class="clearfix">
-        <div id="features">
+        <div class="jumbotron">
+          
           <h6>Features</h6>
+          <ul id="feature_list">
+            <li>Playlists</li>
+            <li>Youtube Videos</li>
+            <li>Switch Resolutions</li>
+            <li>Stat Tracking</li>
+            <li>Hide Controls</li>
+            <li>Ads</li>
+            <li>Autoplay & Loop</li>
+            <li>End of Video Overlay with Replay Button</li>
+            <li>Multiple video players on 1 page</li>
+          </ul>
+
+          <br/>
+
+          <h6>Plus all regular Video JS Features</h6>
           <ul id="feature_list">
             <li>Free &amp; Open Source</li>
             <li>Lightweight. <strong>NO IMAGES USED</strong></li>
@@ -91,15 +95,19 @@
             <li>Full Window Mode</li>
             <li>Volume Control</li>
             <li>Forced fallback to Flash (even when there is an unsupported source)</li>
-            <li></li>
           </ul>
         </div>
-        <div id="supported" class="clearfix">
+
+      </div>
+      <div class="col-md-4">
+
+        <div class="jumbotron1">
+          
           <h6>Download</h6>
           <div class="supported-section">
             <a href="https://github.com/clarkeadg/html5video/zipball/master" title="Zip Download"><img src="assets/demo/images/icons/zip.png" alt="Zip Download"></a>
-            <a href="https://github.com/clarkeadg/html5video/tarball/master" title="Tar Download"><img src="assets/demo/images/icons/tar.png" alt="Tar Download"></a>
           </div>
+          
           <h6>Supported Browsers</h6>
           <div class="supported-section">
             <a href="http://www.mozilla.com/en-US/firefox/firefox.html" title="Firefox"><img src="assets/demo/images/icons/firefox.png" alt="Firefox"></a>
@@ -107,16 +115,19 @@
             <a href="http://www.google.com/chrome" title="Chrome"><img src="assets/demo/images/icons/chrome.png" alt="Chrome"></a>
             <a href="http://www.opera.com/" title="Opera"><img src="assets/demo/images/icons/opera.png" alt="Opera"></a>
           </div>
+          
           <h6>Fallback Support For</h6>
           <div class="supported-section">
             <a href="http://www.microsoft.com/windows/Internet-explorer/default.aspx" title="IE"><img src="assets/demo/images/icons/ie.png" alt="IE"></a>
           </div>
+          
           <h6>Supported Formats</h6>
           <div class="supported-section">
             <a href="http://en.wikipedia.org/wiki/H.264/MPEG-4_AVC" title="h264"><img src="assets/demo/images/icons/h264.png" alt="h264"></a>
             <a href="http://www.theora.org/" title="Ogg"><img src="assets/demo/images/icons/ogg.png" alt="Ogg"></a>
             <a href="http://www.webmproject.org/" title="WebM"><img src="assets/demo/images/icons/webm.png" alt="WebM"></a>
           </div>
+          
           <h6>Compatible With</h6>
           <div class="supported-section">
             <a href="http://www.apple.com/iphone/" title="iPhone"><img src="assets/demo/images/icons/iphone.png" alt="iPhone"></a>
@@ -124,15 +135,14 @@
           </div>
         </div>
 
-       <!-- <p id="issues_link">Submit any bugs in the <a href="http://github.com/zencoder/video-js/issues">Issue Tracker</a> or update the <a href="http://wiki.github.com/zencoder/video-js/browser-device-compatibility">Compatibility Table</a></p>
-        <p>Moved <a href="http://videojs.com/comments.html">comments</a> to another page temporarily.</p>  -->    
-
       </div>
     </div>
-
-    <!--<div id="footer">
-      &copy; <a href="http://videojs.com">The Video JS Project</a>. Sponsored by <a href="http://zencoder.com">Zencoder</a>.
-    </div>-->
+    <div class="row foot">
+      <div class="col-12">
+        <p id="issues_link">Submit any bugs in the <a href="https://github.com/clarkeadg/html5video/issues">Issue Tracker</a> or update the <a href="https://github.com/clarkeadg/html5video/wiki">Wiki</a></p> 
+      </div>
+    </div>   
+  </div>
 
   </div>
 
@@ -176,14 +186,15 @@
               //,'../assets/videos/TBBBTYB_hopsports.webm'
             ]
             ,srcHD: [
-              'assets/videos/ADA_BEST1.mp4'
+              'assets/videos/TBBBTYB_hopsports.mp4'
+              //'assets/videos/ADA_BEST1.mp4'
               //,'../assets/videos/ADA_BEST1.webm'
             ]
             ,type: "video/mp4"
             ,poster : 'assets/videos/TBBBTYB_hopsports.jpg'
             ,title : 'Ad 1'  
             ,isAd: true
-            ,controls: true 
+            ,controls: false 
           }
           ,{
             "id":"OyYoyYoy"
