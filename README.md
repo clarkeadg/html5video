@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 Cross-browser HTML5 Video Player made with video-js.
 Supports all major browsers plus iOS and Android.
 
@@ -25,9 +24,3 @@ Features
       - youtube
   - flash fallback
 
-=======
-html5video
-==========
-
-HTML5 Video Player
->>>>>>> a7bafec08953ee8930052158f43186d809fadd55
