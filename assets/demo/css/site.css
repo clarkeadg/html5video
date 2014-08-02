@@ -6,8 +6,8 @@ body {
 	color: #FFF;
 }
 #wrap { background: url("../images/background-highlights.png") center 20px no-repeat; }
-h1 { font-size: 360%; line-height: 1; margin-bottom: 10px; text-align: center; letter-spacing: 5px; }
-h2 { font-size: 200%; line-height: 1; margin-bottom: 10px; }
+/*h1 { font-size: 360%; line-height: 1; margin-bottom: 10px; text-align: left; letter-spacing: 5px; }
+h2 { font-size: 200%; line-height: 1; margin-bottom: 10px; }*/
 h6 { font-size: 100%; text-transform: uppercase; margin-bottom: 10px; color: #dedede; }
 p.tagline { text-align: center; font-size: 120%; line-height: 1; }
 
@@ -18,9 +18,10 @@ a { color: #7fdbff; }
 	text-align: center;
 }
 
-.jumbotron {
+.container .jumbotron {
 	color: #000;
-	padding: 25px;
+	padding: 5px 25px 10px;
+	text-align: left;
 }
 .jumbotron h6 { color: #999; }
 
@@ -37,7 +38,7 @@ a { color: #7fdbff; }
 }
 
 #features { width: 300px; float: left; }
-ul#feature_list { display: block; margin: 0; padding: 0; }
+ul#feature_list { display: block; margin: 15px 0 0; padding: 0; }
 ul#feature_list li { list-style: none; padding-left: 25px; font-size: 120%; line-height: 20px; margin-bottom: 25px; background: url("../images/icons/check.png") left top no-repeat; }
 
 #supported { float: right; width: 320px; }
