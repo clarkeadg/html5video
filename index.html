@@ -49,6 +49,7 @@
     <div class="jumbotron1 center">
       <p>Cross-browser HTML5 Video Player made with <a href="http://www.videojs.com" >Video JS</a>. Supports all major browsers plus iOS and Android.</p>
       <div id="video1"></div> 
+      <div id="thumbs"></div>
       <p>
         <a class="btn btn-lg btn-primary" href="docs/get-started.html" role="button">Get Started</a>
         <a class="btn btn-lg btn-primary" href="examples/" role="button">View Examples</a>
@@ -169,7 +170,7 @@
         ,statsApi: 'http://laravel.brainbreaks.net/api/stats/?Version=v2'
         ,enableStats: false        
         ,replayText: 'Replay ?'
-        ,autoplay: true         
+        ,autoplay: false         
         ,loop: true
         ,debug: false
         ,AppSettings: {
@@ -179,6 +180,22 @@
             ,AppPlatform: 'html5'
             ,Skin: 'web'
         } 
+        ,renderPlaylist: function(videos,z) {
+          //console.log(videos)
+          var myHtml = '';
+          $.each(videos,function(i,v){
+            console.log(v)
+            myHtml+= '<a href="#" x-data="'+i+'" ><img src="'+v.poster+'" width="70"height="40" /></a>';
+          });
+          myHtml = $(myHtml);
+          $('#thumbs').html(myHtml);
+          $('#thumbs').find('a').bind('click',function(e){
+            console.log('clicky')
+            e.preventDefault();
+            z.opts.current = parseInt($(this).attr('x-data'));
+            z._initialize();
+          });
+        } 
         ,videos: function(cb) {
           $.ajax({
            // url: 'https://pipes.yahoo.com/pipes/pipe.run?_id=3cf61508d3be9eab5172c92beb9e2d12&_render=json'
@@ -186,7 +203,7 @@
             url: 'http://pipes.yahoo.com/pipes/pipe.run?_id=e678becc06a033cd31f958bf6f7a55ea&_render=json' // top electronic
             ,dataType: 'json'
             ,success: function(data) {
-              console.log(data)
+              //console.log(data)
               var playlist = [];
               $.each(data.value.items,function(i,v){
                 playlist.push({
@@ -210,7 +227,7 @@
                     v.link
                   ]
                   ,type: "youtube"
-                  ,poster : ''
+                  ,poster : v['media:thumbnail'].url
                   ,title : v.title 
                   ,isAd: false
                   ,controls: true 
