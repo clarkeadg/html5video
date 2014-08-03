@@ -22,12 +22,27 @@ a { color: #7fdbff; }
 	text-align: center;
 }
 
+.container.white {
+	background: #fff;
+	width: 100%;
+	padding: 20px 5%;
+}
+
 .container .jumbotron {
 	color: #000;
 	padding: 5px 25px 10px;
 	text-align: left;
 }
 .jumbotron h6 { color: #999; }
+
+.dark {
+	background-color: #262626;
+}
+.supported-section a.dark {
+	display: inline-block;
+	margin: 5px 0;
+	padding: 5px;
+}
 
 .foot { 
 	color: #fff;
@@ -48,4 +63,8 @@ ul#feature_list li { list-style: none; padding-left: 25px; font-size: 120%; line
 #supported { float: right; width: 320px; }
 .supported-section { margin-bottom: 20px; }
 .supported-section a { padding-right: 10px; }
-.supported-section a:last-child { padding-right: 0; }
+
+#issues_link {
+	padding: 10px 0;
+	font-size: 12px;
+}
