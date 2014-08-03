@@ -184,7 +184,7 @@
           //console.log(videos)
           var myHtml = '';
           $.each(videos,function(i,v){
-            console.log(v)
+            //console.log(v)
             myHtml+= '<a href="#" x-data="'+i+'" ><img src="'+v.poster+'" width="70"height="40" /></a>';
           });
           myHtml = $(myHtml);
@@ -199,8 +199,8 @@
         ,videos: function(cb) {
           $.ajax({
            // url: 'https://pipes.yahoo.com/pipes/pipe.run?_id=3cf61508d3be9eab5172c92beb9e2d12&_render=json'
-           // url: 'http://pipes.yahoo.com/pipes/pipe.run?_id=af1731677d0479671fe57893dfdf001c&_render=json' // top all
-            url: 'http://pipes.yahoo.com/pipes/pipe.run?_id=e678becc06a033cd31f958bf6f7a55ea&_render=json' // top electronic
+            url: 'http://pipes.yahoo.com/pipes/pipe.run?_id=af1731677d0479671fe57893dfdf001c&_render=json' // top all
+           // url: 'http://pipes.yahoo.com/pipes/pipe.run?_id=e678becc06a033cd31f958bf6f7a55ea&_render=json' // top electronic
             ,dataType: 'json'
             ,success: function(data) {
               //console.log(data)
