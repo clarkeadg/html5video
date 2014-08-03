@@ -9405,7 +9405,7 @@ function html5video(jcont,opts) {
           if (z.opts.renderPlaylist instanceof Function) {
              z.opts.renderPlaylist(z.opts.videos,z);
           }
-        }
+        }       
     };
 
     z._actions = function() {
@@ -9485,7 +9485,7 @@ function html5video(jcont,opts) {
 
             if (bowser.firefox) {
                 if (z.opts.debug) console.log('firefox');
-                //autoplay = true;
+                autoplay = true;
             }
 
             if (bowser.chrome) {
@@ -9517,6 +9517,14 @@ function html5video(jcont,opts) {
         z.player.ready(function(){
             z._events();
             z._setupControls();
+
+            // if (bowser.ios) {
+              setTimeout(function(){
+                var btn = z.$.cont.find('div.vjs-play-control.vjs-control.vjs-paused');
+                console.log(btn);
+                btn.trigger('click')
+              },5000);             
+            // }
         });
     }; 
 
