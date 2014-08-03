@@ -9339,13 +9339,27 @@ function html5video(jcont,opts) {
     z.$ = {}; 
     z.$.cont = jcont; 
     z.config = config;
-    z.opts = $.extend(true,{},z.config.defaults,opts);        
+    z.opts = $.extend(true,{},z.config.defaults,opts);          
 
     var init = function() {
-        z._inited = true;
-        z._build();
-        z._initialize();
-        z._actions();
+        z._inited = true;  
+        if (z.opts.videos instanceof Function) {
+            z.$.cont.addClass('busy');
+            z.opts.videos(function(data){
+                z.opts.videos = data;
+               // console.log(z.opts.videos)
+                z.$.cont.removeClass('busy');
+                next();
+            });
+        } else {
+            next();
+        }
+
+        function next() {
+            z._build();
+            z._initialize();
+            z._actions();
+        }
     };
 
     z._build = function() {
