@@ -2,7 +2,7 @@ html {
 	/*background: #152B38 url('images/background.png') top left repeat-x; */
 }
 body {
-	background: #152B38 url('images/background.png') top left repeat-x; 
+	background: #152B38 url('../images/background.png') top left repeat-x; 
 	color: #FFF;
 }
 #wrap { background: url("../images/background-highlights.png") center 20px no-repeat; }
