@@ -5,14 +5,8 @@
   <title>HTML5 Video Player | Video JS</title>
 
   <!-- REQUIRED -->
-  <link href="../assets/css/video-js.css" rel="stylesheet" type="text/css">
-  <link href="../assets/css/video-js-resolutions.css" rel="stylesheet" type="text/css">  
   <link href="../assets/css/html5video.css" rel="stylesheet" type="text/css">
   <script src="../assets/js/jquery.min.js"></script>
-  <script src="../assets/js/bowser.min.js"></script>
-  <script src="../assets/js/video.dev.js"></script>  
-  <script src="../assets/js/video-js-resolutions.js"></script>
-  <script src="../assets/js/video-js-youtube.js"></script> 
   <script src="../assets/js/html5video.js"></script>
 
   <!-- OPTIONAL -->
@@ -51,7 +45,46 @@
     </div>
   </div>
 
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">  
+        <div class="jumbotron example_links" >
+          <p><a href="#" x-data="basic-template.html">Basic Template</a></p>
+          <p><a href="#" x-data="2-videos.html">2 Videos</a></p>
+          <p><a href="#" x-data="stat-tracking.html">Stat Tracking</a></p>
+          <p><a href="#" x-data="api-videos.html">Api Videos</a></p>
+          <p><a href="#" x-data="transparent-video.html">Transparent Video</a></p>
+          <p><a href="#" x-data="loop.html">Loop</a></p>
+          <p><a href="#" x-data="2-video-overlay.html">2 Videos Overlay</a></p>
+        </div>
+      </div>
+      <div class="col-md-9">
+        <h2 id="examples_title" >Basic Template</h2>
+        <iframe id="examples_iframe" src="basic-template.html" width="100%" height="800" frameborder="0"></iframe> 
+      </div>
+    </div>
+   
+  </div>
+
 </div>
+
+ <script type="text/javascript">
+    $(function() {        
+      var cont = $('body').find('.example_links');
+      var icont = $('#examples_iframe');
+      var ititle = $('#examples_title');
+      console.log(cont)
+      console.log(icont)
+      cont.find('a').bind('click',function(e){
+        var t = $(this);
+        var path = t.attr('x-data');
+        console.log('click',path)
+        e.preventDefault();
+        ititle.html(t.html());
+        icont.attr('src',path);
+      });
+    });
+  </script>
 
 </body>
 </html>
