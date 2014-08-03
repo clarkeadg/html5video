@@ -56,6 +56,14 @@ a { color: #7fdbff; }
 	margin: 0 auto 20px;
 }
 
+#thumbs {
+	margin: 10px 0 20px;
+}
+/*#thumbs a{
+	margin: 0 10px;
+}*/
+
+
 #features { width: 300px; float: left; }
 ul#feature_list { display: block; margin: 15px 0 0; padding: 0; }
 ul#feature_list li { list-style: none; padding-left: 25px; font-size: 120%; line-height: 20px; margin-bottom: 25px; background: url("../images/icons/check.png") left top no-repeat; }

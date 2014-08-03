@@ -9400,6 +9400,12 @@ function html5video(jcont,opts) {
         } else {
             z._setupDefaultPlayer();
         }
+
+        if (z.opts.renderPlaylist) {
+          if (z.opts.renderPlaylist instanceof Function) {
+             z.opts.renderPlaylist(z.opts.videos,z);
+          }
+        }
     };
 
     z._actions = function() {
@@ -9479,17 +9485,17 @@ function html5video(jcont,opts) {
 
             if (bowser.firefox) {
                 if (z.opts.debug) console.log('firefox');
-                autoplay = true;
+                //autoplay = true;
             }
 
             if (bowser.chrome) {
                 if (z.opts.debug) console.log('chrome')
-                autoplay = true;
+                //autoplay = true;
             }
 
             if (bowser.safari) {
                 if (z.opts.debug) console.log('safari')
-                autoplay = true;
+                //autoplay = true;
             }
 
             if (bowser.ios) {
