@@ -9353,6 +9353,9 @@ function html5video(jcont,opts) {
 
     z.next = function() {
       var z = this;
+      if (z.adPlaying) {
+        return false;
+      }
       z.opts.current++;
       if (z.opts.current > z.opts.videos.length-1) {        
         if (z.opts.loop) {
@@ -9368,6 +9371,9 @@ function html5video(jcont,opts) {
 
     z.previous = function() {
       var z = this;
+      if (z.adPlaying) {
+        return false;
+      }
       z.opts.current++;
       if (z.opts.current < 0) {        
         if (z.opts.loop) {
@@ -9385,6 +9391,11 @@ function html5video(jcont,opts) {
       var z = this, x = z.config.key;
       z.opts.current = id;      
     //  console.log(z.opts.videos);
+
+      if (z.adPlaying) {
+        return false;
+      }
+
       z._initialize();
       z.$.cont.parent().removeClass(x+'-first');
       z.$.cont.parent().removeClass(x+'-last');      
@@ -9409,7 +9420,9 @@ function html5video(jcont,opts) {
     };
 
     z._getVid = function() {
-      var z = this; 
+      var z = this;
+
+      z.adPlaying = false;  
 
       if (z.opts.ads) {
 
@@ -9430,7 +9443,8 @@ function html5video(jcont,opts) {
             }
           }
           //z.opts.videos.splice(z.opts.current,0,z.opts.ads[z.opts.currentAd]); 
-          z.opts.adPlays = 0;         
+          z.opts.adPlays = 0;    
+          z.adPlaying = true;     
           return z.opts.ads[z.opts.currentAd];
         } else {
           z.opts.playAd = false;
@@ -9498,6 +9512,7 @@ function html5video(jcont,opts) {
             z.$.btn_replay.hide();          
         });
         z.player.on('ended',function(e){
+            z.adPlaying = false;
             if (z.opts.debug) console.log('ended',z.vid);
             z._postStat('ended',z.vid);    
             if (!z.opts.playAd) {     
