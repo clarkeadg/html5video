@@ -9321,6 +9321,7 @@ function html5video(jcont,opts) {
             ,replayText: 'Replay Videos ?'
             ,videos: []
             ,current: 0
+            ,adPlays: 0
             ,autoplay: true
             ,loop: false
             ,debug: false
@@ -9334,7 +9335,7 @@ function html5video(jcont,opts) {
         }
     };
 
-    var z = this, init, next, previous, loadVideo, _build, _initialize, _actions, _events, _lastVideoEnded, _killPlayer, _getVideoType, _getVideoType, _setupYoutubePlayer, _setupDefaultPlayer, _startVideos, _setupControls, _setupResolutions, _selectResolution, _postData, _makeSource, _makePlayer;
+    var z = this, init, next, previous, loadVideo, _getVid, _build, _initialize, _actions, _events, _lastVideoEnded, _killPlayer, _getVideoType, _getVideoType, _setupYoutubePlayer, _setupDefaultPlayer, _startVideos, _setupControls, _setupResolutions, _selectResolution, _postData, _makeSource, _makePlayer;
 
     z.$ = {}; 
     z.$.cont = jcont; 
@@ -9382,7 +9383,8 @@ function html5video(jcont,opts) {
 
     z.loadVideo = function(id) {
       var z = this, x = z.config.key;
-      z.opts.current = id;
+      z.opts.current = id;      
+    //  console.log(z.opts.videos);
       z._initialize();
       z.$.cont.parent().removeClass(x+'-first');
       z.$.cont.parent().removeClass(x+'-last');      
@@ -9391,7 +9393,8 @@ function html5video(jcont,opts) {
       }
       if (z.opts.current == z.opts.videos.length-1) {
         z.$.cont.parent().addClass(x+'-last');
-      }  
+      } 
+      $('#video-title').html(z.vid.title); 
     };
 
     z._build = function() {
@@ -9405,6 +9408,38 @@ function html5video(jcont,opts) {
         z.$.btn_replay = z.$.cont.find('div.'+x+'-replay');     
     };
 
+    z._getVid = function() {
+      var z = this; 
+
+      if (z.opts.ads) {
+
+        if (!z.opts.playAd) { 
+          z.opts.playAd = true;  
+          z.opts.adPlays++;
+        //  console.log(z.opts.adPlays,z.opts.adCounter)
+          if (z.opts.adPlays != z.opts.adCounter) {
+            // skip ad
+            return z.opts.videos[z.opts.current]; 
+          }   
+          if (!z.opts.currentAd) {
+            z.opts.currentAd = 0;
+          } else {
+            z.opts.currentAd++;
+            if (z.opts.currentAd > z.opts.ads.length-1) {
+              z.opts.currentAd = 0;
+            }
+          }
+          //z.opts.videos.splice(z.opts.current,0,z.opts.ads[z.opts.currentAd]); 
+          z.opts.adPlays = 0;         
+          return z.opts.ads[z.opts.currentAd];
+        } else {
+          z.opts.playAd = false;
+        }
+      }
+
+      return z.opts.videos[z.opts.current]; 
+    }
+
     z._initialize = function() {
         var z = this;
         if (!z.opts.videos.length) return; 
@@ -9413,7 +9448,7 @@ function html5video(jcont,opts) {
 
         // kill any existing player
         if (z.player) {
-            z.opts.autoplay = true;
+           // z.opts.autoplay = true;
             z._killPlayer(); 
             // put a new player
             z.$.cont.prepend(z._makePlayer(z.opts.id));
@@ -9421,11 +9456,20 @@ function html5video(jcont,opts) {
         } else {
             // set video types
             $.each(z.opts.videos,function(i,v){
-                v.type = z._getVideoType(v.src[0]);
+                //v.type = z._getVideoType(v.src[0]);
+                z.opts.videos[i].type = z._getVideoType(v.src[0]);
+            });
+            $.each(z.opts.ads,function(i,v){
+                //v.type = z._getVideoType(v.src[0]);
+                z.opts.ads[i].type = z._getVideoType(v.src[0]);
             });
         }
 
-        z.currentType = z.opts.videos[z.opts.current].type;
+        z.vid = z._getVid();
+       // console.log(z.vid)
+
+       // z.currentType = z.opts.videos[z.opts.current].type;
+        z.currentType = z.vid.type;
 
         // make a new player
         if (z.currentType == 'youtube') {
@@ -9455,8 +9499,10 @@ function html5video(jcont,opts) {
         });
         z.player.on('ended',function(e){
             if (z.opts.debug) console.log('ended',z.vid);
-            z._postStat('ended',z.vid);
-            z.opts.current++;           
+            z._postStat('ended',z.vid);    
+            if (!z.opts.playAd) {     
+              z.opts.current++;  
+            }                    
             if (z.opts.current == z.opts.videos.length) {               
                 return z._lastVideoEnded();
             };
@@ -9483,8 +9529,10 @@ function html5video(jcont,opts) {
     };
 
     z._getVideoType = function(filename) {
-        var z = this,
-            type = filename.split('.').pop(),
+        var z = this;
+        //console.log(filename);
+        if (!filename) return 'video/mp4';
+        var type = filename.split('.').pop(),
             filetypes = ['mp4','webm'],
             match = false;
         $.each(filetypes,function(i,v){
@@ -9501,7 +9549,7 @@ function html5video(jcont,opts) {
     z._setupYoutubePlayer = function() {
         var z = this;
         if (z.opts.debug) console.log('_setupYoutubePlayer');
-        z.vid = z.opts.videos[z.opts.current]; 
+       // z.vid = z._getVid();
 
         var autoplay = z.opts.autoplay;
 
@@ -9510,17 +9558,17 @@ function html5video(jcont,opts) {
 
             if (bowser.firefox) {
                 if (z.opts.debug) console.log('firefox');
-                //autoplay = true;
+                autoplay = true;
             }
 
             if (bowser.chrome) {
                 if (z.opts.debug) console.log('chrome')
-                //autoplay = true;
+                autoplay = true;
             }
 
             if (bowser.safari) {
                 if (z.opts.debug) console.log('safari')
-                //autoplay = true;
+                autoplay = true;
             }
 
             if (bowser.ios) {
@@ -9553,7 +9601,7 @@ function html5video(jcont,opts) {
               },5000);    */         
             // }
         });
-    }; 
+    };     
 
     z._setupDefaultPlayer = function() {
         var z = this;    
@@ -9565,18 +9613,20 @@ function html5video(jcont,opts) {
         z.player = videojs(z.opts.id);
         z.player.ready(function(){
             z._events();    
-            z._startVideos();
+            z._startVideos();          
         });
     }; 
 
     z._startVideos = function() {   
         var z = this;
-        z.vid = z.opts.videos[z.opts.current];
+     //   z.vid = z._getVid();
         if (z.opts.debug) console.log(z.vid);
         var sources = z._makeSource(z.vid);
-        z.player.src(sources);  
-        z.player.resolutions_.options_['sourceResolutions'] = sources;
-        z._setupResolutions();  
+        z.player.src(sources); 
+        if (z.player.resolutions_) {
+          z.player.resolutions_.options_['sourceResolutions'] = sources;
+          z._setupResolutions();  
+        }
         setTimeout(function() {
             z._setupControls();
         },500);
