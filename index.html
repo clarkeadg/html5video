@@ -191,8 +191,10 @@
             ,Version: '1.4.6'
             ,AppPlatform: 'html5'
             ,Skin: 'web'
-        } 
-        ,videos: [{
+        }
+        ,adCounter: 1
+        ,ads: [
+        {
             "id":"ad1"
             ,"name":"Ad 1"
             ,"contentpack_id":"ad1"
@@ -220,7 +222,40 @@
             ,title : 'Ad 1'  
             ,isAd: true
             ,controls: false 
-          }]
+          }
+        ] 
+        ,videos: []
+        ,videos111: [
+        {
+            "id":"ad1"
+            ,"name":"Ad 1"
+            ,"contentpack_id":"ad1"
+            ,"father_id":null
+            ,"description":"Ad 1"
+            ,"thumbnail":"ContentPacks\/brewers\/brewers_thumb.jpg"
+            ,"filename":""
+            ,"contents_sort_order":"1"
+            ,"video_type":"Ad"
+            ,"duration":"0"
+            ,"tags":""
+            ,"intensity":"1"
+            ,"enabled":"1"
+            ,src: [
+              'assets/videos/TBBBTYB_hopsports.mp4'
+              //,'../assets/videos/TBBBTYB_hopsports.webm'
+            ]
+            ,srcHD: [
+              'assets/videos/TBBBTYB_hopsports.mp4'
+              //'assets/videos/ADA_BEST1.mp4'
+              //,'../assets/videos/ADA_BEST1.webm'
+            ]
+            ,type: "video/mp4"
+            ,poster : 'assets/videos/TBBBTYB_hopsports.jpg'
+            ,title : 'Ad 1'  
+            ,isAd: true
+            ,controls: false 
+          }
+        ]
         ,videos1: [  
           {
             "id":"ad1"
@@ -306,29 +341,36 @@
       $('#next').bind('click',function(e){
         e.preventDefault();
         video1.next();
-        $('#video-title').html(video1.opts.videos[video1.opts.current].title);  
+       // $('#video-title').html(video1.opts.videos[video1.opts.current].title);  
       });
       $('#previous').bind('click',function(e){
         e.preventDefault();
         video1.previous();
-        $('#video-title').html(video1.opts.videos[video1.opts.current].title); 
+     //   $('#video-title').html(video1.opts.videos[video1.opts.current].title); 
       });
 
       getVideos('http://pipes.yahoo.com/pipes/pipe.run?_id=e678becc06a033cd31f958bf6f7a55ea&_render=json',
         function(data) {
-          makePlaylist(data,$('#playlist1'),video1);
+          makePlaylist(data,$('#playlist1'));  
+         // video1.opts.videos = data;
+         // video1.loadVideo(0);
         }
       );
 
       getVideos('http://pipes.yahoo.com/pipes/pipe.run?_id=af1731677d0479671fe57893dfdf001c&_render=json',
         function(data) {
-         makePlaylist(data,$('#playlist2'),video1);
+         makePlaylist(data,$('#playlist2'));
+         //video1.opts.videos = data;
+         //video1.loadVideo(0);
         }
       );
 
       getVideos('https://pipes.yahoo.com/pipes/pipe.run?_id=b3a4c1011716a9b1207714d139663d3a&_render=json',
         function(data) {
-          makePlaylist(data,$('#playlist3'),video1);        
+          makePlaylist(data,$('#playlist3')); 
+          video1.opts.videos = data;
+          video1.loadVideo(0);  
+          video1.opts.adCounter = 2;   
         }
       );
 
@@ -340,32 +382,34 @@
             console.log(data)
             var playlist = [];
             $.each(data.value.items,function(i,v){
-              playlist.push({
-                "id":i
-                ,"name":"video "+i
-                ,"contentpack_id":"youtube"
-                ,"father_id":null
-                ,"description":v.title
-                ,"thumbnail":"ContentPacks\/brewers\/brewers_thumb.jpg"
-                ,"filename":""
-                ,"contents_sort_order":"1"
-                ,"video_type":"youtube"
-                ,"duration":"0"
-                ,"tags":""
-                ,"intensity":"1"
-                ,"enabled":"1"
-                ,src: [
-                  v.link
-                ]
-                ,srcHD: [
-                  v.link
-                ]
-                ,type: "youtube"
-                ,poster : v['media:thumbnail'].url
-                ,title : v.author + ' - ' + v.title 
-                ,isAd: false
-                ,controls: true 
-              })
+              if (v.link) {
+                playlist.push({
+                  "id":i
+                  ,"name":"video "+i
+                  ,"contentpack_id":"youtube"
+                  ,"father_id":null
+                  ,"description":v.title
+                  ,"thumbnail":"ContentPacks\/brewers\/brewers_thumb.jpg"
+                  ,"filename":""
+                  ,"contents_sort_order":"1"
+                  ,"video_type":"youtube"
+                  ,"duration":"0"
+                  ,"tags":""
+                  ,"intensity":"1"
+                  ,"enabled":"1"
+                  ,src: [
+                    v.link
+                  ]
+                  ,srcHD: [
+                    v.link
+                  ]
+                  ,type: "youtube"
+                  ,poster : v['media:thumbnail'].url
+                  ,title : v.author + ' - ' + v.title 
+                  ,isAd: false
+                  ,controls: true 
+                })
+              }
             });
             cb(playlist);
           }
@@ -375,22 +419,27 @@
         });          
       }
 
-      function makePlaylist(videos,jcont,z) {
+      function clickThumb(t,videos) {
+        console.log('clicky')
+        var id = parseInt(t.attr('x-data'));
+        //console.log(id)
+        //console.log(videos)
+        video1.opts.videos = videos;
+        video1.loadVideo(id);
+       // $('#video-title').html(t.attr('title'));
+      }
+
+      function makePlaylist(videos,jcont) {
         var myHtml = '';
         $.each(videos,function(i,v){
           //console.log(v)
-          myHtml+= '<a href="#" x-data="'+i+'" data-toggle="tooltip" data-placement="top" title="'+v.title+'"><img src="'+v.poster+'" width="70"height="40" /></a>';
+          myHtml+= '<a href="#" class="index-'+i+'" x-data="'+i+'" data-toggle="tooltip" data-placement="top" title="'+v.title+'"><img src="'+v.poster+'" width="70"height="40" /></a>';
         });
         myHtml = $(myHtml);
         jcont.html(myHtml);
         jcont.find('a').bind('click',function(e){
-          console.log('clicky')
           e.preventDefault();
-          var t = $(this);
-          var id = parseInt(t.attr('x-data'));
-          z.opts.videos = videos;
-          z.loadVideo(id);
-          $('#video-title').html(t.attr('title'));      
+          clickThumb($(this),videos);      
         });
       }
 
