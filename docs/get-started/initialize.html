@@ -1,19 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8" />
-  <title>HTML5 Video Player | Video JS</title>
-
-  <!-- REQUIRED -->
-  <link href="../assets/css/html5video.css" rel="stylesheet" type="text/css">
-  <script src="../assets/js/jquery.min.js"></script>
-  <script src="../assets/js/html5video.js"></script>
-
-</head>
-<body>
-
-<div id="video1"></div> 
-
 <script type="text/javascript">
   $(function() {        
     videojs.options.flash.swf = "../assets/flash/video-js.swf";      
@@ -21,12 +5,12 @@
       id: 'video-1' //must have a unique idea if you want more than 1 video on a page
       ,width: 640
       ,height: 390
-      ,statsApi: 'http://example.com/api/stats'
+      ,statsApi: 'http://example.com/stats'
       ,enableStats: false        
       ,replayText: 'Replay ?'
       ,autoplay: true         
       ,loop: false
-      ,debug: true
+      ,debug: false
       ,AppSettings: {
         UserID: "brian"
           ,AccountID: 1
@@ -54,6 +38,3 @@
     });
   });
 </script>
-
-</body>
-</html>

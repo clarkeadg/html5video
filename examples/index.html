@@ -9,6 +9,8 @@
   <script src="../assets/js/jquery.min.js"></script>
   <script src="../assets/js/html5video.js"></script>
 
+  <script src="../assets/demo/js/codesnippet.js"></script>
+
   <!-- OPTIONAL -->
   <link href="../assets/demo/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">  
   <script src="../assets/demo/bootstrap/js/bootstrap.min.js"></script>
@@ -60,7 +62,9 @@
       </div>
       <div class="col-md-9">
         <h2 id="examples_title" >Basic Template</h2>
-        <iframe id="examples_iframe" src="basic-template.html" width="100%" height="800" frameborder="0"></iframe> 
+        <iframe id="examples_iframe" src="basic-template.html" width="100%" height="300" frameborder="0"></iframe> 
+        <h2>Example Code</h2>
+        <div id="codesnippet" ></div>
       </div>
     </div>
    
@@ -68,23 +72,25 @@
 
 </div>
 
- <script type="text/javascript">
-    $(function() {        
-      var cont = $('body').find('.example_links');
-      var icont = $('#examples_iframe');
-      var ititle = $('#examples_title');
-      console.log(cont)
-      console.log(icont)
-      cont.find('a').bind('click',function(e){
-        var t = $(this);
-        var path = t.attr('x-data');
-        console.log('click',path)
-        e.preventDefault();
-        ititle.html(t.html());
-        icont.attr('src',path);
-      });
+<script type="text/javascript">
+  $(function() {        
+    var cont = $('body').find('.example_links');
+    var icont = $('#examples_iframe');
+    var ititle = $('#examples_title');
+    console.log(cont)
+    console.log(icont)
+    cont.find('a').bind('click',function(e){
+      var t = $(this);
+      var path = t.attr('x-data');
+      console.log('click',path)
+      e.preventDefault();
+      ititle.html(t.html());
+      icont.attr('src',path);
+      codeSnipet(path,$('#codesnippet'));
     });
-  </script>
+    codeSnipet('basic-template.html',$('#codesnippet'));
+  });
+</script>
 
 </body>
 </html>
