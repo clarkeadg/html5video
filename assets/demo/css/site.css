@@ -8,7 +8,13 @@ body {
 #wrap { background: url("../images/background-highlights.png") center 20px no-repeat; }
 /*h1 { font-size: 360%; line-height: 1; margin-bottom: 10px; text-align: left; letter-spacing: 5px; }
 h2 { font-size: 200%; line-height: 1; margin-bottom: 10px; }*/
-h6 { font-size: 100%; text-transform: uppercase; margin-bottom: 10px; color: #dedede; }
+h6 { 
+	font-size: 100%;
+	text-transform: uppercase;
+	margin-bottom: 10px;
+	color: #dedede;
+	letter-spacing: 0.2em;
+}
 p.tagline { text-align: center; font-size: 120%; line-height: 1; }
 
 p { font-size: 1.2em; line-height: 1.5; margin-bottom: 20px; }
