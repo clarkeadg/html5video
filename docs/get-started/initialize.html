@@ -1,0 +1,40 @@
+<script type="text/javascript">
+  $(function() {        
+    videojs.options.flash.swf = "../assets/flash/video-js.swf";      
+    var video1 = new html5video($('#video1'),{
+      id: 'video-1' //must have a unique idea if you want more than 1 video on a page
+      ,width: 640
+      ,height: 390
+      ,statsApi: 'http://example.com/stats'
+      ,enableStats: false        
+      ,replayText: 'Replay ?'
+      ,autoplay: true         
+      ,loop: false
+      ,debug: false
+      ,AppSettings: {
+        UserID: "brian"
+          ,AccountID: 1
+          ,Version: '1.4.6'
+          ,AppPlatform: 'html5'
+          ,Skin: 'web'
+      } 
+      ,videos: [  
+        {
+          src: [
+            'http://video-js.zencoder.com/oceans-clip.mp4'
+            //,'http://video-js.zencoder.com/oceans-clip.webm'
+            //,'http://video-js.zencoder.com/oceans-clip.ogv'
+          ]
+          ,srcHD: [
+            'http://video-js.zencoder.com/oceans-clip.mp4'
+            //,'http://video-js.zencoder.com/oceans-clip.webm'
+            //,'http://video-js.zencoder.com/oceans-clip.ogv'
+          ] 
+          ,poster: "http://video-js.zencoder.com/oceans-clip.png"
+          ,isAd: false
+          ,controls: true 
+        }
+      ]
+    });
+  });
+</script>

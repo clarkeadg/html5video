@@ -9,6 +9,8 @@
   <script src="../assets/js/jquery.min.js"></script>
   <script src="../assets/js/html5video.js"></script>
 
+  <script src="../assets/demo/js/codesnippet.js"></script>
+
   <!-- OPTIONAL -->
   <link href="../assets/demo/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">  
   <script src="../assets/demo/bootstrap/js/bootstrap.min.js"></script>
@@ -48,6 +50,7 @@
   <div class="container" >
     <div class="row" >
       <div class="col-md-12" >
+        
         <div class="jumbotron" >
           <h2>Download</h2>
           <p>Click the button below to download all the files for Html5 Video.</p>
@@ -55,56 +58,46 @@
             <a class="btn btn-lg btn-primary" role="button" href="https://github.com/clarkeadg/html5video/zipball/master">Download Html5video</a>
           </p>
         </div>
+
         <div class="jumbotron" >
           <h3>Include CSS and Javascript</h3>
           <p>Include these links on your page.</p>
-          <div class="highlight"><pre><code class="html">
-<span class="c">&lt;!-- CSS --&gt;</span>
-<span class="nt">&lt;link </span><span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href=</span><span class="s">&quot;../assets/css/html5video.css&quot;</span><span class="nt">&gt;</span>
-
-<span class="c">&lt;!-- JavaScript --&gt;</span>
-<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;../assets/js/jquery.min.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
-<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;../assets/js/html5video.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
-
-</code></pre></div>
-        </div>  
+          <div id="code_snipet1"></div>  
+        </div>
 
         <div class="jumbotron" >
           <h3>Add a Video</h3>
           <p>Add a video element to the page.</p>
-          <div class="highlight"><pre><code class="html">
-
-
-</code></pre></div>
-
-        </div> 
-
+          <div id="code_snipet2"></div>  
+        </div>
+          
         <div class="jumbotron" >
           <h3>Initialize the Player</h3>
           <p>Add javascript to initialize the player.</p>
-          <div class="highlight"><pre><code class="html">
-
-
-</code></pre></div>
-
+          <div id="code_snipet3"></div>  
         </div> 
 
         <div class="jumbotron" >
           <h3>Basic Template</h3>
           <p>Start with a basic template.</p>
-          <div class="highlight"><pre><code class="html">
-
-
-</code></pre></div>
-
+          <div id="code_snipet4"></div>  
         </div> 
-
 
       </div>      
     </div>
   </div>
 
 </div>
+<script type="text/javascript">
+  $(function() {  
+    
+    codeSnipet('get-started/include.html',$('#code_snipet1'));
+    codeSnipet('get-started/video-element.html',$('#code_snipet2'));
+    codeSnipet('get-started/initialize.html',$('#code_snipet3'));
+    codeSnipet('../examples/basic-template.html',$('#code_snipet4'));
+
+  })
+</script>
 
 </body>
 </html>
