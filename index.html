@@ -259,7 +259,7 @@
           makePlaylist(data,$('#playlist3')); 
           video1.opts.videos = data;
           video1.loadVideo(0);  
-          video1.opts.adCounter = 1;   
+          video1.opts.adCounter = 2;   
         }
       );
 
@@ -331,6 +331,24 @@
           clickThumb($(this),videos);      
         });
       }
+
+      /* EVENTS */
+      $('#video1').on('firstplay',function(e){
+        console.log('firstplay',video1.current_video); 
+        $('#video-title').html(video1.current_video.title);
+      });
+
+      $('#video1').on('play',function(e){
+        console.log('play',video1.current_video);         
+      });
+
+      $('#video1').on('ended',function(e){
+        console.log('ended',video1.current_video); 
+      });
+
+      $('#video1').on('lastvideoended',function(e){
+        console.log('lastvideoended',video1.current_video); 
+      });
 
     });
   </script>

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>HTML5 Video Player | Video JS</title>
+
+  <!-- REQUIRED -->
+  <link href="../assets/css/html5video.css" rel="stylesheet" type="text/css">
+  <script src="../assets/js/jquery.min.js"></script>
+  <script src="../assets/js/html5video.js"></script>
+  <link href="../assets/demo/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css">
+
+  <style>
+    .html5video {
+      width: 640px;
+      height: 390px;
+      margin: 0 auto 5px;
+    }
+    #video-cont {
+      position: relative;      
+    }
+    #video-cont h6 {
+      text-align: left;
+      padding: 0 10%;
+    }
+    #video-title {
+      text-align: center;
+    }
+    .thumbs {
+      margin: 10px auto 20px;
+      width: 640px;
+    }
+    .thumbs a {
+      display: inline-block;
+      margin: 0 2px;
+      border: 1px solid #bbb;
+    }
+    .html5video-loading #previous
+    ,.html5video-loading #next {
+      display: none;
+    }
+    #video-cont.html5video-first #previous {
+      display: none;
+    }
+    #video-cont.html5video-last #next {
+      display: none;
+    }
+    #next {
+      position: absolute;
+      right: 60px;
+      top: 160px;
+      font-size: 64px;
+    }
+    #previous {
+      position: absolute;
+      left: 60px;
+      top: 160px;
+      font-size: 64px;
+    }
+    h6 { 
+    font-size: 100%;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    letter-spacing: 0.2em;
+  }
+  </style>
+
+</head>
+<body>
+
+<div id="video-cont" >
+  <div id="video1"></div> 
+  <div id="video-title"></div> 
+  <h6>Top Electronic</h6>
+  <div id="playlist1" class="thumbs"></div>
+  <h6>Top Pop</h6>
+  <div id="playlist2" class="thumbs"></div>
+  <h6>Top Alternative</h6>
+  <div id="playlist3" class="thumbs"></div>
+  <div id="next"><a href="#" ><i class="fa fa-chevron-right"></i></a></div>
+  <div id="previous"><a href="#" ><i class="fa fa-chevron-left"></i></a></div>
+</div>
+
+<script type="text/javascript">
+  $(function() {        
+      videojs.options.flash.swf = "../assets/flash/video-js.swf";      
+      var video1 = new html5video($('#video1'),{
+        id: 'video-1' //must have a unique idea if you want more than 1 video on a page
+        ,width: 640
+        ,height: 390
+        ,statsApi: 'http://laravel.brainbreaks.net/api/stats/?Version=v2'
+        ,enableStats: false        
+        ,replayText: 'Replay ?'
+        ,autoplay: true         
+        ,loop: true
+        ,debug: false
+        ,AppSettings: {
+          UserID: "brian"
+            ,AccountID: 1
+            ,Version: '1.4.6'
+            ,AppPlatform: 'html5'
+            ,Skin: 'web'
+        }
+        ,adCounter: 1
+        ,ads: [
+        {
+            "id":"ad1"
+            ,"name":"Ad 1"
+            ,"contentpack_id":"ad1"
+            ,"father_id":null
+            ,"description":"Ad 1"
+            ,"thumbnail":"ContentPacks\/brewers\/brewers_thumb.jpg"
+            ,"filename":""
+            ,"contents_sort_order":"1"
+            ,"video_type":"Ad"
+            ,"duration":"0"
+            ,"tags":""
+            ,"intensity":"1"
+            ,"enabled":"1"
+            ,src: [
+              '../assets/videos/TBBBTYB_hopsports.mp4'
+              //,'../assets/videos/TBBBTYB_hopsports.webm'
+            ]
+            ,srcHD: [
+              '../assets/videos/TBBBTYB_hopsports.mp4'
+              //'assets/videos/ADA_BEST1.mp4'
+              //,'../assets/videos/ADA_BEST1.webm'
+            ]
+            ,type: "video/mp4"
+            ,poster : 'assets/videos/TBBBTYB_hopsports.jpg'
+            ,title : 'Ad 1'  
+            ,isAd: true
+            ,controls: false 
+          }
+        ] 
+        ,videos: []
+      });
+      $('#next').bind('click',function(e){
+        e.preventDefault();
+        video1.next();
+       // $('#video-title').html(video1.opts.videos[video1.opts.current].title);  
+      });
+      $('#previous').bind('click',function(e){
+        e.preventDefault();
+        video1.previous();
+     //   $('#video-title').html(video1.opts.videos[video1.opts.current].title); 
+      });
+
+      getVideos('http://pipes.yahoo.com/pipes/pipe.run?_id=e678becc06a033cd31f958bf6f7a55ea&_render=json',
+        function(data) {
+          makePlaylist(data,$('#playlist1'));  
+         // video1.opts.videos = data;
+         // video1.loadVideo(0);
+        }
+      );
+
+      getVideos('http://pipes.yahoo.com/pipes/pipe.run?_id=af1731677d0479671fe57893dfdf001c&_render=json',
+        function(data) {
+         makePlaylist(data,$('#playlist2'));
+         //video1.opts.videos = data;
+         //video1.loadVideo(0);
+        }
+      );
+
+      getVideos('https://pipes.yahoo.com/pipes/pipe.run?_id=b3a4c1011716a9b1207714d139663d3a&_render=json',
+        function(data) {
+          makePlaylist(data,$('#playlist3')); 
+          video1.opts.videos = data;
+          video1.loadVideo(0);  
+          video1.opts.adCounter = 2;   
+        }
+      );
+
+      function getVideos(url,cb) {
+        $.ajax({
+          url: url
+          ,dataType: 'json'
+          ,success: function(data) {
+            console.log(data)
+            var playlist = [];
+            $.each(data.value.items,function(i,v){
+              if (v.link) {
+                playlist.push({
+                  "id":i
+                  ,"name":"video "+i
+                  ,"contentpack_id":"youtube"
+                  ,"father_id":null
+                  ,"description":v.title
+                  ,"thumbnail":"ContentPacks\/brewers\/brewers_thumb.jpg"
+                  ,"filename":""
+                  ,"contents_sort_order":"1"
+                  ,"video_type":"youtube"
+                  ,"duration":"0"
+                  ,"tags":""
+                  ,"intensity":"1"
+                  ,"enabled":"1"
+                  ,src: [
+                    v.link
+                  ]
+                  ,srcHD: [
+                    v.link
+                  ]
+                  ,type: "youtube"
+                  ,poster : v['media:thumbnail'].url
+                  ,title : v.author + ' - ' + v.title 
+                  ,isAd: false
+                  ,controls: true 
+                })
+              }
+            });
+            cb(playlist);
+          }
+          ,error: function(err) {
+            console.log(err)
+          }
+        });          
+      }
+
+      function clickThumb(t,videos) {
+        console.log('clicky')
+        var id = parseInt(t.attr('x-data'));
+        //console.log(id)
+        //console.log(videos)
+        video1.opts.videos = videos;
+        video1.loadVideo(id);
+       // $('#video-title').html(t.attr('title'));
+      }
+
+      function makePlaylist(videos,jcont) {
+        var myHtml = '';
+        $.each(videos,function(i,v){
+          //console.log(v)
+          myHtml+= '<a href="#" class="index-'+i+'" x-data="'+i+'" data-toggle="tooltip" data-placement="top" title="'+v.title+'"><img src="'+v.poster+'" width="70"height="40" /></a>';
+        });
+        myHtml = $(myHtml);
+        jcont.html(myHtml);
+        jcont.find('a').bind('click',function(e){
+          e.preventDefault();
+          clickThumb($(this),videos);      
+        });
+      }
+
+      /* EVENTS */
+      $('#video1').on('firstplay',function(e){
+        console.log('firstplay',video1.current_video); 
+        $('#video-title').html(video1.current_video.title);
+      });
+
+      $('#video1').on('play',function(e){
+        console.log('play',video1.current_video);         
+      });
+
+      $('#video1').on('ended',function(e){
+        console.log('ended',video1.current_video); 
+      });
+
+      $('#video1').on('lastvideoended',function(e){
+        console.log('lastvideoended',video1.current_video); 
+      });
+    });
+</script>
+
+</body>
+</html>
