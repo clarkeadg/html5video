@@ -9640,15 +9640,18 @@ function html5video(jcont,opts) {
     };
 
     z._events = function() {
-        var z = this;   
-        z.player.on('firstplay',function(e){
+        var z = this;
+
+        z.player.on('firstplay',function(e){            
             if (z.opts.debug) console.log('firstplay',z.vid); 
+            z.$.cont.trigger('firstplay'); 
             // funky stuff going on here because of the resolutions plugin
-            if (z.last_vid != z.vid.src) {          
+            if (z.last_vid != z.vid.src ) {                       
               z._postStat('firstplay',z.vid);
             }
         });
         z.player.on('play',function(e){
+            z.$.cont.trigger('play');
             z.$.btn_replay.hide();  
             z.last_vid = z.vid.src;
             z.current_video = z.vid;        
@@ -9657,13 +9660,15 @@ function html5video(jcont,opts) {
             z.$.btn_replay.hide();          
         });
         z.player.on('ended',function(e){
+            z.$.cont.trigger('ended');
             z.adPlaying = false;
             if (z.opts.debug) console.log('ended',z.vid);
             z._postStat('ended',z.vid);    
             if (!z.opts.playAd) {     
               z.opts.current++;  
             }                    
-            if (z.opts.current == z.opts.videos.length) {               
+            if (z.opts.current == z.opts.videos.length) { 
+              z.$.cont.trigger('lastvideoended');              
                 return z._lastVideoEnded();
             };
             z.loadVideo(z.opts.current);
@@ -9976,6 +9981,10 @@ function html5video(jcont,opts) {
         ';  
         return myHtml;
     };
+
+    if (z.opts.postStat && z.opts.postStat instanceof Function) {
+      z._postStat = z.opts.postStat;
+    }
 
     if (z.opts.videos instanceof Function) {
       z.opts.videos(function(data){

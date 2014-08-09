@@ -13,6 +13,7 @@
 <body>
 
 <div id="video1"></div> 
+<div id="video1-title"></div> 
 
 <script type="text/javascript">
   $(function() {        
@@ -26,7 +27,7 @@
       ,replayText: 'Replay ?'
       ,autoplay: true         
       ,loop: false
-      ,debug: true
+      ,debug: false
       ,AppSettings: {
         UserID: "brian"
           ,AccountID: 1
@@ -86,7 +87,7 @@
             'http://www.youtube.com/watch?v=f9aMmSzIHnI'
           ]
           ,poster : 'assets/videos/TBBBTYB_hopsports.jpg'
-          ,title : 'Ad 1'  
+          ,title : 'Youtube Video'  
           ,isAd: false
           ,controls: true 
         }
@@ -111,7 +112,7 @@
             '../assets/videos/TBBBTYB_hopsports.mp4'
           ]
           ,poster : '../assets/videos/TBBBTYB_hopsports.jpg'
-          ,title : 'Ad 1'  
+          ,title : 'Ad 2'  
           ,isAd: true
           ,controls: false 
         } 
@@ -119,25 +120,21 @@
     });
 
     /* EVENTS */
-    video1.player.on('firstplay',function(e){
-      console.log(e)
+    $('#video1').on('firstplay',function(e){
       console.log('firstplay',video1.current_video); 
-      alert('firstplay'+video1.current_video.src) 
+      $('#video1-title').html(video1.current_video.title);
     });
 
-    /*video1.player.on('play',function(e){
-      console.log('play',video1.current_video);  
-      alert('play'+video1.current_video.src)          
-    });*/
+    $('#video1').on('play',function(e){
+      console.log('play',video1.current_video);         
+    });
 
-    video1.player.on('ended',function(e){
-      console.log(e)
+    $('#video1').on('ended',function(e){
       console.log('ended',video1.current_video); 
-      alert('ended'+video1.current_video.src) 
-      if (video1.opts.current == video1.opts.videos.length) {               
-        console.log('lastVideoEnded',video1.current_video); 
-        alert('lastVideoEnded'+video1.current_video.src) 
-      };
+    });
+
+    $('#video1').on('lastvideoended',function(e){
+      console.log('lastvideoended',video1.current_video); 
     });
 
   });
