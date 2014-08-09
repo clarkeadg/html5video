@@ -119,20 +119,29 @@
 
     /* EVENTS */
     video1.player.on('firstplay',function(e){
-      console.log('firstplay',video1.vid);  
+      console.log('firstplay',video1.current_video); 
+      alert('firstplay'+video1.current_video.src) 
     });
 
     video1.player.on('play',function(e){
-      console.log('play',video1.vid);           
+      console.log('play',video1.current_video);  
+      alert('play'+video1.current_video.src)          
+    });
+
+    video1.player.on('pause',function(e){
+      console.log('pause',video1.current_video); 
+      alert('pause'+video1.current_video.src)           
     });
 
     video1.player.on('ended',function(e){
-      console.log('ended',video1.vid); 
+      console.log('ended',video1.current_video); 
+      alert('ended'+video1.current_video.src) 
       if (video1.opts.current == z.opts.videos.length) {               
-        console.log('lastVideoEnded',video1.vid); 
+        console.log('lastVideoEnded',video1.current_video); 
+        alert('lastVideoEnded'+video1.current_video.src) 
       };
     }); 
-    
+
   });
 </script>
 

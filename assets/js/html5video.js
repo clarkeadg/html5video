@@ -9741,6 +9741,8 @@ function html5video(jcont,opts) {
 
         //console.log(z.opts.id,z.vid.src[0])
 
+        z.current_video = z.vid;
+
         z.player = videojs(z.opts.id, { 
             "techOrder": ["youtube"]
             ,"src": z.vid.src[0]
@@ -9797,6 +9799,7 @@ function html5video(jcont,opts) {
           z._setupResolutions();  
           var mySrc = z._selectResolution();
           //console.log('mySrc',mySrc);
+          z.current_video = mySrc;
           z.player.src(mySrc.src); 
         }
         setTimeout(function() {
