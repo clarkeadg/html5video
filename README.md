@@ -20,6 +20,7 @@ Features
 
 Thanks to:
   - jQuery (http://jquery.com)
+  - jQuery Cookie (https://github.com/carhartl/jquery-cookie)
   - Bowser (https://github.com/ded/bowser)
   - VideoJS (http://videojs.com) (https://github.com/videojs)   
   - VideoJS Plugins (https://github.com/videojs/video.js/wiki/Plugins)  
