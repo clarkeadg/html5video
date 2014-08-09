@@ -9642,11 +9642,16 @@ function html5video(jcont,opts) {
     z._events = function() {
         var z = this;   
         z.player.on('firstplay',function(e){
-            if (z.opts.debug) console.log('firstplay',z.vid);           
-            z._postStat('firstplay',z.vid);
+            if (z.opts.debug) console.log('firstplay',z.vid); 
+            // funky stuff going on here because of the resolutions plugin
+            if (z.last_vid != z.vid.src) {          
+              z._postStat('firstplay',z.vid);
+            }
         });
         z.player.on('play',function(e){
-            z.$.btn_replay.hide();          
+            z.$.btn_replay.hide();  
+            z.last_vid = z.vid.src;
+            z.current_video = z.vid;        
         });
         z.player.on('loadeddata',function(e){
             z.$.btn_replay.hide();          
@@ -9782,6 +9787,7 @@ function html5video(jcont,opts) {
         if (z.opts.debug) console.log(z.vid);
         var sources = z._makeSource(z.vid);
         var mySource = z.player.src(sources).cache_.src; 
+       // if (z.opts.debug) console.log('mySource',mySource);
         var myType = z._getVideoType(mySource);
         var rsources = [];
         $.each(sources,function(i,v){
@@ -9790,18 +9796,16 @@ function html5video(jcont,opts) {
             rsources.push(v);
           }
         });
-        if (z.opts.debug) console.log('rsources',rsources);
-       
-        //var mySource = z.player.techGet('src');
-        if (z.opts.debug) console.log('mySource',mySource);
-        if (z.player.resolutions_) {
-          z.player.resolutions_.options_['sourceResolutions'] = rsources;
-          z._setupResolutions();  
-          var mySrc = z._selectResolution();
+        if (z.opts.debug) console.log('rsources',rsources);         
+        
+        if (z.player.resolutions_) { 
+          var mySrc = z._selectResolution(rsources);
+          z._setupResolutions(); 
           //console.log('mySrc',mySrc);
           z.current_video = mySrc;
           z.player.src(mySrc.src); 
         }
+
         setTimeout(function() {
             z._setupControls();
         },500);
@@ -9826,10 +9830,10 @@ function html5video(jcont,opts) {
         z.player.controlBar.addChild(z.resolutionsButton);
     }; 
 
-    z._selectResolution = function() {
+    z._selectResolution = function(videos) {
         var z = this, 
             //source = z.player.resolutions_.selectSource(z.player.options_['sources']);
-            source = z.player.resolutions_.selectSource(z.player.resolutions_.options_['sourceResolutions']);
+            source = z.player.resolutions_.selectSource(videos);
         return source;
     }; 
 
@@ -9842,7 +9846,13 @@ function html5video(jcont,opts) {
         send.account_id = z.opts.AppSettings.AccountID;     
         send.Version = z.opts.AppSettings.Version
         send.medium = z.opts.AppSettings.AppPlatform;
-        send.skin = z.opts.AppSettings.Skin;    
+        send.skin = z.opts.AppSettings.Skin;  
+
+        var vidSrc = z.player.cache_.src;
+        if (vid.type == 'youtube') {
+          vidSrc = z.player.options_.src;
+        }
+
         switch(event_id) {
             case "firstplay":
                 if (z.opts.debug) console.log("ad",vid.isAd)
@@ -9855,7 +9865,7 @@ function html5video(jcont,opts) {
                     send.InstructorDesc = "";
                     send.InstructorURL = "";
                     send.DistractionDesc = ""
-                    send.DistractionURL = z.player.options_.src;
+                    send.DistractionURL = vidSrc;
                     send.DistractionType = "";
                     send.contents_id = vid.id;  
                 } else {
@@ -9867,7 +9877,7 @@ function html5video(jcont,opts) {
                     send.InstructorDesc = "";
                     send.InstructorURL = "";
                     send.DistractionDesc = vid.description;
-                    send.DistractionURL = z.player.options_.src;
+                    send.DistractionURL = vidSrc;
                     send.DistractionType = "";
                     send.contents_id = vid.id;  
                 }
@@ -9883,7 +9893,7 @@ function html5video(jcont,opts) {
                     send.InstructorDesc = "";
                     send.InstructorURL = "";
                     send.DistractionDesc = ""
-                    send.DistractionURL = z.player.options_.src;
+                    send.DistractionURL = vidSrc;
                     send.DistractionType = "";
                     send.contents_id = vid.id;
                 } else {
@@ -9895,7 +9905,7 @@ function html5video(jcont,opts) {
                     send.InstructorDesc = "";
                     send.InstructorURL = "";
                     send.DistractionDesc = vid.description;
-                    send.DistractionURL = z.player.options_.src;
+                    send.DistractionURL = vidSrc;
                     send.DistractionType = "";
                     send.contents_id = vid.id;  
                 }

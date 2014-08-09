@@ -26,7 +26,7 @@
       ,replayText: 'Replay ?'
       ,autoplay: true         
       ,loop: false
-      ,debug: false
+      ,debug: true
       ,AppSettings: {
         UserID: "brian"
           ,AccountID: 1
@@ -50,19 +50,20 @@
           ,"intensity":"1"
           ,"enabled":"1"
           ,src: [
-            '../assets/videos/TBBBTYB_hopsports.mp4'
-            //,'../assets/videos/TBBBTYB_hopsports.webm'
+            'http://video-js.zencoder.com/oceans-clip.mp4'
+            ,'http://video-js.zencoder.com/oceans-clip.webm'
+            //,'http://video-js.zencoder.com/oceans-clip.ogv'
           ]
           ,srcHD: [
             '../assets/videos/TBBBTYB_hopsports.mp4'
-            //'assets/videos/ADA_BEST1.mp4'
-            //,'../assets/videos/ADA_BEST1.webm'
-          ]
+            ,'../assets/videos/TBBBTYB_hopsports.webm'
+            //,'../assets/videos/TBBBTYB_hopsports.ogv'
+          ] 
           ,type: "video/mp4"
           ,poster : '../assets/videos/TBBBTYB_hopsports.jpg'
           ,title : 'Ad 1'  
           ,isAd: true
-          ,controls: false 
+          ,controls: true 
         }
         ,{
           "id":"OyYoyYoy"
@@ -119,28 +120,25 @@
 
     /* EVENTS */
     video1.player.on('firstplay',function(e){
+      console.log(e)
       console.log('firstplay',video1.current_video); 
       alert('firstplay'+video1.current_video.src) 
     });
 
-    video1.player.on('play',function(e){
+    /*video1.player.on('play',function(e){
       console.log('play',video1.current_video);  
       alert('play'+video1.current_video.src)          
-    });
-
-    video1.player.on('pause',function(e){
-      console.log('pause',video1.current_video); 
-      alert('pause'+video1.current_video.src)           
-    });
+    });*/
 
     video1.player.on('ended',function(e){
+      console.log(e)
       console.log('ended',video1.current_video); 
       alert('ended'+video1.current_video.src) 
-      if (video1.opts.current == z.opts.videos.length) {               
+      if (video1.opts.current == video1.opts.videos.length) {               
         console.log('lastVideoEnded',video1.current_video); 
         alert('lastVideoEnded'+video1.current_video.src) 
       };
-    }); 
+    });
 
   });
 </script>
