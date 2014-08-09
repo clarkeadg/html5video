@@ -3,12 +3,132 @@
   - jQuery (http://jquery.com)
 
   Included:
+  - jQuery Cookie (https://github.com/carhartl/jquery-cookie)
   - Bowser (https://github.com/ded/bowser)
   - VideoJS (http://videojs.com) (https://github.com/videojs)  	
   - VideoJS Plugins (https://github.com/videojs/video.js/wiki/Plugins) 	
   	- video-js-resolutions (https://github.com/vidcaster/video-js-resolutions)
   	- videojs-youtube (https://github.com/eXon/videojs-youtube) 		
 */
+
+/*!
+ * jQuery Cookie Plugin v1.4.1
+ * https://github.com/carhartl/jquery-cookie
+ *
+ * Copyright 2006, 2014 Klaus Hartl
+ * Released under the MIT license
+ */
+(function (factory) {
+  if (typeof define === 'function' && define.amd) {
+    // AMD
+    define(['jquery'], factory);
+  } else if (typeof exports === 'object') {
+    // CommonJS
+    factory(require('jquery'));
+  } else {
+    // Browser globals
+    factory(jQuery);
+  }
+}(function ($) {
+
+  var pluses = /\+/g;
+
+  function encode(s) {
+    return config.raw ? s : encodeURIComponent(s);
+  }
+
+  function decode(s) {
+    return config.raw ? s : decodeURIComponent(s);
+  }
+
+  function stringifyCookieValue(value) {
+    return encode(config.json ? JSON.stringify(value) : String(value));
+  }
+
+  function parseCookieValue(s) {
+    if (s.indexOf('"') === 0) {
+      // This is a quoted cookie as according to RFC2068, unescape...
+      s = s.slice(1, -1).replace(/\\"/g, '"').replace(/\\\\/g, '\\');
+    }
+
+    try {
+      // Replace server-side written pluses with spaces.
+      // If we can't decode the cookie, ignore it, it's unusable.
+      // If we can't parse the cookie, ignore it, it's unusable.
+      s = decodeURIComponent(s.replace(pluses, ' '));
+      return config.json ? JSON.parse(s) : s;
+    } catch(e) {}
+  }
+
+  function read(s, converter) {
+    var value = config.raw ? s : parseCookieValue(s);
+    return $.isFunction(converter) ? converter(value) : value;
+  }
+
+  var config = $.cookie = function (key, value, options) {
+
+    // Write
+
+    if (arguments.length > 1 && !$.isFunction(value)) {
+      options = $.extend({}, config.defaults, options);
+
+      if (typeof options.expires === 'number') {
+        var days = options.expires, t = options.expires = new Date();
+        t.setTime(+t + days * 864e+5);
+      }
+
+      return (document.cookie = [
+        encode(key), '=', stringifyCookieValue(value),
+        options.expires ? '; expires=' + options.expires.toUTCString() : '', // use expires attribute, max-age is not supported by IE
+        options.path    ? '; path=' + options.path : '',
+        options.domain  ? '; domain=' + options.domain : '',
+        options.secure  ? '; secure' : ''
+      ].join(''));
+    }
+
+    // Read
+
+    var result = key ? undefined : {};
+
+    // To prevent the for loop in the first place assign an empty array
+    // in case there are no cookies at all. Also prevents odd result when
+    // calling $.cookie().
+    var cookies = document.cookie ? document.cookie.split('; ') : [];
+
+    for (var i = 0, l = cookies.length; i < l; i++) {
+      var parts = cookies[i].split('=');
+      var name = decode(parts.shift());
+      var cookie = parts.join('=');
+
+      if (key && key === name) {
+        // If second argument (value) is a function it's a converter...
+        result = read(cookie, value);
+        break;
+      }
+
+      // Prevent storing a cookie that we couldn't decode.
+      if (!key && (cookie = read(cookie)) !== undefined) {
+        result[name] = cookie;
+      }
+    }
+
+    return result;
+  };
+
+  config.defaults = {};
+
+  $.removeCookie = function (key, options) {
+    if ($.cookie(key) === undefined) {
+      return false;
+    }
+
+    // Must not alter options, thus extending a fresh object...
+    $.cookie(key, '', $.extend({}, options, { expires: -1 }));
+    return !$.cookie(key);
+  };
+
+}));
+
 
 /*!
 * Bowser - a browser detector
@@ -877,6 +997,7 @@ vjs.getData = function(el){
  * @private
  */
 vjs.hasData = function(el){
+  if (!el) return false;
   var id = el[vjs.expando];
   return !(!id || vjs.isEmpty(vjs.cache[id]));
 };
@@ -1406,12 +1527,12 @@ function _logType(type, args){
   argsArray.unshift('VIDEOJS:');
 
   // call appropriate log function
-  if (_console[type].apply) {
+ /* if (_console[type].apply) {
     _console[type].apply(_console, argsArray);
   } else {
     // ie8 doesn't allow error.apply, but it will just join() the array anyway
     _console[type](argsArray.join(' '));
-  }
+  }*/
 }
 
 /**
@@ -8334,7 +8455,8 @@ videojs.plugin('resolutions', function(options) {
     // }
     selectResolution: function(typeSources) {
       var defaultRes = 0;
-      var supportsLocalStorage = !!window.localStorage;
+      //var supportsLocalStorage = !!window.localStorage;
+      var supportsLocalStorage = true;
 
       // check to see if any sources are marked as default
       videojs.obj.each(typeSources, function(i, s){
@@ -8351,7 +8473,9 @@ videojs.plugin('resolutions', function(options) {
 
       // trying to follow the videojs code conventions of if statements
       if (supportsLocalStorage){
-        var storedRes = parseInt(window.localStorage.getItem('videojs_preferred_res'), 10);
+       // var storedRes = parseInt(window.localStorage.getItem('videojs_preferred_res'), 10);
+        var storedRes = parseInt($.cookie('videojs_preferred_res'), 10);
+        //console.log('storedRes',storedRes)
 
         if (!isNaN(storedRes))
           preferredRes = storedRes;
@@ -8420,7 +8544,9 @@ videojs.plugin('resolutions', function(options) {
       }
 
       // remember this selection
-      vjs.setLocalStorage('videojs_preferred_res', parseInt(new_source.index, 10));
+      //vjs.setLocalStorage('videojs_preferred_res', parseInt(new_source.index, 10));
+      $.cookie('videojs_preferred_res', new_source.index);
+     // console.log('videojs_preferred_res', new_source.index)
     });
   };
 
@@ -9390,13 +9516,10 @@ function html5video(jcont,opts) {
     z.loadVideo = function(id) {
       var z = this, x = z.config.key;
       z.opts.current = id;      
-    //  console.log(z.opts.videos);
-
       if (z.adPlaying) {
         return false;
       }
-
-      z._initialize();
+      
       z.$.cont.parent().removeClass(x+'-first');
       z.$.cont.parent().removeClass(x+'-last');      
       if (z.opts.current == 0) {
@@ -9409,6 +9532,8 @@ function html5video(jcont,opts) {
       if ($title ) { 
         $title.html(z.vid.title); 
       }*/
+
+      z._initialize();
     };
 
     z._build = function() {
@@ -9487,7 +9612,12 @@ function html5video(jcont,opts) {
         }
 
        z.vid = z._getVid();
-       // console.log(z.vid)
+      //  console.log(z.vid)
+
+        if (!z.vid || !z.vid.type) {
+          z._killPlayer();
+          return false;
+        }
 
        // z.currentType = z.opts.videos[z.opts.current].type;
         z.currentType = z.vid.type;
@@ -9510,22 +9640,35 @@ function html5video(jcont,opts) {
     };
 
     z._events = function() {
-        var z = this;   
-        z.player.on('firstplay',function(e){
-            if (z.opts.debug) console.log('firstplay',z.vid);           
-            z._postStat('firstplay',z.vid);
+        var z = this;
+
+        z.player.on('firstplay',function(e){            
+            if (z.opts.debug) console.log('firstplay',z.vid); 
+            z.$.cont.trigger('firstplay'); 
+            // funky stuff going on here because of the resolutions plugin
+            if (z.last_vid != z.vid.src ) {                       
+              z._postStat('firstplay',z.vid);
+            }
         });
         z.player.on('play',function(e){
+            z.$.cont.trigger('play');
+            z.$.btn_replay.hide();  
+            z.last_vid = z.vid.src;
+            z.current_video = z.vid;        
+        });
+        z.player.on('loadeddata',function(e){
             z.$.btn_replay.hide();          
         });
         z.player.on('ended',function(e){
+            z.$.cont.trigger('ended');
             z.adPlaying = false;
             if (z.opts.debug) console.log('ended',z.vid);
             z._postStat('ended',z.vid);    
             if (!z.opts.playAd) {     
               z.opts.current++;  
             }                    
-            if (z.opts.current == z.opts.videos.length) {               
+            if (z.opts.current == z.opts.videos.length) { 
+              z.$.cont.trigger('lastvideoended');              
                 return z._lastVideoEnded();
             };
             z.loadVideo(z.opts.current);
@@ -9534,9 +9677,10 @@ function html5video(jcont,opts) {
 
     z._lastVideoEnded = function() {
         var z = this;
+        z.opts.current = 0;
         z.$.btn_replay.show();
         if (z.opts.debug) console.log('lastVideoEnded',z.vid);
-        z.postStat('lastVideoEnded',z.vid);
+        z._postStat('lastVideoEnded',z.vid);
         if (z.opts.loop) {
           z.loadVideo(0);
         }               
@@ -9545,6 +9689,7 @@ function html5video(jcont,opts) {
     z._killPlayer = function() {
         var z = this;
         if (z.opts.debug) console.log('kill player');
+        if (!z.player) return false;
         z.player.pause();
         z.player.dispose();
         z.player = null;        
@@ -9604,7 +9749,9 @@ function html5video(jcont,opts) {
             }
         }
 
-        console.log(z.opts.id,z.vid.src[0])
+        //console.log(z.opts.id,z.vid.src[0])
+
+        z.current_video = z.vid;
 
         z.player = videojs(z.opts.id, { 
             "techOrder": ["youtube"]
@@ -9644,11 +9791,26 @@ function html5video(jcont,opts) {
      //   z.vid = z._getVid();
         if (z.opts.debug) console.log(z.vid);
         var sources = z._makeSource(z.vid);
-        z.player.src(sources); 
-        if (z.player.resolutions_) {
-          z.player.resolutions_.options_['sourceResolutions'] = sources;
-          z._setupResolutions();  
+        var mySource = z.player.src(sources).cache_.src; 
+       // if (z.opts.debug) console.log('mySource',mySource);
+        var myType = z._getVideoType(mySource);
+        var rsources = [];
+        $.each(sources,function(i,v){
+          //console.log(v)
+          if (z._getVideoType(v.src) == myType) {
+            rsources.push(v);
+          }
+        });
+        if (z.opts.debug) console.log('rsources',rsources);         
+        
+        if (z.player.resolutions_) { 
+          var mySrc = z._selectResolution(rsources);
+          z._setupResolutions(); 
+          //console.log('mySrc',mySrc);
+          z.current_video = mySrc;
+          z.player.src(mySrc.src); 
         }
+
         setTimeout(function() {
             z._setupControls();
         },500);
@@ -9673,9 +9835,10 @@ function html5video(jcont,opts) {
         z.player.controlBar.addChild(z.resolutionsButton);
     }; 
 
-    z._selectResolution = function() {
+    z._selectResolution = function(videos) {
         var z = this, 
-            source = z.player.resolutions_.selectSource(z.player.options_['sources']);
+            //source = z.player.resolutions_.selectSource(z.player.options_['sources']);
+            source = z.player.resolutions_.selectSource(videos);
         return source;
     }; 
 
@@ -9688,7 +9851,13 @@ function html5video(jcont,opts) {
         send.account_id = z.opts.AppSettings.AccountID;     
         send.Version = z.opts.AppSettings.Version
         send.medium = z.opts.AppSettings.AppPlatform;
-        send.skin = z.opts.AppSettings.Skin;    
+        send.skin = z.opts.AppSettings.Skin;  
+
+        var vidSrc = z.player.cache_.src;
+        if (vid.type == 'youtube') {
+          vidSrc = z.player.options_.src;
+        }
+
         switch(event_id) {
             case "firstplay":
                 if (z.opts.debug) console.log("ad",vid.isAd)
@@ -9701,7 +9870,7 @@ function html5video(jcont,opts) {
                     send.InstructorDesc = "";
                     send.InstructorURL = "";
                     send.DistractionDesc = ""
-                    send.DistractionURL = z.player.options_.src;
+                    send.DistractionURL = vidSrc;
                     send.DistractionType = "";
                     send.contents_id = vid.id;  
                 } else {
@@ -9713,7 +9882,7 @@ function html5video(jcont,opts) {
                     send.InstructorDesc = "";
                     send.InstructorURL = "";
                     send.DistractionDesc = vid.description;
-                    send.DistractionURL = z.player.options_.src;
+                    send.DistractionURL = vidSrc;
                     send.DistractionType = "";
                     send.contents_id = vid.id;  
                 }
@@ -9729,7 +9898,7 @@ function html5video(jcont,opts) {
                     send.InstructorDesc = "";
                     send.InstructorURL = "";
                     send.DistractionDesc = ""
-                    send.DistractionURL = z.player.options_.src;
+                    send.DistractionURL = vidSrc;
                     send.DistractionType = "";
                     send.contents_id = vid.id;
                 } else {
@@ -9741,7 +9910,7 @@ function html5video(jcont,opts) {
                     send.InstructorDesc = "";
                     send.InstructorURL = "";
                     send.DistractionDesc = vid.description;
-                    send.DistractionURL = z.player.options_.src;
+                    send.DistractionURL = vidSrc;
                     send.DistractionType = "";
                     send.contents_id = vid.id;  
                 }
@@ -9787,6 +9956,7 @@ function html5video(jcont,opts) {
                 ,isAd: (item.isAd) ? true : false
                 ,vid: item
             };
+            //if (opts.type == 'video/mp4') opts["data-res"] = "SD";
             rs.push(opts);
         }
         for(var i=0,c=item.srcHD.length;i<c;i++) {
@@ -9798,6 +9968,7 @@ function html5video(jcont,opts) {
                 ,isAd: (item.isAd) ? true : false
                 ,vid: item
             };
+            //if (opts.type == 'video/mp4') opts["data-res"] = "HD";
             rs.push(opts);
         }
         if (z.opts.debug) console.log('_makeSource done',rs)
@@ -9810,7 +9981,18 @@ function html5video(jcont,opts) {
         ';  
         return myHtml;
     };
-    
-    init();
+
+    if (z.opts.postStat && z.opts.postStat instanceof Function) {
+      z._postStat = z.opts.postStat;
+    }
+
+    if (z.opts.videos instanceof Function) {
+      z.opts.videos(function(data){
+        z.opts.videos = data;
+        init();
+      })
+    } else {     
+      init();
+    }
 };
 

@@ -26,7 +26,7 @@
       ,replayText: 'Replay ?'
       ,autoplay: true         
       ,loop: false
-      ,debug: false
+      ,debug: true
       ,AppSettings: {
         UserID: "brian"
           ,AccountID: 1
@@ -36,38 +36,40 @@
       } 
       ,videos: function(cb) {
           $.ajax({
-            url: 'http://pipes.yahoo.com/pipes/pipe.run?_id=e678becc06a033cd31f958bf6f7a55ea&_render=json'
+            url: 'http://pipes.yahoo.com/pipes/pipe.run?_id=af1731677d0479671fe57893dfdf001c&_render=json'
             ,dataType: 'json'
             ,success: function(data) {
               console.log(data)
               var playlist = [];
               $.each(data.value.items,function(i,v){
-                playlist.push({
-                  "id":i
-                  ,"name":"video "+i
-                  ,"contentpack_id":"youtube"
-                  ,"father_id":null
-                  ,"description":v.title
-                  ,"thumbnail":"ContentPacks\/brewers\/brewers_thumb.jpg"
-                  ,"filename":""
-                  ,"contents_sort_order":"1"
-                  ,"video_type":"youtube"
-                  ,"duration":"0"
-                  ,"tags":""
-                  ,"intensity":"1"
-                  ,"enabled":"1"
-                  ,src: [
-                    v.link
-                  ]
-                  ,srcHD: [
-                    v.link
-                  ]
-                  ,type: "youtube"
-                  ,poster : ''
-                  ,title : v.title 
-                  ,isAd: false
-                  ,controls: true 
-                })
+                if (v.link) {
+                  playlist.push({
+                    "id":i
+                    ,"name":"video "+i
+                    ,"contentpack_id":"youtube"
+                    ,"father_id":null
+                    ,"description":v.title
+                    ,"thumbnail":"ContentPacks\/brewers\/brewers_thumb.jpg"
+                    ,"filename":""
+                    ,"contents_sort_order":"1"
+                    ,"video_type":"youtube"
+                    ,"duration":"0"
+                    ,"tags":""
+                    ,"intensity":"1"
+                    ,"enabled":"1"
+                    ,src: [
+                      v.link
+                    ]
+                    ,srcHD: [
+                      v.link
+                    ]
+                    ,type: "youtube"
+                    ,poster : ''
+                    ,title : v.title 
+                    ,isAd: false
+                    ,controls: true 
+                  });
+                }
               });
               cb(playlist);
             }

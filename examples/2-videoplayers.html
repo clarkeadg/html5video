@@ -15,8 +15,6 @@
 <style>
 .video-small {
   display: inline-block;
-  width: 320px;
-  height: 195px;
 }
 </style>
 
@@ -28,7 +26,7 @@
     videojs.options.flash.swf = "../assets/flash/video-js.swf";      
     var video1 = new html5video($('#video1'),{
       id: 'video-1' //must have a unique idea if you want more than 1 video on a page
-      ,width: 320
+      ,width: 360
       ,height: 195
       ,statsApi: 'http://laravel.brainbreaks.net/api/stats/?Version=v2'
       ,enableStats: false        
@@ -44,26 +42,26 @@
           ,Skin: 'web'
       } 
       ,videos: [  
-       {
+        {
           src: [
             'http://video-js.zencoder.com/oceans-clip.mp4'
-            //,'http://video-js.zencoder.com/oceans-clip.webm'
+            ,'http://video-js.zencoder.com/oceans-clip.webm'
             //,'http://video-js.zencoder.com/oceans-clip.ogv'
           ]
           ,srcHD: [
-            'http://video-js.zencoder.com/oceans-clip.mp4'
-            //,'http://video-js.zencoder.com/oceans-clip.webm'
-            //,'http://video-js.zencoder.com/oceans-clip.ogv'
+            '../assets/videos/TBBBTYB_hopsports.mp4'
+            ,'../assets/videos/TBBBTYB_hopsports.webm'
+            //,'../assets/videos/TBBBTYB_hopsports.ogv'
           ] 
           ,poster: "http://video-js.zencoder.com/oceans-clip.png"
           ,isAd: false
           ,controls: true 
-        }        
+        }
       ]
     });
     var video2 = new html5video($('#video2'),{
       id: 'video-2' //must have a unique idea if you want more than 1 video on a page
-      ,width: 320
+      ,width: 360
       ,height: 195
       ,statsApi: 'http://laravel.brainbreaks.net/api/stats/?Version=v2'
       ,enableStats: false        
@@ -79,21 +77,21 @@
           ,Skin: 'web'
       } 
       ,videos: [  
-       {
+        {
           src: [
             'http://video-js.zencoder.com/oceans-clip.mp4'
-            //,'http://video-js.zencoder.com/oceans-clip.webm'
+            ,'http://video-js.zencoder.com/oceans-clip.webm'
             //,'http://video-js.zencoder.com/oceans-clip.ogv'
           ]
           ,srcHD: [
-            'http://video-js.zencoder.com/oceans-clip.mp4'
-            //,'http://video-js.zencoder.com/oceans-clip.webm'
-            //,'http://video-js.zencoder.com/oceans-clip.ogv'
+            '../assets/videos/TBBBTYB_hopsports.mp4'
+            ,'../assets/videos/TBBBTYB_hopsports.webm'
+            //,'../assets/videos/TBBBTYB_hopsports.ogv'
           ] 
           ,poster: "http://video-js.zencoder.com/oceans-clip.png"
           ,isAd: false
           ,controls: true 
-        }        
+        }
       ]
     });
   });
