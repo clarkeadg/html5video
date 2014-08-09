@@ -997,6 +997,7 @@ vjs.getData = function(el){
  * @private
  */
 vjs.hasData = function(el){
+  if (!el) return false;
   var id = el[vjs.expando];
   return !(!id || vjs.isEmpty(vjs.cache[id]));
 };
@@ -1526,12 +1527,12 @@ function _logType(type, args){
   argsArray.unshift('VIDEOJS:');
 
   // call appropriate log function
-  if (_console[type].apply) {
+ /* if (_console[type].apply) {
     _console[type].apply(_console, argsArray);
   } else {
     // ie8 doesn't allow error.apply, but it will just join() the array anyway
     _console[type](argsArray.join(' '));
-  }
+  }*/
 }
 
 /**
@@ -9611,7 +9612,12 @@ function html5video(jcont,opts) {
         }
 
        z.vid = z._getVid();
-        //console.log(z.vid)
+      //  console.log(z.vid)
+
+        if (!z.vid || !z.vid.type) {
+          z._killPlayer();
+          return false;
+        }
 
        // z.currentType = z.opts.videos[z.opts.current].type;
         z.currentType = z.vid.type;
@@ -9673,6 +9679,7 @@ function html5video(jcont,opts) {
     z._killPlayer = function() {
         var z = this;
         if (z.opts.debug) console.log('kill player');
+        if (!z.player) return false;
         z.player.pause();
         z.player.dispose();
         z.player = null;        
@@ -9732,7 +9739,7 @@ function html5video(jcont,opts) {
             }
         }
 
-        console.log(z.opts.id,z.vid.src[0])
+        //console.log(z.opts.id,z.vid.src[0])
 
         z.player = videojs(z.opts.id, { 
             "techOrder": ["youtube"]
@@ -9956,7 +9963,14 @@ function html5video(jcont,opts) {
         ';  
         return myHtml;
     };
-    
-    init();
+
+    if (z.opts.videos instanceof Function) {
+      z.opts.videos(function(data){
+        z.opts.videos = data;
+        init();
+      })
+    } else {     
+      init();
+    }
 };
 

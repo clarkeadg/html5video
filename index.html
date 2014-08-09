@@ -226,118 +226,6 @@
           }
         ] 
         ,videos: []
-        ,videos111: [
-        {
-            "id":"ad1"
-            ,"name":"Ad 1"
-            ,"contentpack_id":"ad1"
-            ,"father_id":null
-            ,"description":"Ad 1"
-            ,"thumbnail":"ContentPacks\/brewers\/brewers_thumb.jpg"
-            ,"filename":""
-            ,"contents_sort_order":"1"
-            ,"video_type":"Ad"
-            ,"duration":"0"
-            ,"tags":""
-            ,"intensity":"1"
-            ,"enabled":"1"
-            ,src: [
-              'assets/videos/TBBBTYB_hopsports.mp4'
-              //,'../assets/videos/TBBBTYB_hopsports.webm'
-            ]
-            ,srcHD: [
-              'assets/videos/TBBBTYB_hopsports.mp4'
-              //'assets/videos/ADA_BEST1.mp4'
-              //,'../assets/videos/ADA_BEST1.webm'
-            ]
-            ,type: "video/mp4"
-            ,poster : 'assets/videos/TBBBTYB_hopsports.jpg'
-            ,title : 'Ad 1'  
-            ,isAd: true
-            ,controls: false 
-          }
-        ]
-        ,videos1: [  
-          {
-            "id":"ad1"
-            ,"name":"Ad 1"
-            ,"contentpack_id":"ad1"
-            ,"father_id":null
-            ,"description":"Ad 1"
-            ,"thumbnail":"ContentPacks\/brewers\/brewers_thumb.jpg"
-            ,"filename":""
-            ,"contents_sort_order":"1"
-            ,"video_type":"Ad"
-            ,"duration":"0"
-            ,"tags":""
-            ,"intensity":"1"
-            ,"enabled":"1"
-            ,src: [
-              'assets/videos/TBBBTYB_hopsports.mp4'
-              //,'../assets/videos/TBBBTYB_hopsports.webm'
-            ]
-            ,srcHD: [
-              'assets/videos/TBBBTYB_hopsports.mp4'
-              //'assets/videos/ADA_BEST1.mp4'
-              //,'../assets/videos/ADA_BEST1.webm'
-            ]
-            ,type: "video/mp4"
-            ,poster : 'assets/videos/TBBBTYB_hopsports.jpg'
-            ,title : 'Ad 1'  
-            ,isAd: true
-            ,controls: false 
-          }
-          ,{
-            "id":"OyYoyYoy"
-            ,"name":"OyYoyYoy"
-            ,"contentpack_id":"OyYoyYoy"
-            ,"father_id":null
-            ,"description":"OyYoyYoy"
-            ,"thumbnail":"ContentPacks\/brewers\/brewers_thumb.jpg"
-            ,"filename":""
-            ,"contents_sort_order":"1"
-            ,"video_type":"School"
-            ,"duration":"0"
-            ,"tags":""
-            ,"intensity":"1"
-            ,"enabled":"1"
-            ,src: [
-              'http://www.youtube.com/watch?v=f9aMmSzIHnI' //oy yoy yoy
-            ]
-            ,srcHD: [
-              'http://www.youtube.com/watch?v=f9aMmSzIHnI'
-            ]
-            ,poster : 'assets/videos/TBBBTYB_hopsports.jpg'
-            ,title : 'Ad 1'  
-            ,isAd: false
-            ,controls: true 
-          }
-          ,{
-            "id":"ad2"
-            ,"name":"Ad 2"
-            ,"contentpack_id":"ad1"
-            ,"father_id":null
-            ,"description":"Ad 1"
-            ,"thumbnail":"ContentPacks\/brewers\/brewers_thumb.jpg"
-            ,"filename":""
-            ,"contents_sort_order":"1"
-            ,"video_type":"Ad"
-            ,"duration":"0"
-            ,"tags":""
-            ,"intensity":"1"
-            ,"enabled":"1"
-            ,src: [
-              'assets/videos/TBBBTYB_hopsports.mp4'
-            ]
-            ,srcHD: [
-              'assets/videos/TBBBTYB_hopsports.mp4'
-            ]
-            ,poster : 'assets/videos/TBBBTYB_hopsports.jpg'
-            ,title : 'Ad 1'  
-            ,isAd: true
-            ,controls: false 
-          } 
-        ]
       });
       $('#next').bind('click',function(e){
         e.preventDefault();
@@ -371,7 +259,7 @@
           makePlaylist(data,$('#playlist3')); 
           video1.opts.videos = data;
           video1.loadVideo(0);  
-          video1.opts.adCounter = 2;   
+         // video1.opts.adCounter = 1;   
         }
       );
 
