@@ -282,14 +282,15 @@
       var n = 0;
       $.each(feeds,function(i,v){
         n++;        
-        var $title = '<h6>'+v.title+'</h6>';
+        var $title = $('<h6>'+v.title+'</h6>');
         var $playlist = $('<div class="thumbs"></div>');
-        $('#playlists').append($title);  
+        //$('#playlists').append($title);  
         $('#playlists').append($playlist);
         var loaded = false;
-        getVideos(v.url,$playlist,function(data,jcont) {            
+        getVideos(v.url,$playlist,$title,function(data,jcont) {            
             makePlaylist(data,jcont);             
             if (!loaded && data.length) {
+              $title.insertBefore($playlist);
               loaded = true;
               video1.opts.videos = data;
               video1.loadVideo(0);  
@@ -299,7 +300,7 @@
         );
       });
 
-      function getVideos(url,jcont,cb) {
+      function getVideos(url,jcont,title,cb) {
         $.ajax({
           url: url
           ,dataType: 'json'
@@ -335,7 +336,7 @@
                 })
               }
             });
-            cb(playlist,jcont);
+            cb(playlist,jcont,title);
           }
           ,error: function(err) {
             console.log(err)
