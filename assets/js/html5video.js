@@ -9655,9 +9655,10 @@ function html5video(jcont,opts) {
             z.$.btn_replay.hide();  
             z.last_vid = z.vid.src;
             z.current_video = z.vid;        
-        });
-        z.player.on('loadeddata',function(e){
-            z.$.btn_replay.hide();          
+        });        
+        z.player.on('loadedmetadata',function(e){
+            z.$.btn_replay.hide(); 
+            z.$.cont.trigger('loadedmetadata');         
         });
         z.player.on('ended',function(e){
             z.$.cont.trigger('ended');
