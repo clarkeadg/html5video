@@ -18,6 +18,14 @@ Features
       - youtube
   - flash fallback
 
+To run locally:
+  - on mac
+    - open up a terminal window and navigate to the html5video directory
+    - type: python -m SimpleHTTPServer
+    - open up a browser and goto url: http://localhost:8000
+  - on pc
+    - same steps as for mac, but you will have to run a web server on pc like wamp or nginx
+
 Thanks to:
   - jQuery (http://jquery.com)
   - jQuery Cookie (https://github.com/carhartl/jquery-cookie)

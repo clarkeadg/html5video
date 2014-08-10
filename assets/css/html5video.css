@@ -947,7 +947,7 @@ text-shadow: 0em 0em 1em #FFF;
   position: relative;
 }
 .html5video .video-js.vjs-default-skin .vjs-big-play-button { 
-  display: none !important;
+  /*display: none;*/
 }
 .html5video-replay {
   display: none;

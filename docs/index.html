@@ -9,6 +9,8 @@
   <script src="../assets/js/jquery.min.js"></script>
   <script src="../assets/js/html5video.js"></script>
 
+  <script src="../assets/demo/js/codesnippet.js"></script>
+
   <!-- OPTIONAL -->
   <link href="../assets/demo/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">  
   <script src="../assets/demo/bootstrap/js/bootstrap.min.js"></script>
@@ -47,49 +49,53 @@
 
   <div class="container">
     <div class="row">
-     
-      <div class="col-md-9">
-
-        <div class="jumbotron" >
-          <h2>Loading a Video Player</h2>
-          <pre>
-            <code>
-            </code>
-          </pre>
-        </div>
-        
-        <a id="options" />
-        <div class="jumbotron" >
-          <h2>Set Player Options</h2>
-          <pre>
-            <code>
-            </code>
-          </pre>
-        </div>
-
-         <a id="videos" />
-        <div class="jumbotron" >
-          <h2>Set Player Videos</h2>
-          <pre>
-            <code>
-            </code>
-          </pre>
-        </div>
-
-      </div>
 
       <div class="col-md-3">  
         <div class="jumbotron" >
-          <p><a href="#" >Loading a Video Player</a></p>
-          <p><a href="#options" >Set Player Options</a></p>
-          <p><a href="#videos" >Set Player Videos</a></p>
+          <p><a href="#assets" >Required Assets</a></p>
+          <p><a href="#player" >Loading a Player</a></p>
+          <p><a href="#options" >Player Options</a></p>
         </div>
       </div>
+     
+      <div class="col-md-9">
+
+        <a name="assets"></a>
+        <div class="jumbotron" >
+          <h2>Required Assets</h2>
+          <p>You must include these files on the page that you want to have a video player.</p>
+          <div id="docs-1" ></div>
+        </div>
+
+        <a name="player"></a>
+        <div class="jumbotron" >
+          <h2>Loading a Video Player</h2>
+          <p>To load a player you will need to put a div on the page.</p>
+          <p>Then use javascript to initialize the plater.</p>
+          <div id="docs-2" ></div>
+        </div>
+        
+        <a name="options"></a>
+        <div class="jumbotron" >
+          <h2>Set Player Options</h2>
+          <p>You can set these options when loading a new player.</p>
+          <div id="docs-3" ></div>
+        </div>
+
+      </div>      
 
     </div>   
   </div>
 
 </div>
+
+<script type="text/javascript">
+  $(function() {        
+    codeSnipet('get-started/include.html',$('#docs-1'));
+    codeSnipet('newplayer.html',$('#docs-2'));
+    codeSnipet('options.html',$('#docs-3'));
+  });
+</script>
 
 </body>
 </html>

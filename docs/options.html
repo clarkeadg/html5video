@@ -1,0 +1,207 @@
+options = {
+  id: 'video-1' //must have a unique idea if you want more than 1 video on a page
+  ,width: 640
+  ,height: 390
+  ,statsApi: 'http://example.com/api/stats'
+  ,enableStats: false        
+  ,replayText: 'Replay ?'
+  ,autoplay: false         
+  ,loop: false
+  ,debug: false
+  ,AppSettings: {
+    UserID: "brian"
+      ,AccountID: 1
+      ,Version: '1.4.6'
+      ,AppPlatform: 'html5'
+      ,Skin: 'web'
+  }
+  /**
+  *  videos can be an array or a function
+  */
+  ,videos: [  
+    {
+      src: [
+        'http://video-js.zencoder.com/oceans-clip.mp4'
+        ,'http://video-js.zencoder.com/oceans-clip.webm'
+        //,'http://video-js.zencoder.com/oceans-clip.ogv'
+      ]
+      ,srcHD: [
+        '../assets/videos/TBBBTYB_hopsports.mp4'
+        ,'../assets/videos/TBBBTYB_hopsports.webm'
+        //,'../assets/videos/TBBBTYB_hopsports.ogv'
+      ] 
+      ,poster: "http://video-js.zencoder.com/oceans-clip.png"
+      ,isAd: false
+      ,controls: true 
+    }
+  ]
+  ,videos: function(cb) {
+    $.ajax({
+      url: 'http://pipes.yahoo.com/pipes/pipe.run?_id=af1731677d0479671fe57893dfdf001c&_render=json'
+      ,dataType: 'json'
+      ,success: function(data) {
+        console.log(data)
+        var playlist = [];
+        $.each(data.value.items,function(i,v){
+          if (v.link) {
+            playlist.push({
+              "id":i
+              ,"name":"video "+i
+              ,"contentpack_id":"youtube"
+              ,"father_id":null
+              ,"description":v.title
+              ,"thumbnail":"ContentPacks\/brewers\/brewers_thumb.jpg"
+              ,"filename":""
+              ,"contents_sort_order":"1"
+              ,"video_type":"youtube"
+              ,"duration":"0"
+              ,"tags":""
+              ,"intensity":"1"
+              ,"enabled":"1"
+              ,src: [
+                v.link
+              ]
+              ,srcHD: [
+                v.link
+              ]
+              ,type: "youtube"
+              ,poster : ''
+              ,title : v.title 
+              ,isAd: false
+              ,controls: true 
+            });
+          }
+        });
+        cb(playlist);
+      }
+      ,error: function(err) {
+        console.log(err)
+      }
+    });          
+  }
+  /**
+  *  Not required, if you ad this, then it will play and ad inbetween videos
+  *  You can also play ads by putting them into the videos option and setting the type to isAd true.
+  *  you can specify how often to play an ad by setting adCounter, default is 1, 0 means no ads, 2 means every 2 videos
+  */
+  ,ads: [
+    {
+      "id":"ad1"
+      ,"name":"Ad 1"
+      ,"contentpack_id":"ad1"
+      ,"father_id":null
+      ,"description":"Ad 1"
+      ,"thumbnail":"ContentPacks\/brewers\/brewers_thumb.jpg"
+      ,"filename":""
+      ,"contents_sort_order":"1"
+      ,"video_type":"Ad"
+      ,"duration":"0"
+      ,"tags":""
+      ,"intensity":"1"
+      ,"enabled":"1"
+      ,src: [
+        '../assets/videos/TBBBTYB_hopsports.mp4'
+        //,'../assets/videos/TBBBTYB_hopsports.webm'
+      ]
+      ,srcHD: [
+        '../assets/videos/TBBBTYB_hopsports.mp4'
+        //'assets/videos/ADA_BEST1.mp4'
+        //,'../assets/videos/ADA_BEST1.webm'
+      ]
+      ,type: "video/mp4"
+      ,poster : 'assets/videos/TBBBTYB_hopsports.jpg'
+      ,title : 'Ad 1'  
+      ,isAd: true
+      ,controls: false 
+    }
+  ]
+  ,adCounter: 1
+  /**
+  *  Not required, if you ad this then it will overide the default postStat function
+  */
+  ,postStat: function(event_id,vid) {
+    console.log('custom post stat!')
+    var z = video1, error = false;
+    if (!z.opts.enableStats) return false;
+    if (z.opts.debug) console.log("postStat",event_id,vid);
+    var send = {};   
+    send.users_id = z.opts.AppSettings.UserID;
+    send.account_id = z.opts.AppSettings.AccountID;     
+    send.Version = z.opts.AppSettings.Version
+    send.medium = z.opts.AppSettings.AppPlatform;
+    send.skin = z.opts.AppSettings.Skin;  
+
+    var vidSrc = z.player.cache_.src;
+    if (vid.type == 'youtube') {
+      vidSrc = z.player.options_.src;
+    }
+
+    switch(event_id) {
+        case "firstplay":
+            if (z.opts.debug) console.log("ad",vid.isAd)
+            if (vid.isAd) {
+                send.Action = "Play Ad";
+                send.content_type = vid.video_type;
+                send.LocationDesc = "";
+                send.LocationURL = "";
+                send.LocationType = "";
+                send.InstructorDesc = "";
+                send.InstructorURL = "";
+                send.DistractionDesc = ""
+                send.DistractionURL = vidSrc;
+                send.DistractionType = "";
+                send.contents_id = vid.id;  
+            } else {
+                send.Action = "Start School Video";
+                send.content_type = vid.video_type;
+                send.LocationDesc = "";
+                send.LocationURL = "";
+                send.LocationType = "";
+                send.InstructorDesc = "";
+                send.InstructorURL = "";
+                send.DistractionDesc = vid.description;
+                send.DistractionURL = vidSrc;
+                send.DistractionType = "";
+                send.contents_id = vid.id;  
+            }
+        break;
+        case "ended":
+            if (z.opts.debug) console.log("ad",vid.isAd)
+            if (vid.isAd) {
+                send.Action = "Ad Finished";
+                send.content_type = vid.video_type;
+                send.LocationDesc = "";
+                send.LocationURL = "";
+                send.LocationType = "";
+                send.InstructorDesc = "";
+                send.InstructorURL = "";
+                send.DistractionDesc = ""
+                send.DistractionURL = vidSrc;
+                send.DistractionType = "";
+                send.contents_id = vid.id;
+            } else {
+                send.Action = "Complete School Video";
+                send.content_type = vid.video_type;
+                send.LocationDesc = "";
+                send.LocationURL = "";
+                send.LocationType = "";
+                send.InstructorDesc = "";
+                send.InstructorURL = "";
+                send.DistractionDesc = vid.description;
+                send.DistractionURL = vidSrc;
+                send.DistractionType = "";
+                send.contents_id = vid.id;  
+            }
+        break;          
+        default:
+            error = true;
+        break;
+    }
+    if (error) return;
+    z._postData(z.opts.statsApi, send,function(err,data){
+        if (z.opts.debug) console.log(err,data);
+    })  
+  }
+}
+
+    
