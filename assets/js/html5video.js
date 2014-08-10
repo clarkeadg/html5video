@@ -9514,11 +9514,12 @@ function html5video(jcont,opts) {
     };
 
     z.loadVideo = function(id) {
-      var z = this, x = z.config.key;
-      z.opts.current = id;      
+      var z = this, x = z.config.key;           
       if (z.adPlaying) {
         return false;
       }
+      
+      z.opts.current = id;
       
       z.$.cont.parent().removeClass(x+'-first');
       z.$.cont.parent().removeClass(x+'-last');      
@@ -9528,10 +9529,6 @@ function html5video(jcont,opts) {
       if (z.opts.current == z.opts.videos.length-1) {
         z.$.cont.parent().addClass(x+'-last');
       } 
-      /*var $title = $('#video-title');
-      if ($title ) { 
-        $title.html(z.vid.title); 
-      }*/
 
       z._initialize();
     };
@@ -9560,6 +9557,7 @@ function html5video(jcont,opts) {
         //  console.log(z.opts.adPlays,z.opts.adCounter)
           if (z.opts.adPlays != z.opts.adCounter) {
             // skip ad
+             z.opts.playAd = false;
             return z.opts.videos[z.opts.current]; 
           }   
           if (!z.opts.currentAd) {
@@ -9590,8 +9588,8 @@ function html5video(jcont,opts) {
 
         // kill any existing player
         if (z.player) {
-           // z.opts.autoplay = true;
             z._killPlayer(); 
+
             // put a new player
             z.$.cont.prepend(z._makePlayer(z.opts.id));
             z.$.video = z.$.cont.find('#'+z.opts.id);   
@@ -9599,27 +9597,23 @@ function html5video(jcont,opts) {
             // set video types
             if (z.opts.videos) {
               $.each(z.opts.videos,function(i,v){
-                  //v.type = z._getVideoType(v.src[0]);
                   z.opts.videos[i].type = z._getVideoType(v.src[0]);
               });
             }
             if (z.opts.ads) {
               $.each(z.opts.ads,function(i,v){
-                  //v.type = z._getVideoType(v.src[0]);
                   z.opts.ads[i].type = z._getVideoType(v.src[0]);
               });
             }
         }
 
-       z.vid = z._getVid();
-      //  console.log(z.vid)
+        z.vid = z._getVid();
 
         if (!z.vid || !z.vid.type) {
           z._killPlayer();
           return false;
         }
 
-       // z.currentType = z.opts.videos[z.opts.current].type;
         z.currentType = z.vid.type;
 
         // make a new player
@@ -9664,10 +9658,10 @@ function html5video(jcont,opts) {
             z.$.cont.trigger('ended');
             z.adPlaying = false;
             if (z.opts.debug) console.log('ended',z.vid);
-            z._postStat('ended',z.vid);    
+            z._postStat('ended',z.vid);  
             if (!z.opts.playAd) {     
               z.opts.current++;  
-            }                    
+            }          
             if (z.opts.current == z.opts.videos.length) { 
               z.$.cont.trigger('lastvideoended');              
                 return z._lastVideoEnded();
@@ -9788,7 +9782,6 @@ function html5video(jcont,opts) {
 
     z._startVideos = function() {   
         var z = this;
-     //   z.vid = z._getVid();
         if (z.opts.debug) console.log(z.vid);
         var sources = z._makeSource(z.vid);
         var mySource = z.player.src(sources).cache_.src; 
@@ -9796,7 +9789,6 @@ function html5video(jcont,opts) {
         var myType = z._getVideoType(mySource);
         var rsources = [];
         $.each(sources,function(i,v){
-          //console.log(v)
           if (z._getVideoType(v.src) == myType) {
             rsources.push(v);
           }
@@ -9806,7 +9798,6 @@ function html5video(jcont,opts) {
         if (z.player.resolutions_) { 
           var mySrc = z._selectResolution(rsources);
           z._setupResolutions(); 
-          //console.log('mySrc',mySrc);
           z.current_video = mySrc;
           z.player.src(mySrc.src); 
         }        
@@ -9840,7 +9831,6 @@ function html5video(jcont,opts) {
 
     z._selectResolution = function(videos) {
         var z = this, 
-            //source = z.player.resolutions_.selectSource(z.player.options_['sources']);
             source = z.player.resolutions_.selectSource(videos);
         return source;
     }; 
@@ -9959,7 +9949,6 @@ function html5video(jcont,opts) {
                 ,isAd: (item.isAd) ? true : false
                 ,vid: item
             };
-            //if (opts.type == 'video/mp4') opts["data-res"] = "SD";
             rs.push(opts);
         }
         for(var i=0,c=item.srcHD.length;i<c;i++) {
@@ -9971,7 +9960,6 @@ function html5video(jcont,opts) {
                 ,isAd: (item.isAd) ? true : false
                 ,vid: item
             };
-            //if (opts.type == 'video/mp4') opts["data-res"] = "HD";
             rs.push(opts);
         }
         if (z.opts.debug) console.log('_makeSource done',rs)
