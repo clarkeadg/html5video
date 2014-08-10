@@ -121,20 +121,20 @@
 
     /* EVENTS */
     $('#video1').on('firstplay',function(e){
-      console.log('firstplay',video1.current_video); 
-      $('#video1-title').html(video1.current_video.title);
+      console.log('firstplay',video1.vid); 
+      $('#video1-title').html(video1.vid.title);
     });
 
     $('#video1').on('play',function(e){
-      console.log('play',video1.current_video);         
+      console.log('play',video1.vid);         
     });
 
     $('#video1').on('ended',function(e){
-      console.log('ended',video1.current_video); 
+      console.log('ended',video1.vid); 
     });
 
     $('#video1').on('lastvideoended',function(e){
-      console.log('lastvideoended',video1.current_video); 
+      console.log('lastvideoended',video1.vid); 
     });
 
   });

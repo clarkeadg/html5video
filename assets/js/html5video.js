@@ -9725,17 +9725,17 @@ function html5video(jcont,opts) {
 
             if (bowser.firefox) {
                 if (z.opts.debug) console.log('firefox');
-                autoplay = true;
+                //autoplay = true;                
             }
 
             if (bowser.chrome) {
                 if (z.opts.debug) console.log('chrome')
-                autoplay = true;
+                //autoplay = true;
             }
 
             if (bowser.safari) {
                 if (z.opts.debug) console.log('safari')
-                autoplay = true;
+                //autoplay = true;
             }
 
             if (bowser.ios) {
@@ -9753,6 +9753,10 @@ function html5video(jcont,opts) {
 
         z.current_video = z.vid;
 
+        /*if (autoplay) {
+          z.$.cont.find('.video-js.vjs-default-skin .vjs-big-play-button').hide();
+        }*/
+
         z.player = videojs(z.opts.id, { 
             "techOrder": ["youtube"]
             ,"src": z.vid.src[0]
@@ -9761,14 +9765,6 @@ function html5video(jcont,opts) {
         z.player.ready(function(){
             z._events();
             z._setupControls();
-
-            // if (bowser.ios) {
-              /*setTimeout(function(){
-                var btn = z.$.cont.find('div.vjs-play-control.vjs-control.vjs-paused');
-                console.log(btn);
-                btn.trigger('click')
-              },5000);    */         
-            // }
         });
     };     
 
@@ -9781,6 +9777,9 @@ function html5video(jcont,opts) {
         });
         z.player = videojs(z.opts.id);
         z.player.ready(function(){
+            /*if (z.opts.autoplay) {
+              z.$.cont.find('.video-js.vjs-default-skin .vjs-big-play-button').hide();
+            }*/
             z._events();    
             z._startVideos();          
         });
@@ -9809,14 +9808,14 @@ function html5video(jcont,opts) {
           //console.log('mySrc',mySrc);
           z.current_video = mySrc;
           z.player.src(mySrc.src); 
-        }
+        }        
 
         setTimeout(function() {
-            z._setupControls();
-        },500);
-        if (z.opts.autoplay) {
-            z.player.play();            
-        } 
+          z._setupControls();
+          if (z.opts.autoplay) {
+              z.player.play();            
+          }           
+        },500);        
     };
 
     z._setupControls = function() {
@@ -9825,7 +9824,10 @@ function html5video(jcont,opts) {
             z.player.controls(true);
         } else {
             z.player.controls(false);
-        }
+        } 
+        if (z.opts.autoplay == false) {
+          z.player.controls(true);
+        }      
     }; 
 
     z._setupResolutions = function() {
