@@ -52,12 +52,7 @@
       <div id="video-cont" >
         <div id="video1"></div> 
         <div id="video-title"></div> 
-        <h6>Top Electronic</h6>
-        <div id="playlist1" class="thumbs"></div>
-        <h6>Top Pop</h6>
-        <div id="playlist2" class="thumbs"></div>
-        <h6>Top Alternative</h6>
-        <div id="playlist3" class="thumbs"></div>
+        <div id ="playlists" ></div>       
         <div id="next"><a href="#" ><i class="fa fa-chevron-right"></i></a></div>
         <div id="previous"><a href="#" ><i class="fa fa-chevron-left"></i></a></div>
       </div>
@@ -227,48 +222,57 @@
         ] 
         ,videos: []
       });
-      $('#next').bind('click',function(e){
+     
+     $('#next').bind('click',function(e){
         e.preventDefault();
         video1.next();
-       // $('#video-title').html(video1.opts.videos[video1.opts.current].title);  
       });
+      
       $('#previous').bind('click',function(e){
         e.preventDefault();
         video1.previous();
-     //   $('#video-title').html(video1.opts.videos[video1.opts.current].title); 
       });
 
-      getVideos('http://pipes.yahoo.com/pipes/pipe.run?_id=e678becc06a033cd31f958bf6f7a55ea&_render=json',
-        function(data) {
-          makePlaylist(data,$('#playlist1'));  
-         // video1.opts.videos = data;
-         // video1.loadVideo(0);
+      var feeds = [
+        { 
+          url: 'http://pipes.yahoo.com/pipes/pipe.run?_id=e678becc06a033cd31f958bf6f7a55ea&_render=json'
+          ,title: 'Electronic'
         }
-      );
-
-      getVideos('http://pipes.yahoo.com/pipes/pipe.run?_id=af1731677d0479671fe57893dfdf001c&_render=json',
-        function(data) {
-         makePlaylist(data,$('#playlist2'));
-         //video1.opts.videos = data;
-         //video1.loadVideo(0);
+        ,{ 
+          url: 'http://pipes.yahoo.com/pipes/pipe.run?_id=af1731677d0479671fe57893dfdf001c&_render=json'
+          ,title: 'Pop'
         }
-      );
-
-      getVideos('https://pipes.yahoo.com/pipes/pipe.run?_id=b3a4c1011716a9b1207714d139663d3a&_render=json',
-        function(data) {
-          makePlaylist(data,$('#playlist3')); 
-          video1.opts.videos = data;
-          video1.loadVideo(0);  
-          video1.opts.adCounter = 2;   
+        ,{ 
+          url: 'https://pipes.yahoo.com/pipes/pipe.run?_id=b3a4c1011716a9b1207714d139663d3a&_render=json' 
+          ,title: 'Alternative'
         }
-      );
+      ];
 
-      function getVideos(url,cb) {
+      var n = 0;
+      $.each(feeds,function(i,v){
+        n++;        
+        var $title = '<h6>'+v.title+'</h6>';
+        var $playlist = $('<div class="thumbs"></div>');
+        $('#playlists').append($title);  
+        $('#playlists').append($playlist);
+        var loaded = false;
+        getVideos(v.url,$playlist,function(data,jcont) {            
+            makePlaylist(data,jcont);             
+            if (!loaded && data.length) {
+              loaded = true;
+              video1.opts.videos = data;
+              video1.loadVideo(0);  
+              video1.opts.adCounter = 2;
+            }
+          }
+        );
+      });
+
+      function getVideos(url,jcont,cb) {
         $.ajax({
           url: url
           ,dataType: 'json'
           ,success: function(data) {
-            console.log(data)
             var playlist = [];
             $.each(data.value.items,function(i,v){
               if (v.link) {
@@ -300,7 +304,7 @@
                 })
               }
             });
-            cb(playlist);
+            cb(playlist,jcont);
           }
           ,error: function(err) {
             console.log(err)
