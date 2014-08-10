@@ -333,9 +333,13 @@
       }
 
       /* EVENTS */
+      $('#video1').on('loadedmetadata',function(e){
+        console.log('loadedmetadata',video1.vid); 
+        $('#video-title').html(video1.vid.title);
+      });
+
       $('#video1').on('firstplay',function(e){
         console.log('firstplay',video1.vid); 
-        $('#video-title').html(video1.vid.title);
       });
 
       $('#video1').on('play',function(e){
