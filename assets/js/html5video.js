@@ -9761,11 +9761,12 @@ function html5video(jcont,opts) {
           ,"src": z.vid.src[0]
           ,"autoplay": opts.autoplay
           //,"playsInline": true
-          ,"ytcontrols": true
+          ,"ytcontrols": true // ytcontrols have to be true to work on ipad
       });
       z.player.ready(function(){
           z._events();
-          z._setupControls(opts.forceShowControls);           
+         // z._setupControls(opts.forceShowControls); 
+          z._setupControls(false); // need to hide video js controls or there will be double controls       
       });
     };     
 
@@ -9814,18 +9815,8 @@ function html5video(jcont,opts) {
     };
 
     z._setupControls = function(forceShowControls) {
-        var z = this;
-        
-        if (forceShowControls) {
-          z.player.controls(true);
-          return;
-        }
-
-        if (z.vid.controls) {
-          z.player.controls(true);
-        } else {
-          z.player.controls(false);
-        }             
+        var z = this;        
+        z.player.controls(forceShowControls);            
     }; 
 
     z._setupResolutions = function() {
