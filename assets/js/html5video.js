@@ -9760,15 +9760,11 @@ function html5video(jcont,opts) {
           "techOrder": ["youtube"]
           ,"src": z.vid.src[0]
           ,"autoplay": opts.autoplay
+          ,"playsInline": true
       });
       z.player.ready(function(){
           z._events();
-          z._setupControls(opts.forceShowControls);
-           setTimeout(function(){
-            if(opts.forceShowControls) {
-              z.player.controls(true);
-            }
-          },1000) ;
+          z._setupControls(opts.forceShowControls);           
       });
     };     
 
