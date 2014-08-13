@@ -9766,7 +9766,8 @@ function html5video(jcont,opts) {
       z.player.ready(function(){
           z._events();
          // z._setupControls(opts.forceShowControls); 
-          z._setupControls(false); // need to hide video js controls or there will be double controls       
+          //z._setupControls(false); // need to hide video js controls or there will be double controls 
+          z.player.controls(false);      
       });
     };     
 
@@ -9815,7 +9816,10 @@ function html5video(jcont,opts) {
     };
 
     z._setupControls = function(forceShowControls) {
-        var z = this;        
+        var z = this;
+        if (!z.opts.autoplay)  {
+          return z.player.controls(true);
+        }    
         z.player.controls(forceShowControls);            
     }; 
 
