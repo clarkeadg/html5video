@@ -9761,7 +9761,7 @@ function html5video(jcont,opts) {
           ,"src": z.vid.src[0]
           ,"autoplay": opts.autoplay
           //,"playsInline": true
-          ,"ytcontrols" true
+          ,"ytcontrols": true
       });
       z.player.ready(function(){
           z._events();
