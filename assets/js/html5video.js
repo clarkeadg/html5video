@@ -9764,6 +9764,11 @@ function html5video(jcont,opts) {
       z.player.ready(function(){
           z._events();
           z._setupControls(opts.forceShowControls);
+           setTimeout(function(){
+            if(opts.forceShowControls) {
+              z.player.controls(true);
+            }
+          },1000) ;
       });
     };     
 
@@ -9784,7 +9789,7 @@ function html5video(jcont,opts) {
             z._startVideos(); 
             if (opts.autoplay) {
               z.player.play();            
-            }          
+            }                   
         });
     }; 
 
