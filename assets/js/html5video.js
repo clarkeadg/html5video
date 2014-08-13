@@ -9760,7 +9760,8 @@ function html5video(jcont,opts) {
           "techOrder": ["youtube"]
           ,"src": z.vid.src[0]
           ,"autoplay": opts.autoplay
-          ,"playsInline": true
+          //,"playsInline": true
+          ,"ytcontrols" true
       });
       z.player.ready(function(){
           z._events();
