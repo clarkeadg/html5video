@@ -7,7 +7,7 @@
     "playlist",
     "ads"
   ],
-  "version": "1.0.1",
+  "version": "1.0.2",
   "homepage": "http://www.spideyjs.com/html5video/",
   "author": "Brian Clarke <clarkeadg@yahoo.com> (http://clarkeanimation.com)",
   "main": "./index.html",
