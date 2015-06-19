@@ -238,18 +238,18 @@
 
       var feeds = [
         { 
-          url: 'https://pipes.yahoo.com/pipes/pipe.run?_id=a62a707130429b1080f5b7631bba6337&_render=json' 
-          ,title: 'Movie Trailers'
+          url: '/assets/data/top-videos.json' 
+          ,title: 'Top Videos'
         } 
-        ,{ 
+        /*,{ 
           url: 'http://pipes.yahoo.com/pipes/pipe.run?_id=e75b87970a4590ab3f61c53854661fde&_render=json'
           ,title: 'Top Pop'
-        }
+        }*/
         /*,{ 
           url: 'http://pipes.yahoo.com/pipes/pipe.run?_id=af1731677d0479671fe57893dfdf001c&_render=json'
           ,title: 'Top Music Videos'
         }*/
-        ,{ 
+        /*,{ 
           url: 'http://pipes.yahoo.com/pipes/pipe.run?_id=e678becc06a033cd31f958bf6f7a55ea&_render=json'
           ,title: 'Top Electronic'
         }        
@@ -268,15 +268,15 @@
         ,{ 
           url: 'http://pipes.yahoo.com/pipes/pipe.run?_id=1535ad0444516d3c30d98233c8c6052e&_render=json' 
           ,title: 'Top Latino'
-        }
+        }*/
         /*,{ 
           url: 'http://pipes.yahoo.com/pipes/pipe.run?_id=9128fcc66350e03831787723691e1954&_render=json' 
           ,title: 'Top Soul'
         }*/
-        ,{ 
+        /*,{ 
           url: 'http://pipes.yahoo.com/pipes/pipe.run?_id=f1c6d1bf65633c1557f1a9fe83516d34&_render=json' 
           ,title: 'Top Rock'
-        }                     
+        }*/                     
       ];
 
       var n = 0;
@@ -306,8 +306,9 @@
           ,dataType: 'json'
           ,success: function(data) {
             var playlist = [];
-            $.each(data.value.items,function(i,v){
-              if (v.link) {
+            $.each(data.videos,function(i,v){
+              //console.log(i,v)
+              //if (v.link) {
                 playlist.push({
                   "id":i
                   ,"name":"video "+i
@@ -323,18 +324,18 @@
                   ,"intensity":"1"
                   ,"enabled":"1"
                   ,src: [
-                    v.link
+                    'https://www.youtube.com/watch?v='+v.youtube_id
                   ]
                   ,srcHD: [
-                    v.link
+                    'https://www.youtube.com/watch?v='+v.youtube_id
                   ]
                   ,type: "youtube"
-                  ,poster : v['media:thumbnail'].url
-                  ,title : v.author + ' - ' + v.title 
+                  ,poster : "//i.ytimg.com/vi/"+v.youtube_id+"/default.jpg"
+                  ,title : v.song + ' - ' + v.artist
                   ,isAd: false
                   ,controls: true 
                 })
-              }
+              //}
             });
             cb(playlist,jcont,title);
           }
