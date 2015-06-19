@@ -36,13 +36,13 @@
       } 
       ,videos: function(cb) {
           $.ajax({
-            url: 'http://pipes.yahoo.com/pipes/pipe.run?_id=af1731677d0479671fe57893dfdf001c&_render=json'
+            url: '/assets/data/top-videos.json'
             ,dataType: 'json'
             ,success: function(data) {
               console.log(data)
               var playlist = [];
-              $.each(data.value.items,function(i,v){
-                if (v.link) {
+              $.each(data.videos,function(i,v){
+                //if (v.link) {
                   playlist.push({
                     "id":i
                     ,"name":"video "+i
@@ -58,18 +58,18 @@
                     ,"intensity":"1"
                     ,"enabled":"1"
                     ,src: [
-                      v.link
+                      'https://www.youtube.com/watch?v='+v.youtube_id
                     ]
                     ,srcHD: [
-                      v.link
+                      'https://www.youtube.com/watch?v='+v.youtube_id
                     ]
                     ,type: "youtube"
-                    ,poster : ''
-                    ,title : v.title 
+                    ,poster : "//i.ytimg.com/vi/"+v.youtube_id+"/default.jpg"
+                    ,title : v.song + ' - ' + v.artist
                     ,isAd: false
                     ,controls: true 
-                  });
-                }
+                  })
+                //}
               });
               cb(playlist);
             }

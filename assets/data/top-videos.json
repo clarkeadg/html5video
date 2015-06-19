@@ -1,0 +1,1704 @@
+{
+  "videos": [
+    {
+      "_id": "5579c9bed943167c08b1d3c6",
+      "slug": "something-in-the-water-carrie-underwood",
+      "title": "Something in the Water - Carrie Underwood",
+      "artist": "Carrie Underwood",
+      "song": "Something in the Water",
+      "itunes_id": "934482858",
+      "release_date": "2014-12-09T00:00:00-07:00",
+      "youtube_id": "mH9kYn4L8TI",
+      "__v": 1,
+      "artists": [],
+      "genres": [
+        "5579c9602f135b301151dac2",
+        "5579c9602f135b301151dab9"
+      ],
+      "state": "published"
+    },
+    {
+      "_id": "5579c9bed943167c08b1d3c7",
+      "slug": "girl-crush-little-big-town",
+      "title": "Girl Crush - Little Big Town",
+      "artist": "Little Big Town",
+      "song": "Girl Crush",
+      "itunes_id": "983437345",
+      "release_date": "2015-04-08T00:00:00-07:00",
+      "youtube_id": "JYZMT8otKdI",
+      "__v": 1,
+      "artists": [],
+      "genres": [
+        "5579c9602f135b301151dac2",
+        "5579c9602f135b301151dab9"
+      ],
+      "state": "published"
+    },
+    {
+      "_id": "5579c9bed943167c08b1d3c8",
+      "slug": "you-belong-with-me-taylor-swift",
+      "title": "You Belong With Me - Taylor Swift",
+      "artist": "Taylor Swift",
+      "song": "You Belong With Me",
+      "itunes_id": "335628709",
+      "release_date": "2009-10-26T00:00:00-07:00",
+      "youtube_id": "VuNIsY6JdUw",
+      "__v": 1,
+      "artists": [],
+      "genres": [
+        "5579c9602f135b301151dac2",
+        "5579c9602f135b301151dab9"
+      ],
+      "state": "published"
+    },
+    {
+      "_id": "5579c9bed943167c08b1d3c9",
+      "slug": "tonight-looks-good-on-you-jason-aldean",
+      "title": "Tonight Looks Good On You - Jason Aldean",
+      "artist": "Jason Aldean",
+      "song": "Tonight Looks Good On You",
+      "itunes_id": "999533548",
+      "release_date": "2015-05-25T00:00:00-07:00",
+      "youtube_id": "zsM8GD2Q4nU",
+      "__v": 1,
+      "artists": [],
+      "genres": [
+        "5579c9602f135b301151dac2",
+        "5579c9602f135b301151dab9"
+      ],
+      "state": "published"
+    },
+    {
+      "_id": "5579c9bed943167c08b1d3cc",
+      "slug": "somethin-bad-with-carrie-underwood-miranda-lambert",
+      "title": "Somethin' Bad (with Carrie Underwood) - Miranda Lambert",
+      "artist": "Miranda Lambert",
+      "song": "Somethin' Bad (with Carrie Underwood)",
+      "itunes_id": "891849431",
+      "release_date": "2014-06-26T00:00:00-07:00",
+      "youtube_id": "o4Yzj-m_SBk",
+      "__v": 1,
+      "artists": [],
+      "genres": [
+        "5579c9602f135b301151dac2",
+        "5579c9602f135b301151dab9"
+      ],
+      "state": "published"
+    },
+    {
+      "_id": "5579c9bed943167c08b1d3d0",
+      "slug": "take-your-time-sam-hunt",
+      "title": "Take Your Time - Sam Hunt",
+      "artist": "Sam Hunt",
+      "song": "Take Your Time",
+      "itunes_id": "976347776",
+      "release_date": "2015-03-13T00:00:00-07:00",
+      "youtube_id": "iXi6IHFHeIA",
+      "__v": 1,
+      "artists": [],
+      "genres": [
+        "5579c9602f135b301151dac2",
+        "5579c9602f135b301151dab9"
+      ],
+      "state": "published"
+    },
+    {
+      "_id": "5579c9bed943167c08b1d3d1",
+      "slug": "crash-and-burn-thomas-rhett",
+      "title": "Crash and Burn - Thomas Rhett",
+      "artist": "Thomas Rhett",
+      "song": "Crash and Burn",
+      "itunes_id": "1000808458",
+      "release_date": "2015-06-06T00:00:00-07:00",
+      "youtube_id": "heyIXXCfyaM",
+      "__v": 1,
+      "artists": [],
+      "genres": [
+        "5579c9602f135b301151dac2",
+        "5579c9602f135b301151dab9"
+      ],
+      "state": "published"
+    },
+    {
+      "_id": "5579c9bed943167c08b1d3d2",
+      "slug": "biscuits-kacey-musgraves",
+      "title": "Biscuits - Kacey Musgraves",
+      "artist": "Kacey Musgraves",
+      "song": "Biscuits",
+      "itunes_id": "1003958038",
+      "release_date": "2015-06-10T00:00:00-07:00",
+      "youtube_id": "E598KjYyBJI",
+      "__v": 1,
+      "artists": [],
+      "genres": [
+        "5579c9602f135b301151dac2",
+        "5579c9602f135b301151dab9"
+      ],
+      "state": "published"
+    },
+    {
+      "_id": "5579c9bed943167c08b1d3d3",
+      "slug": "sangria-blake-shelton",
+      "title": "Sangria - Blake Shelton",
+      "artist": "Blake Shelton",
+      "song": "Sangria",
+      "itunes_id": "978925703",
+      "release_date": "2015-03-24T00:00:00-07:00",
+      "youtube_id": "KoQrH6EMnas",
+      "__v": 1,
+      "artists": [],
+      "genres": [
+        "5579c9602f135b301151dac2",
+        "5579c9602f135b301151dab9"
+      ],
+      "state": "published"
+    },
+    {
+      "_id": "5579c9bed943167c08b1d3d4",
+      "slug": "little-toy-guns-carrie-underwood",
+      "title": "Little Toy Guns - Carrie Underwood",
+      "artist": "Carrie Underwood",
+      "song": "Little Toy Guns",
+      "itunes_id": "960469122",
+      "release_date": "2015-01-31T00:00:00-07:00",
+      "youtube_id": "kxOYvI0pfLo",
+      "__v": 1,
+      "artists": [],
+      "genres": [
+        "5579c9602f135b301151dac2",
+        "5579c9602f135b301151dab9"
+      ],
+      "state": "published"
+    },
+    {
+      "_id": "5579c9bfd943167c08b1d3d9",
+      "slug": "crushin-it-brad-paisley",
+      "title": "Crushin' It - Brad Paisley",
+      "artist": "Brad Paisley",
+      "song": "Crushin' It",
+      "itunes_id": "996848790",
+      "release_date": "2015-05-19T00:00:00-07:00",
+      "youtube_id": "6E8FGdIl7HM",
+      "__v": 1,
+      "artists": [],
+      "genres": [
+        "5579c9602f135b301151dac2",
+        "5579c9602f135b301151dab9"
+      ],
+      "state": "published"
+    },
+    {
+      "_id": "5579c9bfd943167c08b1d3da",
+      "slug": "smoke-a-thousand-horses",
+      "title": "Smoke - A Thousand Horses",
+      "artist": "A Thousand Horses",
+      "song": "Smoke",
+      "itunes_id": "960139022",
+      "release_date": "2015-01-23T00:00:00-07:00",
+      "youtube_id": "gDWepmUXk3w",
+      "__v": 1,
+      "artists": [],
+      "genres": [
+        "5579c9602f135b301151dac2",
+        "5579c9602f135b301151dab9"
+      ],
+      "state": "published"
+    },
+    {
+      "_id": "5579c9bfd943167c08b1d3dd",
+      "slug": "bartender-lady-antebellum",
+      "title": "Bartender - Lady Antebellum",
+      "artist": "Lady Antebellum",
+      "song": "Bartender",
+      "itunes_id": "891111128",
+      "release_date": "2014-06-19T00:00:00-07:00",
+      "youtube_id": "_rHuitW9xDc",
+      "__v": 1,
+      "artists": [],
+      "genres": [
+        "5579c9602f135b301151dac2",
+        "5579c9602f135b301151dab9"
+      ],
+      "state": "published"
+    },
+    {
+      "_id": "5579c9bfd943167c08b1d3de",
+      "slug": "love-me-like-you-mean-it-kelsea-ballerini",
+      "title": "Love Me Like You Mean It - Kelsea Ballerini",
+      "artist": "Kelsea Ballerini",
+      "song": "Love Me Like You Mean It",
+      "itunes_id": "971467215",
+      "release_date": "2015-03-09T00:00:00-07:00",
+      "youtube_id": "2r6N2JQQwg0",
+      "__v": 1,
+      "artists": [],
+      "genres": [
+        "5579c9602f135b301151dac2",
+        "5579c9602f135b301151dab9"
+      ],
+      "state": "published"
+    },
+    {
+      "_id": "5579c9bfd943167c08b1d3df",
+      "slug": "wild-child-with-grace-potter-kenny-chesney",
+      "title": "Wild Child (with Grace Potter) - Kenny Chesney",
+      "artist": "Kenny Chesney",
+      "song": "Wild Child (with Grace Potter)",
+      "itunes_id": "965450300",
+      "release_date": "2015-02-13T00:00:00-07:00",
+      "youtube_id": "_XIANQM3xm0",
+      "__v": 1,
+      "artists": [],
+      "genres": [
+        "5579c9602f135b301151dac2",
+        "5579c9602f135b301151dab9"
+      ],
+      "state": "published"
+    },
+    {
+      "_id": "5579c9bfd943167c08b1d3e0",
+      "slug": "love-story-taylor-swift",
+      "title": "Love Story - Taylor Swift",
+      "artist": "Taylor Swift",
+      "song": "Love Story",
+      "itunes_id": "291234086",
+      "release_date": "2008-09-23T00:00:00-07:00",
+      "youtube_id": "8xg3vE8Ie_E",
+      "__v": 1,
+      "artists": [],
+      "genres": [
+        "5579c9602f135b301151dac2",
+        "5579c9602f135b301151dab9"
+      ],
+      "state": "published"
+    },
+    {
+      "_id": "5579c9bfd943167c08b1d3e4",
+      "slug": "chicken-fried-full-version-zac-brown-band",
+      "title": "Chicken Fried (Full Version) - Zac Brown Band",
+      "artist": "Zac Brown Band",
+      "song": "Chicken Fried (Full Version)",
+      "itunes_id": "295740288",
+      "release_date": "2008-11-17T00:00:00-07:00",
+      "youtube_id": "e4ujS1er1r0",
+      "__v": 1,
+      "artists": [],
+      "genres": [
+        "5579c9602f135b301151dac2",
+        "5579c9602f135b301151dab9"
+      ],
+      "state": "published"
+    },
+    {
+      "_id": "5579c9bfd943167c08b1d3e6",
+      "slug": "my-kinda-party-jason-aldean",
+      "title": "My Kinda Party - Jason Aldean",
+      "artist": "Jason Aldean",
+      "song": "My Kinda Party",
+      "itunes_id": "397219120",
+      "release_date": "2010-11-02T00:00:00-07:00",
+      "youtube_id": "isLqoB3v_wI",
+      "__v": 1,
+      "artists": [],
+      "genres": [
+        "5579c9602f135b301151dac2",
+        "5579c9602f135b301151dab9"
+      ],
+      "state": "published"
+    },
+    {
+      "_id": "5579c9bfd943167c08b1d3e7",
+      "slug": "mean-taylor-swift",
+      "title": "Mean - Taylor Swift",
+      "artist": "Taylor Swift",
+      "song": "Mean",
+      "itunes_id": "436018490",
+      "release_date": "2011-05-07T00:00:00-07:00",
+      "youtube_id": "jYa1eI1hpDE",
+      "__v": 1,
+      "artists": [],
+      "genres": [
+        "5579c9602f135b301151dac2",
+        "5579c9602f135b301151dab9"
+      ],
+      "state": "published"
+    },
+    {
+      "_id": "5579c9bfd943167c08b1d3e8",
+      "slug": "im-comin-over-chris-young",
+      "title": "I'm Comin' Over - Chris Young",
+      "artist": "Chris Young",
+      "song": "I'm Comin' Over",
+      "itunes_id": "997509595",
+      "release_date": "2015-05-29T00:00:00-07:00",
+      "youtube_id": "hxcmik9Rs40",
+      "__v": 1,
+      "artists": [],
+      "genres": [
+        "5579c9602f135b301151dac2",
+        "5579c9602f135b301151dab9"
+      ],
+      "state": "published"
+    },
+    {
+      "_id": "5579c9bfd943167c08b1d3e9",
+      "slug": "this-is-how-we-roll-feat-luke-bryan-florida-georgia-line",
+      "title": "This Is How We Roll (feat. Luke Bryan) - Florida Georgia Line",
+      "artist": "Florida Georgia Line",
+      "song": "This Is How We Roll (feat. Luke Bryan)",
+      "itunes_id": "834528610",
+      "release_date": "2014-03-08T00:00:00-07:00",
+      "youtube_id": "CbxuXq_981s",
+      "__v": 1,
+      "artists": [],
+      "genres": [
+        "5579c9602f135b301151dac2",
+        "5579c9602f135b301151dab9"
+      ],
+      "state": "published"
+    },
+    {
+      "_id": "5579c9bfd943167c08b1d3ea",
+      "slug": "dirt-florida-georgia-line",
+      "title": "Dirt - Florida Georgia Line",
+      "artist": "Florida Georgia Line",
+      "song": "Dirt",
+      "itunes_id": "897705081",
+      "release_date": "2014-07-11T00:00:00-07:00",
+      "youtube_id": "42uphHWxmFU",
+      "__v": 1,
+      "artists": [],
+      "genres": [
+        "5579c9602f135b301151dac2",
+        "5579c9602f135b301151dab9"
+      ],
+      "state": "published"
+    },
+    {
+      "_id": "5579c9bfd943167c08b1d3eb",
+      "slug": "girl-in-a-country-song-maddie-tae",
+      "title": "Girl In a Country Song - Maddie & Tae",
+      "artist": "Maddie & Tae",
+      "song": "Girl In a Country Song",
+      "itunes_id": "903115876",
+      "release_date": "2014-07-25T00:00:00-07:00",
+      "youtube_id": "_MOavH-Eivw",
+      "__v": 1,
+      "artists": [],
+      "genres": [
+        "5579c9602f135b301151dac2",
+        "5579c9602f135b301151dab9"
+      ],
+      "state": "published"
+    },
+    {
+      "_id": "5579c9bfd943167c08b1d3f0",
+      "slug": "sun-daze-florida-georgia-line",
+      "title": "Sun Daze - Florida Georgia Line",
+      "artist": "Florida Georgia Line",
+      "song": "Sun Daze",
+      "itunes_id": "934207066",
+      "release_date": "2014-10-29T00:00:00-07:00",
+      "youtube_id": "c8nY06Pt8Qw",
+      "__v": 1,
+      "artists": [],
+      "genres": [
+        "5579c9602f135b301151dac2",
+        "5579c9602f135b301151dab9"
+      ],
+      "state": "published"
+    },
+    {
+      "_id": "5579c9bfd943167c08b1d3f1",
+      "slug": "burnin-it-down-jason-aldean",
+      "title": "Burnin' It Down - Jason Aldean",
+      "artist": "Jason Aldean",
+      "song": "Burnin' It Down",
+      "itunes_id": "913637439",
+      "release_date": "2014-08-30T00:00:00-07:00",
+      "youtube_id": "xdImDqbgc2g",
+      "__v": 1,
+      "artists": [],
+      "genres": [
+        "5579c9602f135b301151dac2",
+        "5579c9602f135b301151dab9"
+      ],
+      "state": "published"
+    },
+    {
+      "_id": "5579c9bfd943167c08b1d3f2",
+      "slug": "sippin-on-fire-florida-georgia-line",
+      "title": "Sippin’ On Fire - Florida Georgia Line",
+      "artist": "Florida Georgia Line",
+      "song": "Sippin’ On Fire",
+      "itunes_id": "979655291",
+      "release_date": "2015-03-25T00:00:00-07:00",
+      "youtube_id": "KllQ8e9Ae0w",
+      "__v": 1,
+      "artists": [],
+      "genres": [
+        "5579c9602f135b301151dac2",
+        "5579c9602f135b301151dab9"
+      ],
+      "state": "published"
+    },
+    {
+      "_id": "5579c9bfd943167c08b1d3f3",
+      "slug": "one-hell-of-an-amen-brantley-gilbert",
+      "title": "One Hell of an Amen - Brantley Gilbert",
+      "artist": "Brantley Gilbert",
+      "song": "One Hell of an Amen",
+      "itunes_id": "963824758",
+      "release_date": "2015-01-29T00:00:00-07:00",
+      "youtube_id": "8IMn4c4MwM0",
+      "__v": 1,
+      "artists": [],
+      "genres": [
+        "5579c9602f135b301151dac2",
+        "5579c9602f135b301151dab9"
+      ],
+      "state": "published"
+    },
+    {
+      "_id": "5579c9bfd943167c08b1d3f4",
+      "slug": "for-a-boy-raelynn",
+      "title": "For a Boy - RaeLynn",
+      "artist": "RaeLynn",
+      "song": "For a Boy",
+      "itunes_id": "994625760",
+      "release_date": "2015-05-11T00:00:00-07:00",
+      "youtube_id": "T551UQYQU2g",
+      "__v": 1,
+      "artists": [],
+      "genres": [
+        "5579c9602f135b301151dac2",
+        "5579c9602f135b301151dab9"
+      ],
+      "state": "published"
+    },
+    {
+      "_id": "5579c9bfd943167c08b1d3f5",
+      "slug": "loving-you-easy-zac-brown-band",
+      "title": "Loving You Easy - Zac Brown Band",
+      "artist": "Zac Brown Band",
+      "song": "Loving You Easy",
+      "itunes_id": "999075882",
+      "release_date": "2015-05-30T00:00:00-07:00",
+      "youtube_id": "D05NewQpqxg",
+      "__v": 1,
+      "artists": [],
+      "genres": [
+        "5579c9602f135b301151dac2",
+        "5579c9602f135b301151dab9"
+      ],
+      "state": "published"
+    },
+    {
+      "_id": "5579c9c0d943167c08b1d3f8",
+      "slug": "get-your-shine-on-florida-georgia-line",
+      "title": "Get Your Shine On - Florida Georgia Line",
+      "artist": "Florida Georgia Line",
+      "song": "Get Your Shine On",
+      "itunes_id": "739665012",
+      "release_date": "2013-11-25T00:00:00-07:00",
+      "youtube_id": "oajuSNChUOo",
+      "__v": 1,
+      "artists": [],
+      "genres": [
+        "5579c9602f135b301151dac2",
+        "5579c9602f135b301151dab9"
+      ],
+      "state": "published"
+    },
+    {
+      "_id": "5579c9c0d943167c08b1d3f9",
+      "slug": "round-here-florida-georgia-line",
+      "title": "Round Here - Florida Georgia Line",
+      "artist": "Florida Georgia Line",
+      "song": "Round Here",
+      "itunes_id": "739665013",
+      "release_date": "2013-11-25T00:00:00-07:00",
+      "youtube_id": "p1oL37ycONQ",
+      "__v": 1,
+      "artists": [],
+      "genres": [
+        "5579c9602f135b301151dac2",
+        "5579c9602f135b301151dab9"
+      ],
+      "state": "published"
+    },
+    {
+      "_id": "5579c9c0d943167c08b1d3fa",
+      "slug": "cruise-feat-nelly-florida-georgia-line",
+      "title": "Cruise (feat. Nelly) - Florida Georgia Line",
+      "artist": "Florida Georgia Line",
+      "song": "Cruise (feat. Nelly)",
+      "itunes_id": "739665011",
+      "release_date": "2013-11-25T00:00:00-07:00",
+      "youtube_id": "bmZ9xRO7M9M",
+      "__v": 1,
+      "artists": [],
+      "genres": [
+        "5579c9602f135b301151dac2",
+        "5579c9602f135b301151dab9"
+      ],
+      "state": "published"
+    },
+    {
+      "_id": "5579c9c0d943167c08b1d3fb",
+      "slug": "small-town-throwdown-feat-justin-moore-thomas-rhett-brantley-gilbert",
+      "title": "Small Town Throwdown (feat. Justin Moore & Thomas Rhett) - Brantley Gilbert",
+      "artist": "Brantley Gilbert",
+      "song": "Small Town Throwdown (feat. Justin Moore & Thomas Rhett)",
+      "itunes_id": "904799208",
+      "release_date": "2014-08-01T00:00:00-07:00",
+      "youtube_id": "NbE3TUegz3s",
+      "__v": 1,
+      "artists": [],
+      "genres": [
+        "5579c9602f135b301151dac2",
+        "5579c9602f135b301151dab9"
+      ],
+      "state": "published"
+    },
+    {
+      "_id": "5579c9c0d943167c08b1d3fc",
+      "slug": "thats-my-kind-of-night-luke-bryan",
+      "title": "That's My Kind Of Night - Luke Bryan",
+      "artist": "Luke Bryan",
+      "song": "That's My Kind Of Night",
+      "itunes_id": "704588561",
+      "release_date": "2013-09-13T00:00:00-07:00",
+      "youtube_id": "crCqWK3SmRo",
+      "__v": 1,
+      "artists": [],
+      "genres": [
+        "5579c9602f135b301151dac2",
+        "5579c9602f135b301151dab9"
+      ],
+      "state": "published"
+    },
+    {
+      "_id": "5579c9c0d943167c08b1d3fd",
+      "slug": "come-back-to-me-keith-urban",
+      "title": "Come Back To Me - Keith Urban",
+      "artist": "Keith Urban",
+      "song": "Come Back To Me",
+      "itunes_id": "996679010",
+      "release_date": "2015-05-20T00:00:00-07:00",
+      "youtube_id": "rDL4x23F0kY",
+      "__v": 1,
+      "artists": [],
+      "genres": [
+        "5579c9602f135b301151dac2",
+        "5579c9602f135b301151dab9"
+      ],
+      "state": "published"
+    },
+    {
+      "_id": "5579c9c0d943167c08b1d3fe",
+      "slug": "roller-coaster-luke-bryan",
+      "title": "Roller Coaster - Luke Bryan",
+      "artist": "Luke Bryan",
+      "song": "Roller Coaster",
+      "itunes_id": "891103544",
+      "release_date": "2014-06-20T00:00:00-07:00",
+      "youtube_id": "AxVKTwAkv1k",
+      "__v": 1,
+      "artists": [],
+      "genres": [
+        "5579c9602f135b301151dac2",
+        "5579c9602f135b301151dab9"
+      ],
+      "state": "published"
+    },
+    {
+      "_id": "5579c9c0d943167c08b1d3ff",
+      "slug": "need-you-now-lady-antebellum",
+      "title": "Need You Now - Lady Antebellum",
+      "artist": "Lady Antebellum",
+      "song": "Need You Now",
+      "itunes_id": "719619516",
+      "release_date": "2009-09-18T00:00:00-07:00",
+      "youtube_id": "eM213aMKTHg",
+      "__v": 1,
+      "artists": [],
+      "genres": [
+        "5579c9602f135b301151dac2",
+        "5579c9602f135b301151dab9"
+      ],
+      "state": "published"
+    },
+    {
+      "_id": "5579c9c0d943167c08b1d400",
+      "slug": "leave-the-night-on-sam-hunt",
+      "title": "Leave the Night On - Sam Hunt",
+      "artist": "Sam Hunt",
+      "song": "Leave the Night On",
+      "itunes_id": "895171062",
+      "release_date": "2014-07-09T00:00:00-07:00",
+      "youtube_id": "BuMiMBjcvWU",
+      "__v": 1,
+      "artists": [],
+      "genres": [
+        "5579c9602f135b301151dac2",
+        "5579c9602f135b301151dab9"
+      ],
+      "state": "published"
+    },
+    {
+      "_id": "5579c9c0d943167c08b1d401",
+      "slug": "raise-em-up-feat-eric-church-keith-urban",
+      "title": "Raise 'Em Up (feat. Eric Church) - Keith Urban",
+      "artist": "Keith Urban",
+      "song": "Raise 'Em Up (feat. Eric Church)",
+      "itunes_id": "981244271",
+      "release_date": "2015-03-31T00:00:00-07:00",
+      "youtube_id": "31KOGb1MU4g",
+      "__v": 1,
+      "artists": [],
+      "genres": [
+        "5579c9602f135b301151dac2",
+        "5579c9602f135b301151dab9"
+      ],
+      "state": "published"
+    },
+    {
+      "_id": "5579c9c0d943167c08b1d406",
+      "slug": "if-i-die-young-the-band-perry",
+      "title": "If I Die Young - The Band Perry",
+      "artist": "The Band Perry",
+      "song": "If I Die Young",
+      "itunes_id": "375380539",
+      "release_date": "2010-06-01T00:00:00-07:00",
+      "youtube_id": "7NJqUN9TClM",
+      "__v": 1,
+      "artists": [],
+      "genres": [
+        "5579c9602f135b301151dac2",
+        "5579c9602f135b301151dab9"
+      ],
+      "state": "published"
+    },
+    {
+      "_id": "5579c9c0d943167c08b1d407",
+      "slug": "hangover-tonight-gary-allan",
+      "title": "Hangover Tonight - Gary Allan",
+      "artist": "Gary Allan",
+      "song": "Hangover Tonight",
+      "itunes_id": "1003924419",
+      "release_date": "2015-06-11T00:00:00-07:00",
+      "youtube_id": "iGh0t1qXhRI",
+      "__v": 1,
+      "artists": [],
+      "genres": [
+        "5579c9602f135b301151dac2",
+        "5579c9602f135b301151dab9"
+      ],
+      "state": "published"
+    },
+    {
+      "_id": "5579c9c0d943167c08b1d408",
+      "slug": "before-he-cheats-carrie-underwood",
+      "title": "Before He Cheats - Carrie Underwood",
+      "artist": "Carrie Underwood",
+      "song": "Before He Cheats",
+      "itunes_id": "325193922",
+      "release_date": "2006-08-10T00:00:00-07:00",
+      "youtube_id": "WaSy8yy-mr8",
+      "__v": 1,
+      "artists": [],
+      "genres": [
+        "5579c9602f135b301151dac2",
+        "5579c9602f135b301151dab9"
+      ],
+      "state": "published"
+    },
+    {
+      "_id": "5579c9c0d943167c08b1d409",
+      "slug": "im-to-blame-kip-moore",
+      "title": "I'm To Blame - Kip Moore",
+      "artist": "Kip Moore",
+      "song": "I'm To Blame",
+      "itunes_id": "982990406",
+      "release_date": "2015-04-07T00:00:00-07:00",
+      "youtube_id": "0Pck0IQPsoY",
+      "__v": 1,
+      "artists": [],
+      "genres": [
+        "5579c9602f135b301151dac2",
+        "5579c9602f135b301151dab9"
+      ],
+      "state": "published"
+    },
+    {
+      "_id": "5579c9c0d943167c08b1d40a",
+      "slug": "the-house-that-built-me-miranda-lambert",
+      "title": "The House That Built Me - Miranda Lambert",
+      "artist": "Miranda Lambert",
+      "song": "The House That Built Me",
+      "itunes_id": "364086182",
+      "release_date": "2010-04-06T00:00:00-07:00",
+      "youtube_id": "DQYNM6SjD_o",
+      "__v": 1,
+      "artists": [],
+      "genres": [
+        "5579c9602f135b301151dac2",
+        "5579c9602f135b301151dab9"
+      ],
+      "state": "published"
+    },
+    {
+      "_id": "5579c9c0d943167c08b1d40e",
+      "slug": "back-to-december-taylor-swift",
+      "title": "Back to December - Taylor Swift",
+      "artist": "Taylor Swift",
+      "song": "Back to December",
+      "itunes_id": "415792423",
+      "release_date": "2011-01-25T00:00:00-07:00",
+      "youtube_id": "QUwxKWT6m7U",
+      "__v": 1,
+      "artists": [],
+      "genres": [
+        "5579c9602f135b301151dac2",
+        "5579c9602f135b301151dab9"
+      ],
+      "state": "published"
+    },
+    {
+      "_id": "5579c9c0d943167c08b1d40f",
+      "slug": "cowgirls-dont-cry-feat-reba-mcentire-brooks-dunn",
+      "title": "Cowgirls Don't Cry (feat. Reba McEntire) - Brooks & Dunn",
+      "artist": "Brooks & Dunn",
+      "song": "Cowgirls Don't Cry (feat. Reba McEntire)",
+      "itunes_id": "299107410",
+      "release_date": "2008-11-27T00:00:00-07:00",
+      "youtube_id": "HECZbIMg9u8",
+      "__v": 1,
+      "artists": [],
+      "genres": [
+        "5579c9602f135b301151dac2",
+        "5579c9602f135b301151dab9"
+      ],
+      "state": "published"
+    },
+    {
+      "_id": "5579c9c0d943167c08b1d410",
+      "slug": "22-taylor-swift",
+      "title": "22 - Taylor Swift",
+      "artist": "Taylor Swift",
+      "song": "22",
+      "itunes_id": "617167262",
+      "release_date": "2013-03-14T00:00:00-07:00",
+      "youtube_id": "AgFeZr5ptV8",
+      "__v": 1,
+      "artists": [],
+      "genres": [
+        "5579c9602f135b301151dac2",
+        "5579c9602f135b301151dab9"
+      ],
+      "state": "published"
+    },
+    {
+      "_id": "5579c9c0d943167c08b1d412",
+      "slug": "knee-deep-feat-jimmy-buffett-zac-brown-band",
+      "title": "Knee Deep (feat. Jimmy Buffett) - Zac Brown Band",
+      "artist": "Zac Brown Band",
+      "song": "Knee Deep (feat. Jimmy Buffett)",
+      "itunes_id": "447912809",
+      "release_date": "2011-07-12T00:00:00-07:00",
+      "youtube_id": "9n5G0qFBsHM",
+      "__v": 1,
+      "artists": [],
+      "genres": [
+        "5579c9602f135b301151dac2",
+        "5579c9602f135b301151dab9"
+      ],
+      "state": "published"
+    },
+    {
+      "_id": "5579c9c0d943167c08b1d413",
+      "slug": "sure-be-cool-if-you-did-blake-shelton",
+      "title": "Sure Be Cool If You Did - Blake Shelton",
+      "artist": "Blake Shelton",
+      "song": "Sure Be Cool If You Did",
+      "itunes_id": "606057414",
+      "release_date": "2013-03-26T00:00:00-07:00",
+      "youtube_id": "kXmmXAUqfd8",
+      "__v": 1,
+      "artists": [],
+      "genres": [
+        "5579c9602f135b301151dac2",
+        "5579c9602f135b301151dab9"
+      ],
+      "state": "published"
+    },
+    {
+      "_id": "5579c9c0d943167c08b1d414",
+      "slug": "bottoms-up-brantley-gilbert",
+      "title": "Bottoms Up - Brantley Gilbert",
+      "artist": "Brantley Gilbert",
+      "song": "Bottoms Up",
+      "itunes_id": "773598650",
+      "release_date": "2013-12-17T00:00:00-07:00",
+      "youtube_id": "ukick72Qafc",
+      "__v": 1,
+      "artists": [],
+      "genres": [
+        "5579c9602f135b301151dac2",
+        "5579c9602f135b301151dab9"
+      ],
+      "state": "published"
+    },
+    {
+      "_id": "5579c9c0d943167c08b1d415",
+      "slug": "see-you-again-carrie-underwood",
+      "title": "See You Again - Carrie Underwood",
+      "artist": "Carrie Underwood",
+      "song": "See You Again",
+      "itunes_id": "658916372",
+      "release_date": "2013-06-07T00:00:00-07:00",
+      "youtube_id": "vTnWFT3DvVA",
+      "__v": 1,
+      "artists": [],
+      "genres": [
+        "5579c9602f135b301151dac2",
+        "5579c9602f135b301151dab9"
+      ],
+      "state": "published"
+    },
+    {
+      "_id": "5579c9c0d943167c08b1d416",
+      "slug": "drunk-on-a-plane-dierks-bentley",
+      "title": "Drunk On a Plane - Dierks Bentley",
+      "artist": "Dierks Bentley",
+      "song": "Drunk On a Plane",
+      "itunes_id": "877866033",
+      "release_date": "2014-05-13T00:00:00-07:00",
+      "youtube_id": "QrM39m22jH4",
+      "__v": 1,
+      "artists": [],
+      "genres": [
+        "5579c9602f135b301151dac2",
+        "5579c9602f135b301151dab9"
+      ],
+      "state": "published"
+    },
+    {
+      "_id": "5579c9c0d943167c08b1d417",
+      "slug": "man-i-feel-like-a-woman-shania-twain",
+      "title": "Man! I Feel Like a Woman - Shania Twain",
+      "artist": "Shania Twain",
+      "song": "Man! I Feel Like a Woman",
+      "itunes_id": "272424080",
+      "release_date": "2005-09-30T00:00:00-07:00",
+      "youtube_id": "ZJL4UGSbeFg",
+      "__v": 1,
+      "artists": [],
+      "genres": [
+        "5579c9602f135b301151dac2",
+        "5579c9602f135b301151dab9"
+      ],
+      "state": "published"
+    },
+    {
+      "_id": "5579c9c1d943167c08b1d41a",
+      "slug": "cruise-florida-georgia-line",
+      "title": "Cruise - Florida Georgia Line",
+      "artist": "Florida Georgia Line",
+      "song": "Cruise",
+      "itunes_id": "739665010",
+      "release_date": "2013-11-25T00:00:00-07:00",
+      "youtube_id": "8PvebsWcpto",
+      "__v": 1,
+      "artists": [],
+      "genres": [
+        "5579c9602f135b301151dac2",
+        "5579c9602f135b301151dab9"
+      ],
+      "state": "published"
+    },
+    {
+      "_id": "5579c9c1d943167c08b1d41b",
+      "slug": "american-kids-kenny-chesney",
+      "title": "American Kids - Kenny Chesney",
+      "artist": "Kenny Chesney",
+      "song": "American Kids",
+      "itunes_id": "890042391",
+      "release_date": "2014-06-30T00:00:00-07:00",
+      "youtube_id": "de1aPKXBdAE",
+      "__v": 1,
+      "artists": [],
+      "genres": [
+        "5579c9602f135b301151dac2",
+        "5579c9602f135b301151dab9"
+      ],
+      "state": "published"
+    },
+    {
+      "_id": "5579c9c1d943167c08b1d41c",
+      "slug": "play-it-again-luke-bryan",
+      "title": "Play It Again - Luke Bryan",
+      "artist": "Luke Bryan",
+      "song": "Play It Again",
+      "itunes_id": "854766446",
+      "release_date": "2014-04-04T00:00:00-07:00",
+      "youtube_id": "ALV-QtDFpSw",
+      "__v": 1,
+      "artists": [],
+      "genres": [
+        "5579c9602f135b301151dac2",
+        "5579c9602f135b301151dab9"
+      ],
+      "state": "published"
+    },
+    {
+      "_id": "5579c9c1d943167c08b1d41d",
+      "slug": "amarillo-sky-jason-aldean",
+      "title": "Amarillo Sky - Jason Aldean",
+      "artist": "Jason Aldean",
+      "song": "Amarillo Sky",
+      "itunes_id": "307328429",
+      "release_date": "2009-03-17T00:00:00-07:00",
+      "youtube_id": "kc823UD0LeU",
+      "__v": 1,
+      "artists": [],
+      "genres": [
+        "5579c9602f135b301151dac2",
+        "5579c9602f135b301151dab9"
+      ],
+      "state": "published"
+    },
+    {
+      "_id": "5579c9c1d943167c08b1d41e",
+      "slug": "country-girl-shake-it-for-me-luke-bryan",
+      "title": "Country Girl (Shake It for Me) - Luke Bryan",
+      "artist": "Luke Bryan",
+      "song": "Country Girl (Shake It for Me)",
+      "itunes_id": "720006572",
+      "release_date": "2011-05-24T00:00:00-07:00",
+      "youtube_id": "7HX4SfnVlP4",
+      "__v": 1,
+      "artists": [],
+      "genres": [
+        "5579c9602f135b301151dac2",
+        "5579c9602f135b301151dab9"
+      ],
+      "state": "published"
+    },
+    {
+      "_id": "5579c9c1d943167c08b1d41f",
+      "slug": "lonely-tonight-feat-ashley-monroe-blake-shelton",
+      "title": "Lonely Tonight (feat. Ashley Monroe) - Blake Shelton",
+      "artist": "Blake Shelton",
+      "song": "Lonely Tonight (feat. Ashley Monroe)",
+      "itunes_id": "939052031",
+      "release_date": "2014-11-07T00:00:00-07:00",
+      "youtube_id": "G91KZ56mNbw",
+      "__v": 1,
+      "artists": [],
+      "genres": [
+        "5579c9602f135b301151dac2",
+        "5579c9602f135b301151dab9"
+      ],
+      "state": "published"
+    },
+    {
+      "_id": "5579c9c1d943167c08b1d420",
+      "slug": "something-in-the-water-carrie-underwood-1",
+      "title": "Something in the Water - Carrie Underwood",
+      "artist": "Carrie Underwood",
+      "song": "Something in the Water",
+      "itunes_id": "934905094",
+      "release_date": "2014-11-06T00:00:00-07:00",
+      "youtube_id": "mH9kYn4L8TI",
+      "__v": 1,
+      "artists": [],
+      "genres": [
+        "5579c9602f135b301151dac2",
+        "5579c9602f135b301151dab9"
+      ],
+      "state": "published"
+    },
+    {
+      "_id": "5579c9c1d943167c08b1d421",
+      "slug": "night-train-jason-aldean",
+      "title": "Night Train - Jason Aldean",
+      "artist": "Jason Aldean",
+      "song": "Night Train",
+      "itunes_id": "689554723",
+      "release_date": "2013-08-08T00:00:00-07:00",
+      "youtube_id": "-PLgUlRVLZE",
+      "__v": 1,
+      "artists": [],
+      "genres": [
+        "5579c9602f135b301151dac2",
+        "5579c9602f135b301151dab9"
+      ],
+      "state": "published"
+    },
+    {
+      "_id": "5579c9c7d943167c08b1d4d4",
+      "slug": "wear-em-out-kendall-k",
+      "title": "Wear Em Out - Kendall K",
+      "artist": "Kendall K",
+      "song": "Wear Em Out",
+      "itunes_id": "1002490329",
+      "release_date": "2015-04-21T00:00:00-07:00",
+      "youtube_id": "Z3FOwSZTOzs",
+      "__v": 1,
+      "artists": [],
+      "genres": [
+        "5579c9602f135b301151daba",
+        "5579c9602f135b301151dab9"
+      ],
+      "state": "published"
+    },
+    {
+      "_id": "5579c9c7d943167c08b1d4d7",
+      "slug": "bad-blood-feat-kendrick-lamar-taylor-swift",
+      "title": "Bad Blood (feat. Kendrick Lamar) - Taylor Swift",
+      "artist": "Taylor Swift",
+      "song": "Bad Blood (feat. Kendrick Lamar)",
+      "itunes_id": "996277743",
+      "release_date": "2015-05-18T00:00:00-07:00",
+      "youtube_id": "QcIy9NiNbmo",
+      "__v": 1,
+      "artists": [],
+      "genres": [
+        "5579c9602f135b301151daba",
+        "5579c9602f135b301151dab9"
+      ],
+      "state": "published"
+    },
+    {
+      "_id": "5579c9c7d943167c08b1d4d8",
+      "slug": "uptown-funk-feat-bruno-mars-mark-ronson",
+      "title": "Uptown Funk (feat. Bruno Mars) - Mark Ronson",
+      "artist": "Mark Ronson",
+      "song": "Uptown Funk (feat. Bruno Mars)",
+      "itunes_id": "942813466",
+      "release_date": "2014-11-20T00:00:00-07:00",
+      "youtube_id": "OPf0YbXqDm0",
+      "__v": 1,
+      "artists": [],
+      "genres": [
+        "5579c9602f135b301151daba",
+        "5579c9602f135b301151dab9"
+      ],
+      "state": "published"
+    },
+    {
+      "_id": "5579c9c7d943167c08b1d4d9",
+      "slug": "poison-rita-ora",
+      "title": "Poison - RITA ORA",
+      "artist": "RITA ORA",
+      "song": "Poison",
+      "itunes_id": "1001518470",
+      "release_date": "2015-06-04T00:00:00-07:00",
+      "youtube_id": "Q1fGOG3XXIQ",
+      "__v": 1,
+      "artists": [],
+      "genres": [
+        "5579c9602f135b301151daba",
+        "5579c9602f135b301151dab9"
+      ],
+      "state": "published"
+    },
+    {
+      "_id": "5579c9c7d943167c08b1d4dc",
+      "slug": "dear-future-husband-meghan-trainor",
+      "title": "Dear Future Husband - Meghan Trainor",
+      "artist": "Meghan Trainor",
+      "song": "Dear Future Husband",
+      "itunes_id": "976748983",
+      "release_date": "2015-03-17T00:00:00-07:00",
+      "youtube_id": "ShlW5plD_40",
+      "__v": 1,
+      "artists": [],
+      "genres": [
+        "5579c9602f135b301151daba",
+        "5579c9602f135b301151dab9"
+      ],
+      "state": "published"
+    },
+    {
+      "_id": "5579c9c7d943167c08b1d4de",
+      "slug": "fight-song-rachel-platten",
+      "title": "Fight Song - Rachel Platten",
+      "artist": "Rachel Platten",
+      "song": "Fight Song",
+      "itunes_id": "995359164",
+      "release_date": "2015-05-20T00:00:00-07:00",
+      "youtube_id": "xo1VInw-SKc",
+      "__v": 1,
+      "artists": [],
+      "genres": [
+        "5579c9602f135b301151daba",
+        "5579c9602f135b301151dab9"
+      ],
+      "state": "published"
+    },
+    {
+      "_id": "5579c9c7d943167c08b1d4e0",
+      "slug": "thinking-out-loud-ed-sheeran",
+      "title": "Thinking Out Loud - Ed Sheeran",
+      "artist": "Ed Sheeran",
+      "song": "Thinking Out Loud",
+      "itunes_id": "928711391",
+      "release_date": "2014-10-13T00:00:00-07:00",
+      "youtube_id": "lp-EO5I60KA",
+      "__v": 1,
+      "artists": [],
+      "genres": [
+        "5579c9602f135b301151daba",
+        "5579c9602f135b301151dab9"
+      ],
+      "state": "published"
+    },
+    {
+      "_id": "5579c9c7d943167c08b1d4e2",
+      "slug": "back-it-up-feat-jennifer-lopez-pitbull-prince-royce",
+      "title": "Back It Up (feat. Jennifer Lopez & Pitbull) - Prince Royce",
+      "artist": "Prince Royce",
+      "song": "Back It Up (feat. Jennifer Lopez & Pitbull)",
+      "itunes_id": "1004822583",
+      "release_date": "2015-06-11T00:00:00-07:00",
+      "youtube_id": "9w9dXWU5nMI",
+      "__v": 1,
+      "artists": [],
+      "genres": [
+        "5579c9602f135b301151daba",
+        "5579c9602f135b301151dab9"
+      ],
+      "state": "published"
+    },
+    {
+      "_id": "5579c9c7d943167c08b1d4e3",
+      "slug": "shake-it-off-taylor-swift",
+      "title": "Shake It Off - Taylor Swift",
+      "artist": "Taylor Swift",
+      "song": "Shake It Off",
+      "itunes_id": "907320486",
+      "release_date": "2014-08-18T00:00:00-07:00",
+      "youtube_id": "nfWlot6h_JM",
+      "__v": 1,
+      "artists": [],
+      "genres": [
+        "5579c9602f135b301151daba",
+        "5579c9602f135b301151dab9"
+      ],
+      "state": "published"
+    },
+    {
+      "_id": "5579c9c7d943167c08b1d4e4",
+      "slug": "cheerleader-felix-jaehn-remix-omi",
+      "title": "Cheerleader (Felix Jaehn Remix) - Omi",
+      "artist": "Omi",
+      "song": "Cheerleader (Felix Jaehn Remix)",
+      "itunes_id": "1001206352",
+      "release_date": "2003-04-28T00:00:00-07:00",
+      "youtube_id": "jGflUbPQfW8",
+      "__v": 1,
+      "artists": [],
+      "genres": [
+        "5579c9602f135b301151daba",
+        "5579c9602f135b301151dab9"
+      ],
+      "state": "published"
+    },
+    {
+      "_id": "5579c9c7d943167c08b1d4e5",
+      "slug": "grown-woman-bonus-video-beyonce",
+      "title": "Grown Woman (Bonus Video) - Beyoncé",
+      "artist": "Beyoncé",
+      "song": "Grown Woman (Bonus Video)",
+      "itunes_id": "780334212",
+      "release_date": "2013-12-13T00:00:00-07:00",
+      "youtube_id": "y3MjxWn5W9M",
+      "__v": 1,
+      "artists": [],
+      "genres": [
+        "5579c9602f135b301151daba",
+        "5579c9602f135b301151dab9"
+      ],
+      "state": "published"
+    },
+    {
+      "_id": "5579c9c7d943167c08b1d4e9",
+      "slug": "blank-space-taylor-swift",
+      "title": "Blank Space - Taylor Swift",
+      "artist": "Taylor Swift",
+      "song": "Blank Space",
+      "itunes_id": "939101062",
+      "release_date": "2014-11-12T00:00:00-07:00",
+      "youtube_id": "e-ORhEE9VVg",
+      "__v": 1,
+      "artists": [],
+      "genres": [
+        "5579c9602f135b301151daba",
+        "5579c9602f135b301151dab9"
+      ],
+      "state": "published"
+    },
+    {
+      "_id": "5579c9c7d943167c08b1d4ea",
+      "slug": "worth-it-feat-kid-ink-fifth-harmony",
+      "title": "Worth It (feat. Kid Ink) - Fifth Harmony",
+      "artist": "Fifth Harmony",
+      "song": "Worth It (feat. Kid Ink)",
+      "itunes_id": "980782284",
+      "release_date": "2015-03-30T00:00:00-07:00",
+      "youtube_id": "YBHQbu5rbdQ",
+      "__v": 1,
+      "artists": [],
+      "genres": [
+        "5579c9602f135b301151daba",
+        "5579c9602f135b301151dab9"
+      ],
+      "state": "published"
+    },
+    {
+      "_id": "5579c9c7d943167c08b1d4eb",
+      "slug": "honey-im-good-andy-grammer",
+      "title": "Honey, I'm Good. - Andy Grammer",
+      "artist": "Andy Grammer",
+      "song": "Honey, I'm Good.",
+      "itunes_id": "956301635",
+      "release_date": "2015-01-13T00:00:00-07:00",
+      "youtube_id": "Go7gn6dugu0",
+      "__v": 1,
+      "artists": [],
+      "genres": [
+        "5579c9602f135b301151daba",
+        "5579c9602f135b301151dab9"
+      ],
+      "state": "published"
+    },
+    {
+      "_id": "5579c9c7d943167c08b1d4ec",
+      "slug": "love-me-right-exo",
+      "title": "LOVE ME RIGHT - EXO",
+      "artist": "EXO",
+      "song": "LOVE ME RIGHT",
+      "itunes_id": "1002284172",
+      "release_date": "2015-06-03T00:00:00-07:00",
+      "youtube_id": "RuqaVryDRd0",
+      "__v": 1,
+      "artists": [],
+      "genres": [
+        "5579c9602f135b301151daba",
+        "5579c9602f135b301151dab9"
+      ],
+      "state": "published"
+    },
+    {
+      "_id": "5579c9c7d943167c08b1d4f0",
+      "slug": "all-about-that-bass-meghan-trainor",
+      "title": "All About That Bass - Meghan Trainor",
+      "artist": "Meghan Trainor",
+      "song": "All About That Bass",
+      "itunes_id": "888972869",
+      "release_date": "2014-06-12T00:00:00-07:00",
+      "youtube_id": "7PCkvCPvDXk",
+      "__v": 1,
+      "artists": [],
+      "genres": [
+        "5579c9602f135b301151daba",
+        "5579c9602f135b301151dab9"
+      ],
+      "state": "published"
+    },
+    {
+      "_id": "5579c9c7d943167c08b1d4f1",
+      "slug": "elastic-heart-sia",
+      "title": "Elastic Heart - Sia",
+      "artist": "Sia",
+      "song": "Elastic Heart",
+      "itunes_id": "955674484",
+      "release_date": "2015-01-09T00:00:00-07:00",
+      "youtube_id": "KWZGAExj-es",
+      "__v": 1,
+      "artists": [],
+      "genres": [
+        "5579c9602f135b301151daba",
+        "5579c9602f135b301151dab9"
+      ],
+      "state": "published"
+    },
+    {
+      "_id": "5579c9c7d943167c08b1d4f3",
+      "slug": "marvin-gaye-feat-meghan-trainor-charlie-puth",
+      "title": "Marvin Gaye (feat. Meghan Trainor) - Charlie Puth",
+      "artist": "Charlie Puth",
+      "song": "Marvin Gaye (feat. Meghan Trainor)",
+      "itunes_id": "983438130",
+      "release_date": "2015-04-06T00:00:00-07:00",
+      "youtube_id": "igNVdlXhKcI",
+      "__v": 1,
+      "artists": [],
+      "genres": [
+        "5579c9602f135b301151daba",
+        "5579c9602f135b301151dab9"
+      ],
+      "state": "published"
+    },
+    {
+      "_id": "5579c9c7d943167c08b1d4f5",
+      "slug": "pretty-girls-britney-spears-iggy-azalea",
+      "title": "Pretty Girls - Britney Spears & Iggy Azalea",
+      "artist": "Britney Spears & Iggy Azalea",
+      "song": "Pretty Girls",
+      "itunes_id": "994250002",
+      "release_date": "2015-05-14T00:00:00-07:00",
+      "youtube_id": "uV2uebhnqOw",
+      "__v": 1,
+      "artists": [],
+      "genres": [
+        "5579c9602f135b301151daba",
+        "5579c9602f135b301151dab9"
+      ],
+      "state": "published"
+    },
+    {
+      "_id": "5579c9c7d943167c08b1d4f6",
+      "slug": "want-to-want-me-jason-derulo",
+      "title": "Want To Want Me - Jason Derulo",
+      "artist": "Jason Derulo",
+      "song": "Want To Want Me",
+      "itunes_id": "980468708",
+      "release_date": "2015-03-23T00:00:00-07:00",
+      "youtube_id": "rClUOdS5Zyw",
+      "__v": 1,
+      "artists": [],
+      "genres": [
+        "5579c9602f135b301151daba",
+        "5579c9602f135b301151dab9"
+      ],
+      "state": "published"
+    },
+    {
+      "_id": "5579c9c7d943167c08b1d4f7",
+      "slug": "yonce-video-beyonce",
+      "title": "Yoncé (Video) - Beyoncé",
+      "artist": "Beyoncé",
+      "song": "Yoncé (Video)",
+      "itunes_id": "780520076",
+      "release_date": "2013-12-13T00:00:00-07:00",
+      "youtube_id": "jcF5HtGvX5I",
+      "__v": 1,
+      "artists": [],
+      "genres": [
+        "5579c9602f135b301151daba",
+        "5579c9602f135b301151dab9"
+      ],
+      "state": "published"
+    },
+    {
+      "_id": "5579c9c7d943167c08b1d4fa",
+      "slug": "style-taylor-swift",
+      "title": "Style - Taylor Swift",
+      "artist": "Taylor Swift",
+      "song": "Style",
+      "itunes_id": "966403540",
+      "release_date": "2015-02-13T00:00:00-07:00",
+      "youtube_id": "-CmadmM5cOk",
+      "__v": 1,
+      "artists": [],
+      "genres": [
+        "5579c9602f135b301151daba",
+        "5579c9602f135b301151dab9"
+      ],
+      "state": "published"
+    },
+    {
+      "_id": "5579c9c7d943167c08b1d4fb",
+      "slug": "black-magic-little-mix",
+      "title": "Black Magic - Little Mix",
+      "artist": "Little Mix",
+      "song": "Black Magic",
+      "itunes_id": "999315615",
+      "release_date": "2015-05-29T00:00:00-07:00",
+      "youtube_id": "MkElfR_NPBI",
+      "__v": 1,
+      "artists": [],
+      "genres": [
+        "5579c9602f135b301151daba",
+        "5579c9602f135b301151dab9"
+      ],
+      "state": "published"
+    },
+    {
+      "_id": "5579c9c7d943167c08b1d4fd",
+      "slug": "yonce-video-beyonce-1",
+      "title": "Yoncé (Video) - Beyoncé",
+      "artist": "Beyoncé",
+      "song": "Yoncé (Video)",
+      "itunes_id": "780332973",
+      "release_date": "2013-12-13T00:00:00-07:00",
+      "youtube_id": "jcF5HtGvX5I",
+      "__v": 1,
+      "artists": [],
+      "genres": [
+        "5579c9602f135b301151daba",
+        "5579c9602f135b301151dab9"
+      ],
+      "state": "published"
+    },
+    {
+      "_id": "5579c9c8d943167c08b1d4fe",
+      "slug": "happy-from-despicable-me-2-pharrell-williams",
+      "title": "Happy (from Despicable Me 2) - Pharrell Williams",
+      "artist": "Pharrell Williams",
+      "song": "Happy (from Despicable Me 2)",
+      "itunes_id": "793299815",
+      "release_date": "2014-01-08T00:00:00-07:00",
+      "youtube_id": "Q-GLuydiMe4",
+      "__v": 1,
+      "artists": [],
+      "genres": [
+        "5579c9602f135b301151daba",
+        "5579c9602f135b301151dab9"
+      ],
+      "state": "published"
+    },
+    {
+      "_id": "5579c9c8d943167c08b1d500",
+      "slug": "chandelier-sia",
+      "title": "Chandelier - Sia",
+      "artist": "Sia",
+      "song": "Chandelier",
+      "itunes_id": "873189841",
+      "release_date": "2014-05-07T00:00:00-07:00",
+      "youtube_id": "2vjPBrBU-TM",
+      "__v": 1,
+      "artists": [],
+      "genres": [
+        "5579c9602f135b301151daba",
+        "5579c9602f135b301151dab9"
+      ],
+      "state": "published"
+    },
+    {
+      "_id": "5579c9c8d943167c08b1d501",
+      "slug": "yoga-janelle-monae-jidenna",
+      "title": "Yoga - Janelle Monáe & Jidenna",
+      "artist": "Janelle Monáe & Jidenna",
+      "song": "Yoga",
+      "itunes_id": "984352872",
+      "release_date": "2015-04-14T00:00:00-07:00",
+      "youtube_id": "0OkB6p_FZAw",
+      "__v": 1,
+      "artists": [],
+      "genres": [
+        "5579c9602f135b301151daba",
+        "5579c9602f135b301151dab9"
+      ],
+      "state": "published"
+    },
+    {
+      "_id": "5579c9c8d943167c08b1d503",
+      "slug": "i-really-like-you-carly-rae-jepsen",
+      "title": "I Really Like You - Carly Rae Jepsen",
+      "artist": "Carly Rae Jepsen",
+      "song": "I Really Like You",
+      "itunes_id": "975710981",
+      "release_date": "2015-03-12T00:00:00-07:00",
+      "youtube_id": "qV5lzRHrGeg",
+      "__v": 1,
+      "artists": [],
+      "genres": [
+        "5579c9602f135b301151daba",
+        "5579c9602f135b301151dab9"
+      ],
+      "state": "published"
+    },
+    {
+      "_id": "5579c9c8d943167c08b1d504",
+      "slug": "roar-katy-perry",
+      "title": "Roar - Katy Perry",
+      "artist": "Katy Perry",
+      "song": "Roar",
+      "itunes_id": "700911241",
+      "release_date": "2013-09-10T00:00:00-07:00",
+      "youtube_id": "CevxZvSJLk8",
+      "__v": 1,
+      "artists": [],
+      "genres": [
+        "5579c9602f135b301151daba",
+        "5579c9602f135b301151dab9"
+      ],
+      "state": "published"
+    },
+    {
+      "_id": "5579c9c8d943167c08b1d507",
+      "slug": "bang-bang-jessie-j-ariana-grande-nicki-minaj",
+      "title": "Bang Bang - Jessie J, Ariana Grande & Nicki Minaj",
+      "artist": "Jessie J, Ariana Grande & Nicki Minaj",
+      "song": "Bang Bang",
+      "itunes_id": "913746045",
+      "release_date": "2014-08-28T00:00:00-07:00",
+      "youtube_id": "0HDdjwpPM3Y",
+      "__v": 1,
+      "artists": [],
+      "genres": [
+        "5579c9602f135b301151daba",
+        "5579c9602f135b301151dab9"
+      ],
+      "state": "published"
+    },
+    {
+      "_id": "5579c9c8d943167c08b1d509",
+      "slug": "one-last-time-ariana-grande",
+      "title": "One Last Time - Ariana Grande",
+      "artist": "Ariana Grande",
+      "song": "One Last Time",
+      "itunes_id": "970695689",
+      "release_date": "2015-02-26T00:00:00-07:00",
+      "youtube_id": "BPgEgaPk62M",
+      "__v": 1,
+      "artists": [],
+      "genres": [
+        "5579c9602f135b301151daba",
+        "5579c9602f135b301151dab9"
+      ],
+      "state": "published"
+    },
+    {
+      "_id": "5579c9c8d943167c08b1d50b",
+      "slug": "the-heart-wants-what-it-wants-selena-gomez",
+      "title": "The Heart Wants What It Wants - Selena Gomez",
+      "artist": "Selena Gomez",
+      "song": "The Heart Wants What It Wants",
+      "itunes_id": "937054042",
+      "release_date": "2014-11-24T00:00:00-07:00",
+      "youtube_id": "ij_0p_6qTss",
+      "__v": 1,
+      "artists": [],
+      "genres": [
+        "5579c9602f135b301151daba",
+        "5579c9602f135b301151dab9"
+      ],
+      "state": "published"
+    },
+    {
+      "_id": "5579c9c8d943167c08b1d50d",
+      "slug": "7-11-beyonce",
+      "title": "7/11 - Beyoncé",
+      "artist": "Beyoncé",
+      "song": "7/11",
+      "itunes_id": "947130657",
+      "release_date": "2014-12-01T00:00:00-07:00",
+      "youtube_id": "k4YRWT_Aldo",
+      "__v": 1,
+      "artists": [],
+      "genres": [
+        "5579c9602f135b301151daba",
+        "5579c9602f135b301151dab9"
+      ],
+      "state": "published"
+    },
+    {
+      "_id": "5579c9c8d943167c08b1d50e",
+      "slug": "lips-are-movin-meghan-trainor",
+      "title": "Lips Are Movin - Meghan Trainor",
+      "artist": "Meghan Trainor",
+      "song": "Lips Are Movin",
+      "itunes_id": "943938003",
+      "release_date": "2014-11-21T00:00:00-07:00",
+      "youtube_id": "qDc_5zpBj7s",
+      "__v": 1,
+      "artists": [],
+      "genres": [
+        "5579c9602f135b301151daba",
+        "5579c9602f135b301151dab9"
+      ],
+      "state": "published"
+    },
+    {
+      "_id": "5579c9c8d943167c08b1d50f",
+      "slug": "infinity-mariah-carey",
+      "title": "Infinity - Mariah Carey",
+      "artist": "Mariah Carey",
+      "song": "Infinity",
+      "itunes_id": "1000858100",
+      "release_date": "2015-06-03T00:00:00-07:00",
+      "youtube_id": "DO1CQhwCiG0",
+      "__v": 1,
+      "artists": [],
+      "genres": [
+        "5579c9602f135b301151daba",
+        "5579c9602f135b301151dab9"
+      ],
+      "state": "published"
+    },
+    {
+      "_id": "5579c9c8d943167c08b1d511",
+      "slug": "call-me-baby-exo",
+      "title": "CALL ME BABY - EXO",
+      "artist": "EXO",
+      "song": "CALL ME BABY",
+      "itunes_id": "981858342",
+      "release_date": "2015-03-31T00:00:00-07:00",
+      "youtube_id": "yWfsla_Uh80",
+      "__v": 1,
+      "artists": [],
+      "genres": [
+        "5579c9602f135b301151daba",
+        "5579c9602f135b301151dab9"
+      ],
+      "state": "published"
+    },
+    {
+      "_id": "5579c9c8d943167c08b1d512",
+      "slug": "lovin-so-hard-becky-g",
+      "title": "Lovin' So Hard - Becky G",
+      "artist": "Becky G",
+      "song": "Lovin' So Hard",
+      "itunes_id": "992173889",
+      "release_date": "2015-05-07T00:00:00-07:00",
+      "youtube_id": "n6-RFMfPSX8",
+      "__v": 1,
+      "artists": [],
+      "genres": [
+        "5579c9602f135b301151daba",
+        "5579c9602f135b301151dab9"
+      ],
+      "state": "published"
+    },
+    {
+      "_id": "5579c9c8d943167c08b1d514",
+      "slug": "booty-feat-iggy-azalea-jennifer-lopez",
+      "title": "Booty (feat. Iggy Azalea) - Jennifer Lopez",
+      "artist": "Jennifer Lopez",
+      "song": "Booty (feat. Iggy Azalea)",
+      "itunes_id": "921714422",
+      "release_date": "2014-09-25T00:00:00-07:00",
+      "youtube_id": "nxtIRArhVD4",
+      "__v": 1,
+      "artists": [],
+      "genres": [
+        "5579c9602f135b301151daba",
+        "5579c9602f135b301151dab9"
+      ],
+      "state": "published"
+    },
+    {
+      "_id": "5579c9c8d943167c08b1d516",
+      "slug": "thriller-michael-jackson",
+      "title": "Thriller - Michael Jackson",
+      "artist": "Michael Jackson",
+      "song": "Thriller",
+      "itunes_id": "287857650",
+      "release_date": "2004-09-01T00:00:00-07:00",
+      "youtube_id": "sOnqjkJTMaA",
+      "__v": 1,
+      "artists": [],
+      "genres": [
+        "5579c9602f135b301151daba",
+        "5579c9602f135b301151dab9"
+      ],
+      "state": "published"
+    }
+  ]
+}
