@@ -1,7 +1,7 @@
 Cross-browser HTML5 Video Player made with video-js.
 Supports all major browsers plus iOS and Android.
 
-View example at http://www.spideyjs.com/html5video/
+View example at http://clarkeanimation.com/html5video/
 
 Features
   - playlists
